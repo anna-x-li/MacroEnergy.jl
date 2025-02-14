@@ -108,6 +108,7 @@ include("model/assets/beccsnaturalgas.jl")
 include("model/assets/hydrores.jl")
 include("model/assets/mustrun.jl")
 
+<<<<<<< HEAD
 include("model/assets/fossilfuelsupstream.jl")
 include("model/assets/fuelsenduse.jl")
 
@@ -116,8 +117,8 @@ include("model/assets/syntheticliquidfuels.jl")
 
 include("model/assets/co2injection.jl")
 
-include("model/assets/cementplant")
-include("model/assets/electrochemcementplant")
+include("model/assets/cementplant.jl")
+include("model/assets/electrochemcementplant.jl")
 
 include_all_in_folder("model/constraints")
 
