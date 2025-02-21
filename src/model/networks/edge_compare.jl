@@ -29,9 +29,6 @@ macro AbstractEdgeBaseAttributes()
         ramp_up_fraction::Float64 = 1.0
         retired_capacity::AffExpr = AffExpr(0.0)
         retired_units::Union{JuMPVariable,Float64} = 0.0
-        retrofitted_capacity::AffExpr = AffExpr(0.0)
-        retrofitted_units::Union{JuMPVariable,Float64} = 0.0
-        retrofit_id::Int = 0
         unidirectional::Bool = false
         variable_om_cost::Float64 = 0.0
     end)
@@ -64,14 +61,13 @@ function make_edge(
         has_capacity = get(data, :has_capacity, false),
         integer_decisions = get(data, :integer_decisions, false),
         investment_cost = get(data, :investment_cost, 0.0),
-        is_retrofit = get(data, :is_retrofit, false),
+        is_retrofit = get(data, :retrofit, false),
         loss_fraction = get(data,:loss_fraction,0.0),
         max_capacity = get(data, :max_capacity, Inf),
         min_capacity = get(data, :min_capacity, 0.0),
         min_flow_fraction = get(data, :min_flow_fraction, 0.0),
         ramp_down_fraction = get(data, :ramp_down_fraction, 1.0),
         ramp_up_fraction = get(data, :ramp_up_fraction, 1.0),
-        retrofit_id = get(data, :retrofit_id, 0),
         unidirectional = get(data, :unidirectional, false),
         variable_om_cost = get(data, :variable_om_cost, 0.0),
     )
@@ -106,7 +102,6 @@ function availability(e::AbstractEdge, t::Int64)
 end
 can_expand(e::AbstractEdge) = e.can_expand;
 can_retire(e::AbstractEdge) = e.can_retire;
-can_retrofit(e::AbstractEdge) = e.can_retrofit;
 capacity(e::AbstractEdge) = e.capacity;
 capacity_size(e::AbstractEdge) = e.capacity_size;
 commodity_type(e::AbstractEdge{T}) where {T} = T;
@@ -119,7 +114,6 @@ has_capacity(e::AbstractEdge) = e.has_capacity;
 id(e::AbstractEdge) = e.id;
 integer_decisions(e::AbstractEdge) = e.integer_decisions;
 investment_cost(e::AbstractEdge) = e.investment_cost;
-is_retrofit(e::AbstractEdge) = e.is_retrofit;
 loss_fraction(e::AbstractEdge) = e.loss_fraction;
 max_capacity(e::AbstractEdge) = e.max_capacity;
 min_capacity(e::AbstractEdge) = e.min_capacity;
@@ -132,6 +126,7 @@ retired_capacity(e::AbstractEdge) = e.retired_capacity;
 retired_units(e::AbstractEdge) = e.retired_units;
 retrofitted_capacity(e::AbstractEdge) = e.retrofitted_capacity;
 retrofitted_units(e::AbstractEdge) = e.retrofitted_units;
+is_retrofit(e::AbstractEdge) = e.is_retrofit;
 start_vertex(e::AbstractEdge)::AbstractVertex = e.start_vertex;
 variable_om_cost(e::AbstractEdge) = e.variable_om_cost;
 ##### End of Edge interface #####
@@ -141,18 +136,15 @@ function add_linking_variables!(e::AbstractEdge, model::Model)
 
     if has_capacity(e)
         e.new_units = @variable(model, lower_bound = 0.0, base_name = "vNEWUNIT_$(id(e))")
-
         e.retired_units = @variable(model, lower_bound = 0.0, base_name = "vRETUNIT_$(id(e))")
-
         e.new_capacity = @expression(model, capacity_size(e) * new_units(e))
-        
         e.retired_capacity = @expression(model, capacity_size(e) * retired_units(e))
     end
 
     if can_retrofit(e)
-        e.retrofitted_units = @variable(model, lower_bound = 0.0, base_name = "vRETROFITUNIT_$(id(e))")
-        e.retrofitted_capacity = @expression(model, capacity_size(e) * retrofitted_units(e))
-    end   
+        e.retrofitted_units = @variable(model, lower_bound = 0.0, base_name = "vRETFUNIT_$(id(e))")
+        e.retrofitted_capacity = @expression(model, capacity_size(e) * retrofited_units(e))
+    end
 
     return nothing
 
@@ -206,22 +198,23 @@ function planning_model!(e::AbstractEdge, model::Model)
 
         @constraint(model, retired_capacity(e) <= existing_capacity(e))
 
-        # Retrofitting constraints
+        # retrofit part
         if can_retrofit(e)
-            @constraint(model, retrofitted_capacity(e) <= existing_capacity(e))
+            @constraint(model, retrofited_capacity(e) <= existing_capacity(e))
             if integer_decisions(e)
                 set_integer(retrofitted_units(e))
             end
+
             retrofit_id = e.retrofit_id
-            add_to_expression!(model[:eRetrofittedCapByRetroId][retrofit_id], retrofitted_capacity(e))
+            add_to_expression!(model[:eRetrofittedCapByRetroId][retrofit_id], retrofited_capacity(e))
         end
+
         if is_retrofit(e)
             retrofit_id = e.retrofit_id
             add_to_expression!(model[:eRetrofitCapByRetroId][retrofit_id], new_capacity(e))
         end
     end
-
-
+    
     return nothing
 
 end
@@ -242,7 +235,9 @@ function operation_model!(e::Edge, model::Model)
     update_balances!(e, model)
 
     for t in time_interval(e)
-        w = current_subperiod(e,t)
+
+        w = current_subperiod(e, t)
+
         if variable_om_cost(e) > 0
             add_to_expression!(
                 model[:eVariableCost],
@@ -270,7 +265,7 @@ Base.@kwdef mutable struct EdgeWithUC{T} <: AbstractEdge{T}
     min_down_time::Int64 = 0.0
     min_up_time::Int64 = 0.0
     startup_cost::Float64 = 0.0
-    startup_fuel_consumption::Float64 = 0.0
+    startup_fuel::Float64 = 0.0
     startup_fuel_balance_id::Symbol = :none
     ucommit::JuMPVariable = Vector{VariableRef}()
     ushut::JuMPVariable = Vector{VariableRef}()
@@ -309,7 +304,7 @@ function make_edge_UC(
         min_down_time = get(data, :min_down_time, 0.0),
         min_up_time = get(data, :min_up_time, 0.0),
         startup_cost = get(data, :startup_cost, 0.0),
-        startup_fuel_consumption = get(data, :startup_fuel_consumption, 0.0),
+        startup_fuel = get(data, :startup_fuel, 0.0),
         startup_fuel_balance_id = get(data, :startup_fuel_balance_id, :none),
     )
     return _edge
@@ -327,7 +322,7 @@ EdgeWithUC(
 min_down_time(e::EdgeWithUC) = e.min_down_time;
 min_up_time(e::EdgeWithUC) = e.min_up_time;
 startup_cost(e::EdgeWithUC) = e.startup_cost;
-startup_fuel_consumption(e::EdgeWithUC) = e.startup_fuel_consumption;
+startup_fuel(e::EdgeWithUC) = e.startup_fuel;
 startup_fuel_balance_id(e::EdgeWithUC) = e.startup_fuel_balance_id;
 ucommit(e::EdgeWithUC) = e.ucommit;
 ucommit(e::EdgeWithUC, t::Int64) = ucommit(e)[t];
@@ -376,11 +371,12 @@ function operation_model!(e::EdgeWithUC, model::Model)
 
     update_balances!(e, model)
 
-    update_startup_fuel_balance!(e)
+    update_startup_fuel_balances!(e)
 
     for t in time_interval(e)
 
-        w = current_subperiod(e,t)
+        w = current_subperiod(e, t)
+
         if variable_om_cost(e) > 0
             add_to_expression!(
                 model[:eVariableCost],
@@ -463,19 +459,11 @@ function update_balances!(e::AbstractEdge, model::Model)
 
 end
 
-function update_startup_fuel_balance!(e::EdgeWithUC)
+function update_startup_fuel_balances!(e::EdgeWithUC)
 
-    # The startup fuel will not contribute to the end vertex balance as it is not consumed there.
+    update_startup_fuel_balance_start!(e)
 
-    v = start_vertex(e);
-
-    i = startup_fuel_balance_id(e)
-
-    if i ∈ balance_ids(v)
-        add_to_expression!.(get_balance(v, i), -1 * startup_fuel_consumption(e) * capacity_size(e) * ustart(e))
-    end
-
-    return nothing
+    update_startup_fuel_balance_end!(e)
 
 end
 
@@ -536,4 +524,33 @@ function update_balance_end!(e::AbstractEdge, model::Model)
         add_to_expression!.(get_balance(v, i),  balance_data(e, v, i) * effective_flow)
     end
     
+end
+
+function update_startup_fuel_balance_start!(e::EdgeWithUC)
+
+    v = start_vertex(e);
+
+    i = startup_fuel_balance_id(e)
+
+    if i ∈ balance_ids(v)
+        add_to_expression!.(get_balance(v, i), -1 * startup_fuel(e) * capacity_size(e) * ustart(e))
+    end
+
+    return nothing
+
+end
+
+
+function update_startup_fuel_balance_end!(e::EdgeWithUC)
+    
+    v = end_vertex(e);
+
+    i = startup_fuel_balance_id(e)
+
+    if i ∈ balance_ids(v)
+        add_to_expression!.(get_balance(v, i), startup_fuel(e) * capacity_size(e) * ustart(e))
+    end
+
+    return nothing
+
 end
