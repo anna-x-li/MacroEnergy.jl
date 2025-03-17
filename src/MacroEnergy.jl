@@ -28,6 +28,7 @@ abstract type Uranium <: Commodity end ## MWh
 abstract type LiquidFuels <: Commodity end ## MWh
 abstract type Cement <: Commodity end ## tonnes
 abstract type CementMaterials <: Commodity end ## tonnes
+abstract type CementFuel <: Commodity end ## tonnes
 
 ## Time data types
 abstract type AbstractTimeData{T<:Commodity} end
@@ -121,6 +122,8 @@ include("model/assets/co2injection.jl")
 
 include("model/assets/cementplant.jl")
 include("model/assets/electrochemcementplant.jl")
+include("model/assets/cementplant_test.jl")
+include("model/assets/electrochemcementplant_test.jl")
 
 include_all_in_folder("model/constraints")
 
@@ -222,6 +225,7 @@ export AbstractAsset,
     write_flow,
     write_results,
     Cement,
-    CementMaterials
+    CementMaterials,
+    CementFuel
     
 end # module MacroEnergy
