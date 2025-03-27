@@ -112,7 +112,6 @@ include("model/assets/beccsnaturalgas.jl")
 include("model/assets/hydrores.jl")
 include("model/assets/mustrun.jl")
 
-<<<<<<< HEAD
 include("model/assets/fossilfuelsupstream.jl")
 include("model/assets/fuelsenduse.jl")
 
