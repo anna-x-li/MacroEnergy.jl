@@ -35,7 +35,8 @@
                         "fixed_om_cost": 0,
                         "variable_om_cost": 0,
                         "is_retrofit": true,
-                        "retrofit_id": 1
+                        "retrofit_id": 1,
+                        "retrofit_efficiency": 0.9
                     }
                 }
             },

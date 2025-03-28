@@ -32,6 +32,7 @@ macro AbstractEdgeBaseAttributes()
         retired_units::Union{JuMPVariable,Float64} = 0.0
         retrofitted_capacity::AffExpr = AffExpr(0.0)
         retrofitted_units::Union{JuMPVariable,Float64} = 0.0
+        retrofit_efficiency::Float64 = 1.0
         retrofit_id::Int = 0
         unidirectional::Bool = $edge_defaults[:unidirectional]
         variable_om_cost::Float64 = $edge_defaults[:variable_om_cost]
@@ -86,6 +87,8 @@ function make_edge(
         min_flow_fraction = get(data, :min_flow_fraction, 0.0),
         ramp_down_fraction = get(data, :ramp_down_fraction, 1.0),
         ramp_up_fraction = get(data, :ramp_up_fraction, 1.0),
+        retrofit_efficiency = get(data, :retrofit_efficiency, 1.0),
+        retrofit_id = get(data, :retrofit_id, 0),
         unidirectional = get(data, :unidirectional, false),
         variable_om_cost = get(data, :variable_om_cost, 0.0),
     )
@@ -144,6 +147,7 @@ ramp_down_fraction(e::AbstractEdge) = e.ramp_down_fraction;
 ramp_up_fraction(e::AbstractEdge) = e.ramp_up_fraction;
 retired_capacity(e::AbstractEdge) = e.retired_capacity;
 retired_units(e::AbstractEdge) = e.retired_units;
+retrofit_efficiency(e::AbstractEdge) = e.retrofit_efficiency;
 retrofitted_capacity(e::AbstractEdge) = e.retrofitted_capacity;
 retrofitted_units(e::AbstractEdge) = e.retrofitted_units;
 start_vertex(e::AbstractEdge)::AbstractVertex = e.start_vertex;
@@ -231,7 +235,7 @@ function planning_model!(e::AbstractEdge, model::Model)
         end
         if is_retrofit(e)
             retrofit_id = e.retrofit_id
-            add_to_expression!(model[:eRetrofitCapByRetroId][retrofit_id], new_capacity(e))
+            add_to_expression!(model[:eRetrofitCapByRetroId][retrofit_id], new_capacity(e) * (1 / retrofit_efficiency(e)))
         end
     end
 
