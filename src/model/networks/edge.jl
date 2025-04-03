@@ -20,6 +20,7 @@ macro AbstractEdgeBaseAttributes()
         integer_decisions::Bool = $edge_defaults[:integer_decisions]
         investment_cost::Float64 = $edge_defaults[:investment_cost]
         is_retrofit::Bool = false
+        location::Union{Missing, String} = $edge_defaults[:location]
         loss_fraction::Float64 = $edge_defaults[:loss_fraction]
         max_capacity::Float64 = $edge_defaults[:max_capacity]
         min_capacity::Float64 = $edge_defaults[:min_capacity]
@@ -137,6 +138,7 @@ id(e::AbstractEdge) = e.id;
 integer_decisions(e::AbstractEdge) = e.integer_decisions;
 investment_cost(e::AbstractEdge) = e.investment_cost;
 is_retrofit(e::AbstractEdge) = e.is_retrofit;
+location(e::AbstractEdge) = e.location;
 loss_fraction(e::AbstractEdge) = e.loss_fraction;
 max_capacity(e::AbstractEdge) = e.max_capacity;
 min_capacity(e::AbstractEdge) = e.min_capacity;
