@@ -109,6 +109,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][fuel_edge_key], key),
             (data[:edges][fuel_edge_key], Symbol("fuel_", key)),
             (data, Symbol("fuel_", key)),
+            (data, key),
         ]
     )
 
@@ -139,13 +140,14 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][cement_edge_key], key),
             (data[:edges][cement_edge_key], Symbol("cement_", key)),
             (data, Symbol("cement_", key)),
+            (data, key),
         ]
     )
     cement_start_node = cement_transform
     @end_vertex(
         cement_end_node,
         cement_edge_data,
-        CO2,
+        Cement,
         [(cement_edge_data, :end_vertex), (data, :location)],
     )
     cement_edge = Edge(
@@ -166,6 +168,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][co2_edge_key], key),
             (data[:edges][co2_edge_key], Symbol("co2_", key)),
             (data, Symbol("co2_", key)),
+            (data, key),
         ]
     )
     co2_start_node = cement_transform
