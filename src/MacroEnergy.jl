@@ -122,8 +122,6 @@ include("model/assets/co2injection.jl")
 
 include("model/assets/cementplant.jl")
 include("model/assets/electrochemcementplant.jl")
-include("model/assets/cementplant_test.jl")
-include("model/assets/electrochemcementplant_test.jl")
 
 include_all_in_folder("model/constraints")
 
