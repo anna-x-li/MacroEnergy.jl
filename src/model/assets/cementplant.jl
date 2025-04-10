@@ -17,7 +17,7 @@ function default_data(::Type{CementPlant}, id=missing)
             :timedata => "Cement",
             :fuel_cement_rate => 1.0,
             :elec_cement_rate => 1.0,
-            :cement_emissions_rate => 0.0,
+            :emission_rate => 0.0,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -28,6 +28,7 @@ function default_data(::Type{CementPlant}, id=missing)
             ),
             :fuel_edge => @edge_data(
                 :commodity => missing,
+                :start_vertex => "ng_source",
             ),
             :cement_edge => @edge_data(
                 :commodity=>"Cement",
@@ -38,6 +39,7 @@ function default_data(::Type{CementPlant}, id=missing)
                 :constraints => Dict{Symbol, Bool}(
                     :CapacityConstraint => true,
                 ),
+                :end_vertex => "cement_produced",
             ),
             :co2_edge => @edge_data(
                 :commodity=>"CO2",
@@ -204,7 +206,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         :emissions => Dict(
             elec_edge.id => 0,
             fuel_edge.id => 0,
-            cement_edge.id => get(transform_data, :cement_emission_rate, 1.0),
+            cement_edge.id => get(transform_data, :emission_rate, 1.0),
             co2_edge.id => -1.0,
         )
     )
