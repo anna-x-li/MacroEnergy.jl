@@ -27,8 +27,7 @@ function default_data(::Type{CementPlant}, id=missing)
                 :commodity => "Electricity"
             ),
             :fuel_edge => @edge_data(
-                :commodity => missing,
-                :start_vertex => "ng_source",
+                :commodity => missing
             ),
             :cement_edge => @edge_data(
                 :commodity=>"Cement",
@@ -38,8 +37,7 @@ function default_data(::Type{CementPlant}, id=missing)
                 :can_retire => true,
                 :constraints => Dict{Symbol, Bool}(
                     :CapacityConstraint => true,
-                ),
-                :end_vertex => "cement_produced",
+                )
             ),
             :co2_edge => @edge_data(
                 :commodity=>"CO2",
