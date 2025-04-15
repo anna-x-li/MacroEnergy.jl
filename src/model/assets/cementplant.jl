@@ -8,9 +8,9 @@ struct CementPlant{T} <: AbstractAsset
 end
 
 CementPlant(id::AssetId, cement_transform::Transformation, elec_edge::Union{Edge{Electricity},EdgeWithUC{Electricity}}, fuel_edge::Edge{T}, cement_edge::Edge{Cement}, co2_edge::Edge{CO2}) where T<:Commodity =
-    CementPlant{T}(id, cement_transform,  elec_edge, fuel_edge, cement_edge, co2_edge)
+    CementPlant{T}(id, cement_transform, elec_edge, fuel_edge, cement_edge, co2_edge)
 
-function default_data(::Type{CementPlant}, id=missing)
+function default_data(::Type{CementPlant}, id=missing, style="full")
     return Dict{Symbol,Any}(
         :id => id,
         :transforms => @transform_data(
