@@ -3,6 +3,7 @@ Pkg.activate(dirname(dirname(@__DIR__)))
 using MacroEnergy
 using Gurobi
 using DataFrames
+include("../helper_functions.jl")
 
 system = MacroEnergy.load_system(@__DIR__)
 model = MacroEnergy.generate_model(system)
@@ -10,6 +11,12 @@ model = MacroEnergy.generate_model(system)
 MacroEnergy.set_optimizer(model, Gurobi.Optimizer)
 MacroEnergy.set_optimizer_attributes(model, "BarConvTol"=>1e-3,"Crossover" => 0, "Method" => 2)
 MacroEnergy.optimize!(model)
+
+# Save Results
+case = "test"
+results_dir = joinpath(@__DIR__,  "results")
+mkpath(results_dir)
+save_results(results_dir, case, system)
 
 MacroEnergy.compute_conflict!(model)
 list_of_conflicting_constraints = MacroEnergy.ConstraintRef[];
@@ -59,4 +66,13 @@ end
 # Write the unique constraints to a file
 open("conflicting_constraints.txt", "w") do file
     write(file, constraints)
+end
+
+# Write the unique constraints to a file
+open("conflicting_constraints.txt", "w") do file
+    write(file, list_of_conflicting_constraints)
+end
+
+for constraint in list_of_conflicting_constraints
+    println(constraint)
 end
