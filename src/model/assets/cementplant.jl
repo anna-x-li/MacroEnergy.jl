@@ -201,8 +201,8 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         data[:edges][co2_captured_edge_key], 
         [
             (data[:edges][co2_captured_edge_key], key),
-            (data[:edges][co2_captured_edge_key], Symbol("co2_", key)),
-            (data, Symbol("co2_", key)),
+            (data[:edges][co2_captured_edge_key], Symbol("co2_captured_", key)),
+            (data, Symbol("co2_captured_", key)),
             (data, key),
         ]
     )
@@ -210,8 +210,8 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
     @end_vertex(
         co2_captured_end_node,
         co2_captured_edge_data,
-        CO2,
-        [(co2_captured_edge_data, :end_vertex), (data, :co2_sink), (data, :location)],
+        CO2Captured,
+        [(co2_captured_edge_data, :end_vertex), (data, :location)],
     )
     co2_captured_edge = Edge(
         Symbol(id, "_", co2_captured_edge_key),
