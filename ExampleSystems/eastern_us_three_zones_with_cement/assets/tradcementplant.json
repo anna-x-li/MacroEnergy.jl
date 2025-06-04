@@ -3,29 +3,26 @@
         {
             "type": "CementPlant",
             "global_data": {
-                "fuel_commodity": "CementFuel",
+                "fuel_commodity": "NaturalGas",
                 "nodes": {},
                 "transforms": {
                     "id": "traditional_cement",
                     "timedata": "Cement",
-                    "fuel_cement_rate": 0.9311,
-                    "elec_cement_rate": 0.07,
+                    "fuel_consumption_rate": 0.9311,
+                    "elec_consumption_rate": 0.07,
                     "fuel_emission_rate": 0.296,
                     "process_emission_rate": 0.536,
-                    "co2_capture_rate": 0,
+                    "emission_capture_rate": 0,
                     "constraints": {
                         "BalanceConstraint": true
                     }
                 },
                 "edges":{
                     "elec_edge":{
-                        "type": "Electricity",
-                        "unidirectional": true,
-                        "has_capacity": false
+                        "type": "Electricity"
                     },
                     "cement_edge":{
                         "type": "Cement",
-                        "unidirectional": true,
                         "has_capacity": true,
                         "can_retire": true,
                         "can_expand": true,
@@ -36,21 +33,15 @@
                         "end_vertex": "cement_produced"
                     },
                     "fuel_edge": {
-                        "type": "CementFuel",
-                        "unidirectional": true,
-                        "has_capacity": false,
-                        "start_vertex": "cement_fuel_source"
+                        "type": "NaturalGas",
+                        "start_vertex": "ng_source"
                     },
                     "co2_emissions_edge": {
                         "type": "CO2",
-                        "unidirectional": true,
-                        "has_capacity": false,
                         "end_vertex": "cement_co2_sink"
                     },
                     "co2_captured_edge": {
                         "type": "CO2Captured",
-                        "unidirectional": true,
-                        "has_capacity": false,
                         "end_vertex": "co2_captured_sink"
                     }
                 }
