@@ -87,17 +87,6 @@
             ]
         },
         {
-            "type": "CementFuel",
-            "global_data": {
-                "time_interval": "CementFuel"
-            },
-            "instance_data": [
-                {
-                    "id": "cement_fuel_source"
-                }
-            ]
-        },
-        {
             "type": "CO2",
             "global_data": {
                 "time_interval": "CO2"

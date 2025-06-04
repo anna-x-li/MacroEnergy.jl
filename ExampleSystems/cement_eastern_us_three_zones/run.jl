@@ -43,3 +43,5 @@ write_flow(joinpath(results_dir, "flow.csv"), system)
 #     end
 # end
 # display(list_of_conflicting_constraints)
+
+(system, model) = run_case(@__DIR__; optimizer=Gurobi.Optimizer);

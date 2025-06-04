@@ -28,7 +28,6 @@ abstract type Biomass <: Commodity end ## tonnes
 abstract type Uranium <: Commodity end ## MWh
 abstract type LiquidFuels <: Commodity end ## MWh
 abstract type Cement <: Commodity end ## tonnes
-abstract type CementFuel <: Commodity end ## MWh
 
 ## Time data types
 abstract type AbstractTimeData{T<:Commodity} end
@@ -146,7 +145,6 @@ export AbstractAsset,
     Biomass,
     Coal,
     Cement,
-    CementFuel,
     BECCSElectricity,
     BECCSHydrogen,
     BECCSGasoline,

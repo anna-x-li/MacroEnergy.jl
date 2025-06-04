@@ -1,26 +1,34 @@
 struct CementPlant{T} <: AbstractAsset
     id::AssetId
     cement_transform::Transformation
-    elec_edge::Union{Edge{Electricity},EdgeWithUC{Electricity}} # Electricity consumed
-    fuel_edge::Edge{T} # Fuel consumed
-    cement_edge::Edge{Cement} # Cement produced
-    co2_emissions_edge::Edge{CO2} # CO2 emissions
-    co2_captured_edge::Edge{CO2Captured} # CO2 captured
+    elec_edge::Union{Edge{<:Electricity},EdgeWithUC{<:Electricity}} # Electricity consumed
+    fuel_edge::Edge{<:T} # Fuel consumed
+    cement_edge::Edge{<:Cement} # Cement produced
+    co2_emissions_edge::Edge{<:CO2} # CO2 emissions
+    co2_captured_edge::Edge{<:CO2Captured} # CO2 captured
 end
 
 CementPlant(id::AssetId, cement_transform::Transformation, elec_edge::Union{Edge{Electricity},EdgeWithUC{Electricity}}, fuel_edge::Edge{T}, cement_edge::Edge{Cement}, co2_emissions_edge::Edge{CO2}, co2_captured_edge::Edge{CO2Captured}) where T<:Commodity =
     CementPlant{T}(id, cement_transform, elec_edge, fuel_edge, cement_edge, co2_emissions_edge, co2_captured_edge)
 
-function default_data(::Type{CementPlant}, id=missing, style="full")
-    return Dict{Symbol,Any}(
+function default_data(t::Type{CementPlant}, id=missing, style="full")
+    if style == "full"
+        return full_default_data(t, id)
+    else
+        return simple_default_data(t, id)
+    end
+end
+
+function full_default_data(::Type{CementPlant}, id=missing)
+    return OrderedDict{Symbol,Any}(
         :id => id,
         :transforms => @transform_data(
             :timedata => "Cement",
-            :fuel_cement_rate => 1.0,
-            :elec_cement_rate => 1.0,
+            :fuel_consumption => 1.0,
+            :elec_consumption => 1.0,
             :fuel_emission_rate => 0.0,
             :process_emission_rate => 0.536,
-            :co2_capture_rate => 1.0,
+            :emission_capture_rate => 0.0,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -51,6 +59,29 @@ function default_data(::Type{CementPlant}, id=missing, style="full")
                 :co2_sink => missing,
             ),
         ),
+    )
+end
+
+function simple_default_data(::Type{CementPlant}, id=missing)
+    return OrderedDict{Symbol,Any}(
+        :id => id,
+        :location => missing,
+        :can_expand => true,
+        :can_retire => true,
+        :existing_capacity => 0.0,
+        :capacity_size => 1.0,
+        :timedata => "Cement",
+        :fuel_commodity => "NaturalGas",
+        :co2_sink => missing,
+        :uc => false,
+        :investment_cost => 0.0,
+        :fixed_om_cost => 0.0,
+        :variable_om_cost => 0.0,
+        :fuel_consumption => 1.0,
+        :elec_consumption => 1.0,
+        :fuel_emission_rate => 0.0,
+        :process_emission_rate => 0.0,
+        :emission_capture_rate => 0.0,
     )
 end
 
@@ -86,7 +117,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][elec_edge_key], key),
             (data[:edges][elec_edge_key], Symbol("elec_", key)),
             (data, Symbol("elec_", key)),
-            (data, key),
         ]
     )
 
@@ -116,7 +146,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][fuel_edge_key], key),
             (data[:edges][fuel_edge_key], Symbol("fuel_", key)),
             (data, Symbol("fuel_", key)),
-            (data, key),
         ]
     )
 
@@ -175,7 +204,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][co2_emissions_edge_key], key),
             (data[:edges][co2_emissions_edge_key], Symbol("co2_", key)),
             (data, Symbol("co2_", key)),
-            (data, key),
         ]
     )
     co2_emissions_start_node = cement_transform
@@ -203,7 +231,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][co2_captured_edge_key], key),
             (data[:edges][co2_captured_edge_key], Symbol("co2_captured_", key)),
             (data, Symbol("co2_captured_", key)),
-            (data, key),
         ]
     )
     co2_captured_start_node = cement_transform

@@ -31,6 +31,7 @@ DuckDB = "^0.10.3"
 Gurobi = "1.6.0"
 MacroEnergyScaling = "0.2.0"
 Parquet2 = "0.2.27"
+Revise = "3.8.0"
 
 [extras]
 JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
