@@ -17,6 +17,7 @@ end
 
 # Load a single instance of an asset, location, etc. into a System
 function load!(system::System, data::AbstractDict{Symbol,Any})::Nothing
+    @infiltrate
     if data_is_system_data(data)
         # println("Loading system data")
         load_system_data!(system, data)
@@ -31,6 +32,7 @@ function load!(system::System, data::AbstractDict{Symbol,Any})::Nothing
             data_type = check_and_convert_type(data)
             load_time_series_data!(system, data) # substitute ts file paths with actual vectors of data
             add!(system, make(data_type, data[:instance_data], system))
+
         elseif isa(data[:instance_data], AbstractVector{<:AbstractDict{Symbol,Any}})
             load!(system, expand_instances(data))
         else

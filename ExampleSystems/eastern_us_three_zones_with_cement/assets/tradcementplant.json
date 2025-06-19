@@ -13,8 +13,6 @@
                     "fuel_emission_rate": 0.296,
                     "process_emission_rate": 0.536,
                     "emission_capture_rate": 0,
-                    "can_retrofit": true,
-                    "retrofit_id": "oxyfuel_retrofit",
                     "constraints": {
                         "BalanceConstraint": true
                     }
@@ -32,7 +30,9 @@
                         "investment_cost": 220939,
                         "fixed_om_cost": 38,
                         "variable_om_cost": 0,
-                        "end_vertex": "cement_produced"
+                        "end_vertex": "cement_produced",
+                        "can_retrofit": true,
+                        "retrofit_id": "oxyfuel_retrofit"
                     },
                     "fuel_edge": {
                         "type": "NaturalGas",

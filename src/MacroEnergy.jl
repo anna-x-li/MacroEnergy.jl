@@ -13,6 +13,7 @@ using Printf: @printf
 using MacroEnergyScaling
 using GitHub
 using Markdown
+using Infiltrator
 
 import Base: /, push!, merge!
 

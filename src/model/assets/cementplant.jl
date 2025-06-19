@@ -79,7 +79,7 @@ function simple_default_data(::Type{CementPlant}, id=missing)
         :fuel_consumption => 1.0,
         :elec_consumption => 1.0,
         :fuel_emission_rate => 0.0,
-        :process_emission_rate => 0.0,
+        :process_emission_rate => 0.536,
         :emission_capture_rate => 0.0,
     )
 end
@@ -169,6 +169,9 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
 
     # Cement Edge
     cement_edge_key = :cement_edge
+
+    # @infiltrate
+
     @process_data(
         cement_edge_data, 
         data[:edges][cement_edge_key], 
@@ -179,6 +182,14 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data, key),
         ]
     )
+
+    # if cement_edge_data[:can_retrofit] === true
+    #     @infiltrate
+    #     add!(system, make(data_type, data, system))
+    # end
+
+    # @infiltrate
+
     cement_start_node = cement_transform
     @end_vertex(
         cement_end_node,
@@ -194,6 +205,8 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         cement_start_node,
         cement_end_node,
     )
+
+    @infiltrate
 
     # CO2 Emissions Edge
     co2_emissions_edge_key = :co2_emissions_edge
@@ -212,7 +225,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         co2_emissions_end_node,
         co2_emissions_edge_data,
         CO2,
-        [(co2_emissions_edge_data, :end_vertex), (data, :co2_sink), (data, :location)],
+        [(co2_emissions_edge_data, :end_vertex), (data, :location)],
     )
     co2_emissions_edge = Edge(
         Symbol(id, "_", co2_emissions_edge_key),
@@ -269,7 +282,8 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         :co2_emissions => Dict(
             elec_edge.id => 0,
             fuel_edge.id => 0,
-            cement_edge.id => (1 - get(transform_data, :co2_capture_rate, 1.0)) * (get(transform_data, :fuel_emission_rate, 1.0) + get(transform_data, :process_emission_rate, 1.0)),
+            cement_edge.id => 1,
+            #cement_edge.id => (1 - get(transform_data, :co2_capture_rate, 1.0)) * (get(transform_data, :fuel_emission_rate, 1.0) + get(transform_data, :process_emission_rate, 1.0)),
             co2_emissions_edge.id => -1.0,
             co2_captured_edge.id => 0,
         ),
