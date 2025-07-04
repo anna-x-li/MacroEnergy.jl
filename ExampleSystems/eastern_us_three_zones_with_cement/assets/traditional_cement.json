@@ -31,8 +31,7 @@
                         "fixed_om_cost": 38,
                         "variable_om_cost": 0,
                         "end_vertex": "cement_produced",
-                        "can_retrofit": true,
-                        "retrofit_id": "oxyfuel_retrofit"
+                        "can_retrofit": true
                     },
                     "fuel_edge": {
                         "type": "NaturalGas",
@@ -52,7 +51,52 @@
                 {
                     "id": "traditional_cement_MA",
                     "location": "MA",
-                    "existing_capacity": 100
+                    "existing_capacity": 100,
+                    "retrofit_options": [
+                        {
+                            "template_id": "traditional_cement_MA",
+                            "id": "traditional_cement_MA_retrofitfom",
+                            "edges": {
+                                "cement_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 0.9,
+                                    "investment_cost": 5000,
+                                    "fixed_om_cost": 10
+                                }
+                            }
+                        },
+                        {
+                            "template_id": "traditional_cement_MA",
+                            "id": "traditional_cement_MA_retrofitfuel",
+                            "fuel_commodity": "LiquidFuels",
+                            "transforms": {
+                                "fuel_consumption_rate": 1.06,
+                                "fuel_emission_rate": 0.05
+                            },
+                            "edges": {
+                                "fuel_edge": {
+                                    "type": "LiquidFuels",
+                                    "start_vertex": "liqfuel_source"
+                                },
+                                "cement_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1.0,
+                                    "investment_cost": 220939
+                                }
+                            }
+                        },
+                        {
+                            "template_id": "oxyfuel_cement_MA",
+                            "id": "oxyfuel_cement_MA_retrofit",
+                            "edges": {
+                                "cement_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 0.95,
+                                    "investment_cost": 50000
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "id": "traditional_cement_CT",

@@ -8,7 +8,9 @@ function load!(system::System, file_path::AbstractString)::Nothing
     if isfile(file_path)
         load!(system, load_inputs(file_path))
     elseif isdir(file_path)
-        for file in get_json_files(file_path)
+        files = get_json_files(file_path)
+        files = sort(files, by = x -> occursin("_retrofit_option", x) ? 0 : 1) # Sorts files so that retrofit options are loaded first
+        for file in files
             load!(system, joinpath(file_path, file))
         end
     end
@@ -17,7 +19,6 @@ end
 
 # Load a single instance of an asset, location, etc. into a System
 function load!(system::System, data::AbstractDict{Symbol,Any})::Nothing
-    @infiltrate
     if data_is_system_data(data)
         # println("Loading system data")
         load_system_data!(system, data)
@@ -29,9 +30,15 @@ function load!(system::System, data::AbstractDict{Symbol,Any})::Nothing
     # Check that data has only :type and :instance_data fields
     elseif data_has_only_instance_data(data)
         if isa(data[:instance_data], AbstractDict{Symbol,Any})
-            data_type = check_and_convert_type(data)
             load_time_series_data!(system, data) # substitute ts file paths with actual vectors of data
-            add!(system, make(data_type, data[:instance_data], system))
+
+            data[:instance_data][:id] = Symbol(data[:instance_data][:id]) # Make sure the id is a Symbol
+            data[:instance_data][:type] = check_and_convert_type(data) # Add the type to the instance data
+            push!(system.input_data, data[:instance_data]) #Store the input data for later use
+
+            make_retrofit_options(system, data) # Make retrofitting assets for assets with retrofit_options
+
+            add!(system, make(data[:instance_data][:type], data[:instance_data], system))
 
         elseif isa(data[:instance_data], AbstractVector{<:AbstractDict{Symbol,Any}})
             load!(system, expand_instances(data))

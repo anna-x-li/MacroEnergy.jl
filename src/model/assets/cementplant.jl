@@ -24,11 +24,11 @@ function full_default_data(::Type{CementPlant}, id=missing)
         :id => id,
         :transforms => @transform_data(
             :timedata => "Cement",
-            :fuel_consumption => 1.0,
-            :elec_consumption => 1.0,
+            :fuel_consumption_rate => 0.0,
+            :elec_consumption_rate => 0.0,
             :fuel_emission_rate => 0.0,
-            :process_emission_rate => 0.536,
-            :emission_capture_rate => 0.0,
+            :process_emission_rate => 0.0,
+            :co2_capture_rate => 0.0,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -76,11 +76,11 @@ function simple_default_data(::Type{CementPlant}, id=missing)
         :investment_cost => 0.0,
         :fixed_om_cost => 0.0,
         :variable_om_cost => 0.0,
-        :fuel_consumption => 1.0,
-        :elec_consumption => 1.0,
+        :fuel_consumption_rate => 0.0,
+        :elec_consumption_rate => 0.0,
         :fuel_emission_rate => 0.0,
-        :process_emission_rate => 0.536,
-        :emission_capture_rate => 0.0,
+        :process_emission_rate => 0.0,
+        :co2_capture_rate => 0.0,
     )
 end
 
@@ -101,6 +101,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data, key),
         ]
     )
+
     cement_transform = Transformation(;
         id = Symbol(id, "_", cement_key),
         timedata = system.time_data[Symbol(transform_data[:timedata])],
@@ -170,8 +171,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
     # Cement Edge
     cement_edge_key = :cement_edge
 
-    # @infiltrate
-
     @process_data(
         cement_edge_data, 
         data[:edges][cement_edge_key], 
@@ -182,13 +181,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data, key),
         ]
     )
-
-    # if cement_edge_data[:can_retrofit] === true
-    #     @infiltrate
-    #     add!(system, make(data_type, data, system))
-    # end
-
-    # @infiltrate
 
     cement_start_node = cement_transform
     @end_vertex(
@@ -205,8 +197,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         cement_start_node,
         cement_end_node,
     )
-
-    @infiltrate
 
     # CO2 Emissions Edge
     co2_emissions_edge_key = :co2_emissions_edge
@@ -268,22 +258,21 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         :elec_to_cement => Dict(
             elec_edge.id => 1.0,
             fuel_edge.id => 0,
-            cement_edge.id => get(transform_data, :elec_cement_rate, 1.0),
+            cement_edge.id => get(transform_data, :elec_consumption_rate, 1.0),
             co2_emissions_edge.id => 0,
             co2_captured_edge.id => 0,
         ),
         :fuel_to_cement => Dict(
             elec_edge.id => 0,
             fuel_edge.id => 1.0,
-            cement_edge.id => get(transform_data, :fuel_cement_rate, 1.0),
+            cement_edge.id => get(transform_data, :fuel_consumption_rate, 1.0),
             co2_emissions_edge.id => 0,
             co2_captured_edge.id => 0,
         ),
         :co2_emissions => Dict(
             elec_edge.id => 0,
             fuel_edge.id => 0,
-            cement_edge.id => 1,
-            #cement_edge.id => (1 - get(transform_data, :co2_capture_rate, 1.0)) * (get(transform_data, :fuel_emission_rate, 1.0) + get(transform_data, :process_emission_rate, 1.0)),
+            cement_edge.id => (1 - get(transform_data, :co2_capture_rate, 1.0)) * (get(transform_data, :fuel_emission_rate, 1.0) + get(transform_data, :process_emission_rate, 1.0)),
             co2_emissions_edge.id => -1.0,
             co2_captured_edge.id => 0,
         ),
@@ -295,6 +284,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             co2_captured_edge.id => -1.0,
         )
     )
-
+    
     return CementPlant(id, cement_transform, elec_edge, fuel_edge, cement_edge, co2_emissions_edge, co2_captured_edge)
 end

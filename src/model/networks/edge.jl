@@ -32,7 +32,7 @@ macro AbstractEdgeBaseAttributes()
         retired_capacity::AffExpr = AffExpr(0.0)
         retired_units::Union{JuMPVariable,Float64} = 0.0
         retrofit_efficiency::Union{Missing,Float64} = $edge_defaults[:retrofit_efficiency]
-        retrofit_id::Union{Missing,Symbol} = $edge_defaults[:retrofit_id]
+        retrofit_id::Union{Missing, Vector{Symbol}} = $edge_defaults[:retrofit_id]
         retrofitted_capacity::AffExpr = AffExpr(0.0)
         retrofitted_units::Union{JuMPVariable,Float64} = 0.0
         unidirectional::Bool = $edge_defaults[:unidirectional]
@@ -120,10 +120,7 @@ function make_edge(
     filtered_data = Dict{Symbol, Any}(
         k => v for (k,v) in data if k in edge_kwargs
     )
-    
-    if !ismissing(get(filtered_data, :retrofit_id, missing))
-        filtered_data[:retrofit_id] = Symbol(filtered_data[:retrofit_id])
-    end
+
 
     remove_keys = [:id, :start_vertex, :end_vertex, :timedata]
     for key in remove_keys
@@ -416,9 +413,7 @@ function make_edge_UC(
     filtered_data = Dict{Symbol,Any}(
         k => v for (k, v) in data if k in edge_kwargs
     )
-    if !ismissing(get(filtered_data, :retrofit_id, missing))
-        filtered_data[:retrofit_id] = Symbol(filtered_data[:retrofit_id])
-    end
+
     remove_keys = [:id, :start_vertex, :end_vertex, :timedata]
     for key in remove_keys
         if haskey(filtered_data, key)

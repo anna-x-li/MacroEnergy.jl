@@ -1,47 +1,69 @@
     
+function make_retrofit_options(system::System, data::Dict{Symbol,Any})
+    # Make retrofitting assets for assets with retrofit_options
+    if haskey(data[:instance_data], :retrofit_options)
+        retrofit_id_list = []
+
+        for retrofit_option_data in data[:instance_data][:retrofit_options]
+            retrofit_id = Symbol(retrofit_option_data[:id]) # Set the retrofit_id to be the id of the retrofit option, make sure is Symbol
+            push!(retrofit_id_list, retrofit_id)
+
+            # Copy template asset and merge data from retrofitting option
+            template_asset = Symbol(retrofit_option_data[:template_id])
+            template_asset_data = get_input_data_by_id(system, template_asset)
+            retrofit_data = recursive_merge(template_asset_data, retrofit_option_data)
+
+            # Make changes to the retrofitting edge
+            for (edge, attributes) in retrofit_data[:edges]
+                if get(attributes, :can_retrofit, false)
+                    attributes[:can_retrofit] = false # Make sure can_retrofit is false
+                end
+                if get(attributes, :is_retrofit, false)
+                    attributes[:retrofit_id] = [retrofit_id] # Adds the retrofit_id to the retrofitting edge
+                    attributes[:existing_capacity] = 0.0 # Set existing capacity to 0 for the retrofitting edges
+                    attributes[:can_expand] = true # Make sure retroftting edge can expand
+                end
+            end
+            
+            # Add the retrofitting asset to the system
+            add!(system, make(retrofit_data[:type], retrofit_data, system))
+
+        end
+
+        # Add the retrofit_ids to the asset that can be retrofitted
+        for (edge, attributes) in data[:instance_data][:edges]
+            if get(attributes, :can_retrofit, false)
+                attributes[:retrofit_id] = retrofit_id_list
+            end
+        end
+
+    end
+
+end 
+
 function add_retrofit_constraints!(system::System, model::Model)    
     # Add retrofitting constraints
     
-    retrofit_ids,can_retrofit_edges,is_retrofit_edges = get_unique_retrofit_ids(system)
+    can_retrofit_edges,is_retrofit_edges = get_retrofit_edges(system)
 
-    @infiltrate
-
-    @constraint(model, 
-    cRetrofitCapacity[retrofit_id in retrofit_ids],
-    sum(retrofitted_capacity(e) for e in can_retrofit_edges[retrofit_id]) ==
-    sum((new_capacity(e)/retrofit_efficiency(e)) for e in is_retrofit_edges[retrofit_id])
+    @constraint(model, cRetrofitCapacity[edge_id in keys(can_retrofit_edges)],
+        retrofitted_capacity(can_retrofit_edges[edge_id]) ==
+        sum(new_capacity(is_retrofit_edges[retrofit_id]) / retrofit_efficiency(is_retrofit_edges[retrofit_id])
+        for retrofit_id in retrofit_id(can_retrofit_edges[edge_id]))
     )
-
 end
 
-function get_unique_retrofit_ids(system::System)
-    can_retrofit_ids = Vector{Symbol}()
-    is_retrofit_ids = Vector{Symbol}()
-    can_retrofit_edges = Dict{Symbol,Vector{AbstractEdge}}()
-    is_retrofit_edges = Dict{Symbol,Vector{AbstractEdge}}()
+function get_retrofit_edges(system::System)
+    can_retrofit_edges = Dict{Symbol,AbstractEdge}()
+    is_retrofit_edges = Dict{Symbol,AbstractEdge}()
     edges = get_edges(system)
     for e in edges
-        if can_retrofit(e)
-            push!(can_retrofit_ids, retrofit_id(e))
-            if !haskey(can_retrofit_edges, retrofit_id(e))
-                can_retrofit_edges[retrofit_id(e)] = [e]
-            else
-                push!(can_retrofit_edges[retrofit_id(e)], e)
-            end
+        if can_retrofit(e) && !ismissing(retrofit_id(e))
+            can_retrofit_edges[e.id] = e
         end
-        if is_retrofit(e)
-            push!(is_retrofit_ids, retrofit_id(e))
-            if !haskey(is_retrofit_edges, retrofit_id(e))
-                is_retrofit_edges[retrofit_id(e)] = [e]
-            else
-                push!(is_retrofit_edges[retrofit_id(e)], e)
-            end
+        if is_retrofit(e) && !ismissing(retrofit_id(e))
+            is_retrofit_edges[retrofit_id(e)[1]] = e
         end
     end
-    unique_can_retrofit_ids = unique(can_retrofit_ids)
-    unique_is_retrofit_ids = unique(is_retrofit_ids)
-    # Check if the unique retrofit_ids are the same for can_retrofit and is_retrofit
-    @assert isempty(setdiff(unique_can_retrofit_ids,unique_is_retrofit_ids))
-    retrofit_ids = unique_is_retrofit_ids
-    return retrofit_ids,can_retrofit_edges,is_retrofit_edges
+    return can_retrofit_edges, is_retrofit_edges
 end

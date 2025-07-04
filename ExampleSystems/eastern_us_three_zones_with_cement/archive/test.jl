@@ -1,5 +1,6 @@
 using Pkg
 Pkg.activate(dirname(dirname(@__DIR__)))
+using Infiltrator
 using MacroEnergy
 using Gurobi
 using DataFrames
