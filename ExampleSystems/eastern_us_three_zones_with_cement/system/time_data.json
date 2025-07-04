@@ -16,5 +16,6 @@
         "LiquidFuels": 8760
     },
     "PeriodLength": 8760,
-    "NumberOfSubperiods": 1
+    "NumberOfSubperiods": 1,
+    "TotalHoursModeled": 8760
 }

@@ -265,16 +265,16 @@ function define_available_capacity!(e::AbstractEdge, model::Model)
         
         e.retired_capacity_track[period_index(e)] = retired_capacity(e);
 
-        @constraint(model, capacity(e) == new_capacity(e) - retired_capacity(e) + existing_capacity(e))
+        if can_retrofit(e)
+            @constraint(model, capacity(e) == new_capacity(e) - retired_capacity(e) - retrofitted_capacity(e) + existing_capacity(e))
+        else
+            @constraint(model, capacity(e) == new_capacity(e) - retired_capacity(e) + existing_capacity(e))
+        end
 
         # e.capacity = @expression(
         #     model,
         #     new_capacity(e) - retired_capacity(e) + existing_capacity(e)
         # )
-    end
-
-    if can_retrofit(e)
-        add_to_expression!(capacity(e), -1, retrofitted_capacity(e))
     end
 
     return nothing
