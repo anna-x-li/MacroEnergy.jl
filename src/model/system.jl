@@ -5,6 +5,7 @@ mutable struct System <: AbstractSystem
     time_data::Dict{Symbol,TimeData}
     assets::Vector{AbstractAsset}
     locations::Vector{Union{Node, Location}}
+    input_data::Vector{Dict{Symbol,Any}}
 end
 
 """
@@ -104,6 +105,7 @@ function empty_system(data_dirpath::String)
         Dict{Symbol,TimeData}(),
         [],
         [],
+        []
     )
 end
 
@@ -133,6 +135,15 @@ function get_asset_by_id(system::System, id::Symbol)
     for asset in system.assets
         if asset.id == id
             return asset
+        end
+    end
+    return nothing
+end
+
+function get_input_data_by_id(system::System, id::Symbol)
+    for input_data in system.input_data
+        if input_data[:id] == id
+            return input_data
         end
     end
     return nothing
