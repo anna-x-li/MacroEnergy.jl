@@ -1,0 +1,1685 @@
+{
+    "hydro_res": {
+        "global_data": {
+            "storage": {
+                "commodity": "Electricity"
+            },
+            "edges": {
+                "discharge_edge": {
+                    "unidirectional": true,
+                    "has_capacity": true,
+                    "commodity": "Electricity"
+                },
+                "inflow_edge": {
+                    "unidirectional": true,
+                    "has_capacity": true,
+                    "commodity": "Electricity"
+                },
+                "spill_edge": {
+                    "unidirectional": true,
+                    "has_capacity": false,
+                    "commodity": "Electricity"
+                }
+            }
+        },
+        "instance_data": [
+            {
+                "id": "p1_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1.715371952,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.134,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 3086.8118276239998
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p1",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1799.5,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p1_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 1799.5
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p10_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.090665802,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 681
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p10",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 681,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p10_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 681
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p13_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 1039.4
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p13",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1039.4,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p13_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 1039.4
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p14_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.223579243,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 374.9
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p14",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 374.9,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p14_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 374.9
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p15_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.210125402,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 1456.1
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p15",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1456.1,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p15_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 1456.1
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p16_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 351.8
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p16",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 351.8,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p16_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 351.8
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p17_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.182563588,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 1897.3
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p17",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1897.3,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p17_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 1897.3
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p18_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1.082213592,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.024,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 687.6385163568
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p18",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 635.4,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p18_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 635.4
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p19_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 198
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p19",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 198,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p19_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 198
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p2_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1.335617861,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.131760627,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 4668.2515477672
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p2",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 3495.2,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p2_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 3495.2
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p24_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 232.9
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p24",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 232.9,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p24_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 232.9
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p26_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 151.8
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p26",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 151.8,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p26_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 151.8
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p27_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 1294.5
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p27",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1294.5,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p27_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 1294.5
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p28_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.007,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 1468
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p28",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1468,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p28_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 1468
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p3_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1.668038568,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.157,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 3147.7555816728
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p3",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1887.1,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p3_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 1887.1
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p33_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 175.8
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p33",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 175.8,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p33_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 175.8
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p34_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 294.6
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p34",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 294.6,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p34_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 294.6
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p4_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1.864001248,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.251584977,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 25064.665581481604
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p4",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 13446.7,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p4_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 13446.7
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p5_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1.935174568,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.248327076,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 13977.765904664
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p5",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 7223,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p5_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 7223
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p6_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1.862900066,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.148,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 613.825571747
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p6",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 329.5,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p6_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 329.5
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p7_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 2.324257717,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 511.1042719683
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p7",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 219.9,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p7_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 219.9
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p8_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 34
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p8",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 34,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p8_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 34
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            },
+            {
+                "id": "p9_conventional_hydroelectric_1",
+                "storage": {
+                    "can_retire": false,
+                    "can_expand": false,
+                    "constraints": {
+                        "StorageChargeDischargeRatioConstraint": true,
+                        "StorageMaxDurationConstraint": true,
+                        "StorageCapacityConstraint": true,
+                        "BalanceConstraint": true,
+                        "MinStorageOutflowConstraint": true
+                    },
+                    "max_duration": 1,
+                    "fixed_om_cost": 0,
+                    "long_duration": false,
+                    "min_outflow_fraction": 0.061,
+                    "charge_discharge_ratio": 1,
+                    "investment_cost": 0,
+                    "loss_fraction": 0,
+                    "capacity_size": 1,
+                    "existing_capacity": 8039.2
+                },
+                "edges": {
+                    "discharge_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "StorageDischargeLimitConstraint": true,
+                            "RampingLimitConstraint": true,
+                            "CapacityConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "fixed_om_cost": 47048,
+                        "ramp_up_fraction": 0.5,
+                        "end_vertex": "elec_p9",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 8039.2,
+                        "ramp_down_fraction": 0.5
+                    },
+                    "inflow_edge": {
+                        "can_retire": false,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "start_vertex": "water_node",
+                        "fixed_om_cost": 0,
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "efficiency": 1,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p9_conventional_hydroelectric_1",
+                                "path": "system/hydro_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 8039.2
+                    },
+                    "spill_edge": {
+                        "end_vertex": "water_node",
+                        "commodity": "Electricity"
+                    }
+                }
+            }
+        ],
+        "type": "HydroRes"
+    }
+}

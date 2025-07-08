@@ -1,0 +1,1342 @@
+{
+    "MustRun": {
+        "global_data": {
+            "transforms": {
+                "timedata": "Electricity"
+            },
+            "edges": {
+                "elec_edge": {
+                    "unidirectional": true,
+                    "has_capacity": true,
+                    "commodity": "Electricity"
+                }
+            }
+        },
+        "instance_data": [
+            {
+                "id": "p1_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p1",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 2.7
+                    }
+                }
+            },
+            {
+                "id": "p1_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p1",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p1_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 65.5
+                    }
+                }
+            },
+            {
+                "id": "p10_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p10",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 107.4
+                    }
+                }
+            },
+            {
+                "id": "p10_geothermal_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 209101,
+                        "end_vertex": "elec_p10",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 987.9
+                    }
+                }
+            },
+            {
+                "id": "p10_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p10",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p10_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 110.8
+                    }
+                }
+            },
+            {
+                "id": "p11_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p11",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 6.6
+                    }
+                }
+            },
+            {
+                "id": "p11_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p11",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p11_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 1.8
+                    }
+                }
+            },
+            {
+                "id": "p12_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p12",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 2.8
+                    }
+                }
+            },
+            {
+                "id": "p12_geothermal_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 209101,
+                        "end_vertex": "elec_p12",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 725.8
+                    }
+                }
+            },
+            {
+                "id": "p12_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p12",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p12_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 6.1
+                    }
+                }
+            },
+            {
+                "id": "p13_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p13",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 3.4
+                    }
+                }
+            },
+            {
+                "id": "p14_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p14",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 2.8
+                    }
+                }
+            },
+            {
+                "id": "p14_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p14",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p14_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 12.1
+                    }
+                }
+            },
+            {
+                "id": "p15_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p15",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 7.6
+                    }
+                }
+            },
+            {
+                "id": "p15_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p15",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p15_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 95.2
+                    }
+                }
+            },
+            {
+                "id": "p16_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p16",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1
+                    }
+                }
+            },
+            {
+                "id": "p16_geothermal_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 209101,
+                        "end_vertex": "elec_p16",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 12.2
+                    }
+                }
+            },
+            {
+                "id": "p16_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p16",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p16_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 94.3
+                    }
+                }
+            },
+            {
+                "id": "p17_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p17",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1
+                    }
+                }
+            },
+            {
+                "id": "p17_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p17",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p17_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 9.9
+                    }
+                }
+            },
+            {
+                "id": "p18_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p18",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p18_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 51.7
+                    }
+                }
+            },
+            {
+                "id": "p2_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p2",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p2_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 32.3
+                    }
+                }
+            },
+            {
+                "id": "p21_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p21",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p21_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 35.2
+                    }
+                }
+            },
+            {
+                "id": "p24_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p24",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p24_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 1.9
+                    }
+                }
+            },
+            {
+                "id": "p25_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p25",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 7.8
+                    }
+                }
+            },
+            {
+                "id": "p25_geothermal_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 209101,
+                        "end_vertex": "elec_p25",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 72.8
+                    }
+                }
+            },
+            {
+                "id": "p25_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p25",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p25_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 28.4
+                    }
+                }
+            },
+            {
+                "id": "p26_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p26",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p26_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 11.2
+                    }
+                }
+            },
+            {
+                "id": "p28_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p28",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 12.7
+                    }
+                }
+            },
+            {
+                "id": "p28_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p28",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p28_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 14.6
+                    }
+                }
+            },
+            {
+                "id": "p3_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p3",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 28.2
+                    }
+                }
+            },
+            {
+                "id": "p3_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p3",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p3_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 42.6
+                    }
+                }
+            },
+            {
+                "id": "p31_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p31",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 3.4
+                    }
+                }
+            },
+            {
+                "id": "p31_geothermal_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 209101,
+                        "end_vertex": "elec_p31",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 13.8
+                    }
+                }
+            },
+            {
+                "id": "p31_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p31",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p31_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 14.8
+                    }
+                }
+            },
+            {
+                "id": "p32_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p32",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 0.3
+                    }
+                }
+            },
+            {
+                "id": "p33_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p33",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 9.2
+                    }
+                }
+            },
+            {
+                "id": "p33_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p33",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p33_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 47.1
+                    }
+                }
+            },
+            {
+                "id": "p34_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p34",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p34_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 28.3
+                    }
+                }
+            },
+            {
+                "id": "p4_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p4",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p4_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 264.7
+                    }
+                }
+            },
+            {
+                "id": "p5_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p5",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 20.4
+                    }
+                }
+            },
+            {
+                "id": "p5_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p5",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p5_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 113.2
+                    }
+                }
+            },
+            {
+                "id": "p6_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p6",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 11.5
+                    }
+                }
+            },
+            {
+                "id": "p6_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p6",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p6_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 31.1
+                    }
+                }
+            },
+            {
+                "id": "p7_geothermal_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 209101,
+                        "end_vertex": "elec_p7",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 28.5
+                    }
+                }
+            },
+            {
+                "id": "p7_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p7",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p7_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 4.5
+                    }
+                }
+            },
+            {
+                "id": "p8_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p8",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 11.5
+                    }
+                }
+            },
+            {
+                "id": "p8_geothermal_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 209101,
+                        "end_vertex": "elec_p8",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 1.4
+                    }
+                }
+            },
+            {
+                "id": "p8_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p8",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p8_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 30
+                    }
+                }
+            },
+            {
+                "id": "p9_biomass_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 0,
+                        "end_vertex": "elec_p9",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 137.8
+                    }
+                }
+            },
+            {
+                "id": "p9_geothermal_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 209101,
+                        "end_vertex": "elec_p9",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": [
+                            1
+                        ],
+                        "existing_capacity": 977
+                    }
+                }
+            },
+            {
+                "id": "p9_small_hydroelectric_1",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "max_capacity": 0,
+                        "can_expand": false,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        },
+                        "min_capacity": 0,
+                        "commodity": "Electricity",
+                        "fixed_om_cost": 47048,
+                        "end_vertex": "elec_p9",
+                        "investment_cost": 0,
+                        "variable_om_cost": 0,
+                        "capacity_size": 1,
+                        "availability": {
+                            "timeseries": {
+                                "header": "p9_small_hydroelectric_1",
+                                "path": "system/mustrun_availability.csv"
+                            }
+                        },
+                        "existing_capacity": 228.2
+                    }
+                }
+            }
+        ],
+        "type": "MustRun"
+    }
+}

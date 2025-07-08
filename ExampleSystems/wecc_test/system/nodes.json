@@ -1,0 +1,424 @@
+{
+    "nodes": [
+        {
+            "global_data": {
+                "constraints": {
+                    "MaxNonServedDemandConstraint": true,
+                    "MaxNonServedDemandPerSegmentConstraint": true,
+                    "BalanceConstraint": true
+                },
+                "max_nsd": [
+                    1,
+                    0.04,
+                    0.024,
+                    0.003
+                ],
+                "time_interval": "Electricity",
+                "price_nsd": [
+                    2000,
+                    1800,
+                    1100,
+                    400
+                ]
+            },
+            "instance_data": [
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p1",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p1"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p10",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p10"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p11",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p11"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p12",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p12"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p13",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p13"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p14",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p14"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p15",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p15"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p16",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p16"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p17",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p17"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p18",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p18"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p19",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p19"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p2",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p2"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p20",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p20"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p21",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p21"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p22",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p22"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p23",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p23"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p24",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p24"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p25",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p25"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p26",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p26"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p27",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p27"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p28",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p28"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p29",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p29"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p3",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p3"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p30",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p30"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p31",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p31"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p32",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p32"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p33",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p33"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p34",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p34"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p4",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p4"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p5",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p5"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p59",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p59"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p6",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p6"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p7",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p7"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p8",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p8"
+                },
+                {
+                    "demand": {
+                        "timeseries": {
+                            "header": "elec_demand_p9",
+                            "path": "system/demand.csv"
+                        }
+                    },
+                    "id": "elec_p9"
+                }
+            ],
+            "type": "Electricity"
+        },
+        {
+            "global_data": {
+                "time_interval": "NaturalGas"
+            },
+            "instance_data": [
+                {
+                    "price": {
+                        "timeseries": {
+                            "header": "pacific_naturalgas",
+                            "path": "system/fuel_prices.csv"
+                        }
+                    },
+                    "id": "pacific_naturalgas"
+                },
+                {
+                    "price": {
+                        "timeseries": {
+                            "header": "mountain_naturalgas",
+                            "path": "system/fuel_prices.csv"
+                        }
+                    },
+                    "id": "mountain_naturalgas"
+                }
+            ],
+            "type": "NaturalGas"
+        },
+        {
+            "global_data": {
+                "time_interval": "Uranium"
+            },
+            "instance_data": [
+                {
+                    "price": {
+                        "timeseries": {
+                            "header": "pacific_uranium",
+                            "path": "system/fuel_prices.csv"
+                        }
+                    },
+                    "id": "pacific_uranium"
+                },
+                {
+                    "price": {
+                        "timeseries": {
+                            "header": "mountain_uranium",
+                            "path": "system/fuel_prices.csv"
+                        }
+                    },
+                    "id": "mountain_uranium"
+                }
+            ],
+            "type": "Uranium"
+        },
+        {
+            "global_data": {
+                "time_interval": "CO2"
+            },
+            "instance_data": [
+                {
+                    "constraints": {
+                        "CO2CapConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2CapConstraint": 38000000
+                    },
+                    "id": "co2_sink_1"
+                }
+            ],
+            "type": "CO2"
+        },
+        {
+            "global_data": {
+                "time_interval": "Electricity"
+            },
+            "instance_data": [
+                {
+                    "id": "water_node"
+                }
+            ],
+            "type": "Electricity"
+        }
+    ]
+}

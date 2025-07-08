@@ -1,0 +1,1329 @@
+{
+    "transmission": {
+        "global_data": {
+            "transforms": {
+            },
+            "edges": {
+                "elec_edge": {
+                    "unidirectional": false,
+                    "has_capacity": true,
+                    "commodity": "Electricity"
+                }
+            }
+        },
+        "instance_data": [
+            {
+                "id": "p1_to_p2",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p1",
+                        "line_loss_percentage": 0.0191,
+                        "end_vertex": "elec_p2",
+                        "max_capacity": 17679.639,
+                        "can_expand": true,
+                        "existing_capacity": 8839.639,
+                        "investment_cost": 26810
+                    }
+                }
+            },
+            {
+                "id": "p1_to_p4",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p1",
+                        "line_loss_percentage": 0.0192,
+                        "end_vertex": "elec_p4",
+                        "max_capacity": 23954.3255,
+                        "can_expand": true,
+                        "existing_capacity": 11977.3255,
+                        "investment_cost": 27312
+                    }
+                }
+            },
+            {
+                "id": "p10_to_p11",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p10",
+                        "line_loss_percentage": 0.0318,
+                        "end_vertex": "elec_p11",
+                        "max_capacity": 6700.038500000001,
+                        "can_expand": true,
+                        "existing_capacity": 3350.0385,
+                        "investment_cost": 20547
+                    }
+                }
+            },
+            {
+                "id": "p10_to_p13",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p10",
+                        "line_loss_percentage": 0.0312,
+                        "end_vertex": "elec_p13",
+                        "max_capacity": 16801.6005,
+                        "can_expand": true,
+                        "existing_capacity": 8400.6005,
+                        "investment_cost": 30050
+                    }
+                }
+            },
+            {
+                "id": "p10_to_p25",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p10",
+                        "line_loss_percentage": 0.0624,
+                        "end_vertex": "elec_p25",
+                        "max_capacity": 3840,
+                        "can_expand": true,
+                        "existing_capacity": 1920,
+                        "investment_cost": 46155
+                    }
+                }
+            },
+            {
+                "id": "p10_to_p27",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p10",
+                        "line_loss_percentage": 0.0336,
+                        "end_vertex": "elec_p27",
+                        "max_capacity": 1283.7675,
+                        "can_expand": true,
+                        "existing_capacity": 641.7675,
+                        "investment_cost": 31391
+                    }
+                }
+            },
+            {
+                "id": "p10_to_p28",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p10",
+                        "line_loss_percentage": 0.0325,
+                        "end_vertex": "elec_p28",
+                        "max_capacity": 9324.3025,
+                        "can_expand": true,
+                        "existing_capacity": 4662.3025,
+                        "investment_cost": 32297
+                    }
+                }
+            },
+            {
+                "id": "p10_to_p5",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p10",
+                        "line_loss_percentage": 0.0924,
+                        "end_vertex": "elec_p5",
+                        "max_capacity": 5560,
+                        "can_expand": true,
+                        "existing_capacity": 2780,
+                        "investment_cost": 61913
+                    }
+                }
+            },
+            {
+                "id": "p10_to_p9",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p10",
+                        "line_loss_percentage": 0.0603,
+                        "end_vertex": "elec_p9",
+                        "max_capacity": 15461.8825,
+                        "can_expand": true,
+                        "existing_capacity": 7730.8825,
+                        "investment_cost": 54467
+                    }
+                }
+            },
+            {
+                "id": "p12_to_p13",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p12",
+                        "line_loss_percentage": 0.0341,
+                        "end_vertex": "elec_p13",
+                        "max_capacity": 2132.224,
+                        "can_expand": true,
+                        "existing_capacity": 1066.224,
+                        "investment_cost": 29136
+                    }
+                }
+            },
+            {
+                "id": "p12_to_p15",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p12",
+                        "line_loss_percentage": 0.039,
+                        "end_vertex": "elec_p15",
+                        "max_capacity": 1000,
+                        "can_expand": true,
+                        "existing_capacity": 500,
+                        "investment_cost": 30730
+                    }
+                }
+            },
+            {
+                "id": "p12_to_p25",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p12",
+                        "line_loss_percentage": 0.0493,
+                        "end_vertex": "elec_p25",
+                        "max_capacity": 1396.2615,
+                        "can_expand": true,
+                        "existing_capacity": 698.2615,
+                        "investment_cost": 36372
+                    }
+                }
+            },
+            {
+                "id": "p12_to_p9",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p12",
+                        "line_loss_percentage": 0.043,
+                        "end_vertex": "elec_p9",
+                        "max_capacity": 767.3140000000001,
+                        "can_expand": true,
+                        "existing_capacity": 367.314,
+                        "investment_cost": 41649
+                    }
+                }
+            },
+            {
+                "id": "p13_to_p15",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p13",
+                        "line_loss_percentage": 0.0569,
+                        "end_vertex": "elec_p15",
+                        "max_capacity": 400,
+                        "can_expand": true,
+                        "existing_capacity": 0,
+                        "investment_cost": 37969
+                    }
+                }
+            },
+            {
+                "id": "p13_to_p27",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p13",
+                        "line_loss_percentage": 0.0561,
+                        "end_vertex": "elec_p27",
+                        "max_capacity": 2209.87,
+                        "can_expand": true,
+                        "existing_capacity": 1104.87,
+                        "investment_cost": 20405
+                    }
+                }
+            },
+            {
+                "id": "p13_to_p28",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p13",
+                        "line_loss_percentage": 0.0275,
+                        "end_vertex": "elec_p28",
+                        "max_capacity": 10697.586,
+                        "can_expand": true,
+                        "existing_capacity": 5348.586,
+                        "investment_cost": 29752
+                    }
+                }
+            },
+            {
+                "id": "p14_to_p15",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p14",
+                        "line_loss_percentage": 0.0341,
+                        "end_vertex": "elec_p15",
+                        "max_capacity": 4459.721,
+                        "can_expand": true,
+                        "existing_capacity": 2229.721,
+                        "investment_cost": 31252
+                    }
+                }
+            },
+            {
+                "id": "p14_to_p17",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p14",
+                        "line_loss_percentage": 0.0236,
+                        "end_vertex": "elec_p17",
+                        "max_capacity": 1450.125,
+                        "can_expand": true,
+                        "existing_capacity": 725.125,
+                        "investment_cost": 27124
+                    }
+                }
+            },
+            {
+                "id": "p14_to_p2",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p14",
+                        "line_loss_percentage": 0.027,
+                        "end_vertex": "elec_p2",
+                        "max_capacity": 6073.893,
+                        "can_expand": true,
+                        "existing_capacity": 3036.893,
+                        "investment_cost": 24397
+                    }
+                }
+            },
+            {
+                "id": "p14_to_p3",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p14",
+                        "line_loss_percentage": 0.0106,
+                        "end_vertex": "elec_p3",
+                        "max_capacity": 2251.6275,
+                        "can_expand": true,
+                        "existing_capacity": 1125.6275,
+                        "investment_cost": 5971
+                    }
+                }
+            },
+            {
+                "id": "p14_to_p5",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p14",
+                        "line_loss_percentage": 0.0327,
+                        "end_vertex": "elec_p5",
+                        "max_capacity": 1024.2714999999998,
+                        "can_expand": true,
+                        "existing_capacity": 512.2715,
+                        "investment_cost": 30820
+                    }
+                }
+            },
+            {
+                "id": "p15_to_p16",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p15",
+                        "line_loss_percentage": 0.0311,
+                        "end_vertex": "elec_p16",
+                        "max_capacity": 5607.7705000000005,
+                        "can_expand": true,
+                        "existing_capacity": 2803.7705,
+                        "investment_cost": 24096
+                    }
+                }
+            },
+            {
+                "id": "p15_to_p17",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p15",
+                        "line_loss_percentage": 0.0455,
+                        "end_vertex": "elec_p17",
+                        "max_capacity": 3910.0434999999998,
+                        "can_expand": true,
+                        "existing_capacity": 1955.0435,
+                        "investment_cost": 34195
+                    }
+                }
+            },
+            {
+                "id": "p15_to_p5",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p15",
+                        "line_loss_percentage": 0.0376,
+                        "end_vertex": "elec_p5",
+                        "max_capacity": 7328.195,
+                        "can_expand": true,
+                        "existing_capacity": 3664.195,
+                        "investment_cost": 33383
+                    }
+                }
+            },
+            {
+                "id": "p15_to_p7",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p15",
+                        "line_loss_percentage": 0.026,
+                        "end_vertex": "elec_p7",
+                        "max_capacity": 5922.166,
+                        "can_expand": true,
+                        "existing_capacity": 2961.166,
+                        "investment_cost": 9699
+                    }
+                }
+            },
+            {
+                "id": "p16_to_p17",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p16",
+                        "line_loss_percentage": 0.028,
+                        "end_vertex": "elec_p17",
+                        "max_capacity": 662.0930000000001,
+                        "can_expand": true,
+                        "existing_capacity": 262.093,
+                        "investment_cost": 26368
+                    }
+                }
+            },
+            {
+                "id": "p16_to_p21",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p16",
+                        "line_loss_percentage": 0.027,
+                        "end_vertex": "elec_p21",
+                        "max_capacity": 4612.3765,
+                        "can_expand": true,
+                        "existing_capacity": 2306.3765,
+                        "investment_cost": 24423
+                    }
+                }
+            },
+            {
+                "id": "p16_to_p25",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p16",
+                        "line_loss_percentage": 0.0241,
+                        "end_vertex": "elec_p25",
+                        "max_capacity": 3374.1795,
+                        "can_expand": true,
+                        "existing_capacity": 1687.1795,
+                        "investment_cost": 23682
+                    }
+                }
+            },
+            {
+                "id": "p17_to_p18",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p17",
+                        "line_loss_percentage": 0.0222,
+                        "end_vertex": "elec_p18",
+                        "max_capacity": 766.2565,
+                        "can_expand": true,
+                        "existing_capacity": 366.2565,
+                        "investment_cost": 22144
+                    }
+                }
+            },
+            {
+                "id": "p17_to_p20",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p17",
+                        "line_loss_percentage": 0.0287,
+                        "end_vertex": "elec_p20",
+                        "max_capacity": 3773.9880000000003,
+                        "can_expand": true,
+                        "existing_capacity": 1886.988,
+                        "investment_cost": 27450
+                    }
+                }
+            },
+            {
+                "id": "p17_to_p3",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p17",
+                        "line_loss_percentage": 0.0266,
+                        "end_vertex": "elec_p3",
+                        "max_capacity": 3810.3,
+                        "can_expand": true,
+                        "existing_capacity": 1905.3,
+                        "investment_cost": 30633
+                    }
+                }
+            },
+            {
+                "id": "p18_to_p20",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p18",
+                        "line_loss_percentage": 0.0209,
+                        "end_vertex": "elec_p20",
+                        "max_capacity": 1252.2645,
+                        "can_expand": true,
+                        "existing_capacity": 626.2645,
+                        "investment_cost": 16855
+                    }
+                }
+            },
+            {
+                "id": "p18_to_p21",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p18",
+                        "line_loss_percentage": 0.0479,
+                        "end_vertex": "elec_p21",
+                        "max_capacity": 722.6395,
+                        "can_expand": true,
+                        "existing_capacity": 322.6395,
+                        "investment_cost": 34455
+                    }
+                }
+            },
+            {
+                "id": "p18_to_p22",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p18",
+                        "line_loss_percentage": 0.0278,
+                        "end_vertex": "elec_p22",
+                        "max_capacity": 804,
+                        "can_expand": true,
+                        "existing_capacity": 402,
+                        "investment_cost": 25521
+                    }
+                }
+            },
+            {
+                "id": "p18_to_p23",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p18",
+                        "line_loss_percentage": 0.0356,
+                        "end_vertex": "elec_p23",
+                        "max_capacity": 408.52,
+                        "can_expand": true,
+                        "existing_capacity": 8.52,
+                        "investment_cost": 29117
+                    }
+                }
+            },
+            {
+                "id": "p2_to_p3",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p2",
+                        "line_loss_percentage": 0.0215,
+                        "end_vertex": "elec_p3",
+                        "max_capacity": 998.4875,
+                        "can_expand": true,
+                        "existing_capacity": 499.4875,
+                        "investment_cost": 19107
+                    }
+                }
+            },
+            {
+                "id": "p2_to_p4",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p2",
+                        "line_loss_percentage": 0.0402,
+                        "end_vertex": "elec_p4",
+                        "max_capacity": 17474.108,
+                        "can_expand": true,
+                        "existing_capacity": 8737.108,
+                        "investment_cost": 17204
+                    }
+                }
+            },
+            {
+                "id": "p2_to_p5",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p2",
+                        "line_loss_percentage": 0.02,
+                        "end_vertex": "elec_p5",
+                        "max_capacity": 41854.085999999996,
+                        "can_expand": true,
+                        "existing_capacity": 20927.086,
+                        "investment_cost": 23083
+                    }
+                }
+            },
+            {
+                "id": "p21_to_p24",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p21",
+                        "line_loss_percentage": 0.0324,
+                        "end_vertex": "elec_p24",
+                        "max_capacity": 5763.874,
+                        "can_expand": true,
+                        "existing_capacity": 2881.874,
+                        "investment_cost": 27671
+                    }
+                }
+            },
+            {
+                "id": "p21_to_p25",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p21",
+                        "line_loss_percentage": 0.0204,
+                        "end_vertex": "elec_p25",
+                        "max_capacity": 735.325,
+                        "can_expand": true,
+                        "existing_capacity": 335.325,
+                        "investment_cost": 21015
+                    }
+                }
+            },
+            {
+                "id": "p21_to_p26",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p21",
+                        "line_loss_percentage": 0.0197,
+                        "end_vertex": "elec_p26",
+                        "max_capacity": 1167.906,
+                        "can_expand": true,
+                        "existing_capacity": 583.906,
+                        "investment_cost": 19097
+                    }
+                }
+            },
+            {
+                "id": "p22_to_p23",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p22",
+                        "line_loss_percentage": 0.0539,
+                        "end_vertex": "elec_p23",
+                        "max_capacity": 1412.3145,
+                        "can_expand": true,
+                        "existing_capacity": 706.3145,
+                        "investment_cost": 18851
+                    }
+                }
+            },
+            {
+                "id": "p22_to_p24",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p22",
+                        "line_loss_percentage": 0.0286,
+                        "end_vertex": "elec_p24",
+                        "max_capacity": 756.1955,
+                        "can_expand": true,
+                        "existing_capacity": 356.1955,
+                        "investment_cost": 26191
+                    }
+                }
+            },
+            {
+                "id": "p23_to_p24",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p23",
+                        "line_loss_percentage": 0.0286,
+                        "end_vertex": "elec_p24",
+                        "max_capacity": 1878,
+                        "can_expand": true,
+                        "existing_capacity": 939,
+                        "investment_cost": 23364
+                    }
+                }
+            },
+            {
+                "id": "p23_to_p32",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p23",
+                        "line_loss_percentage": 0.0811,
+                        "end_vertex": "elec_p32",
+                        "max_capacity": 1454.066,
+                        "can_expand": true,
+                        "existing_capacity": 727.066,
+                        "investment_cost": 26297
+                    }
+                }
+            },
+            {
+                "id": "p24_to_p33",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p24",
+                        "line_loss_percentage": 0.0449,
+                        "end_vertex": "elec_p33",
+                        "max_capacity": 8804.074,
+                        "can_expand": true,
+                        "existing_capacity": 4402.074,
+                        "investment_cost": 13641
+                    }
+                }
+            },
+            {
+                "id": "p25_to_p26",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p25",
+                        "line_loss_percentage": 0.0277,
+                        "end_vertex": "elec_p26",
+                        "max_capacity": 1330.0795,
+                        "can_expand": true,
+                        "existing_capacity": 665.0795,
+                        "investment_cost": 15454
+                    }
+                }
+            },
+            {
+                "id": "p25_to_p28",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p25",
+                        "line_loss_percentage": 0.0529,
+                        "end_vertex": "elec_p28",
+                        "max_capacity": 562.996,
+                        "can_expand": true,
+                        "existing_capacity": 162.996,
+                        "investment_cost": 39332
+                    }
+                }
+            },
+            {
+                "id": "p25_to_p31",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p25",
+                        "line_loss_percentage": 0.0513,
+                        "end_vertex": "elec_p31",
+                        "max_capacity": 1314.1785,
+                        "can_expand": true,
+                        "existing_capacity": 657.1785,
+                        "investment_cost": 37701
+                    }
+                }
+            },
+            {
+                "id": "p25_to_p33",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p25",
+                        "line_loss_percentage": 0.0466,
+                        "end_vertex": "elec_p33",
+                        "max_capacity": 4437.559,
+                        "can_expand": true,
+                        "existing_capacity": 2218.559,
+                        "investment_cost": 35526
+                    }
+                }
+            },
+            {
+                "id": "p26_to_p33",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p26",
+                        "line_loss_percentage": 0.0461,
+                        "end_vertex": "elec_p33",
+                        "max_capacity": 568.756,
+                        "can_expand": true,
+                        "existing_capacity": 168.756,
+                        "investment_cost": 34711
+                    }
+                }
+            },
+            {
+                "id": "p27_to_p28",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p27",
+                        "line_loss_percentage": 0.02,
+                        "end_vertex": "elec_p28",
+                        "max_capacity": 1024.2730000000001,
+                        "can_expand": true,
+                        "existing_capacity": 512.273,
+                        "investment_cost": 21930
+                    }
+                }
+            },
+            {
+                "id": "p28_to_p29",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p28",
+                        "line_loss_percentage": 0.0278,
+                        "end_vertex": "elec_p29",
+                        "max_capacity": 2938.096,
+                        "can_expand": true,
+                        "existing_capacity": 1469.096,
+                        "investment_cost": 28045
+                    }
+                }
+            },
+            {
+                "id": "p28_to_p30",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p28",
+                        "line_loss_percentage": 0.0517,
+                        "end_vertex": "elec_p30",
+                        "max_capacity": 2437.9085,
+                        "can_expand": true,
+                        "existing_capacity": 1218.9085,
+                        "investment_cost": 16045
+                    }
+                }
+            },
+            {
+                "id": "p28_to_p31",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p28",
+                        "line_loss_percentage": 0.0336,
+                        "end_vertex": "elec_p31",
+                        "max_capacity": 6331.821,
+                        "can_expand": true,
+                        "existing_capacity": 3165.821,
+                        "investment_cost": 30625
+                    }
+                }
+            },
+            {
+                "id": "p29_to_p30",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p29",
+                        "line_loss_percentage": 0.0281,
+                        "end_vertex": "elec_p30",
+                        "max_capacity": 1621.6765,
+                        "can_expand": true,
+                        "existing_capacity": 810.6765,
+                        "investment_cost": 28107
+                    }
+                }
+            },
+            {
+                "id": "p29_to_p31",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p29",
+                        "line_loss_percentage": 0.0191,
+                        "end_vertex": "elec_p31",
+                        "max_capacity": 3034.0595000000003,
+                        "can_expand": true,
+                        "existing_capacity": 1517.0595,
+                        "investment_cost": 16906
+                    }
+                }
+            },
+            {
+                "id": "p3_to_p4",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p3",
+                        "line_loss_percentage": 0.0198,
+                        "end_vertex": "elec_p4",
+                        "max_capacity": 8128.0135,
+                        "can_expand": true,
+                        "existing_capacity": 4064.0135,
+                        "investment_cost": 19101
+                    }
+                }
+            },
+            {
+                "id": "p3_to_p5",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p3",
+                        "line_loss_percentage": 0.0298,
+                        "end_vertex": "elec_p5",
+                        "max_capacity": 752,
+                        "can_expand": true,
+                        "existing_capacity": 352,
+                        "investment_cost": 28910
+                    }
+                }
+            },
+            {
+                "id": "p31_to_p34",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p31",
+                        "line_loss_percentage": 0.0317,
+                        "end_vertex": "elec_p34",
+                        "max_capacity": 2833.9605,
+                        "can_expand": true,
+                        "existing_capacity": 1416.9605,
+                        "investment_cost": 27067
+                    }
+                }
+            },
+            {
+                "id": "p31_to_p59",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p31",
+                        "line_loss_percentage": 0.0288,
+                        "end_vertex": "elec_p59",
+                        "max_capacity": 972.4694999999999,
+                        "can_expand": true,
+                        "existing_capacity": 486.4695,
+                        "investment_cost": 22546
+                    }
+                }
+            },
+            {
+                "id": "p33_to_p34",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p33",
+                        "line_loss_percentage": 0.0344,
+                        "end_vertex": "elec_p34",
+                        "max_capacity": 6644.4685,
+                        "can_expand": true,
+                        "existing_capacity": 3322.4685,
+                        "investment_cost": 15434
+                    }
+                }
+            },
+            {
+                "id": "p5_to_p6",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p5",
+                        "line_loss_percentage": 0.0276,
+                        "end_vertex": "elec_p6",
+                        "max_capacity": 16880.317499999997,
+                        "can_expand": true,
+                        "existing_capacity": 8440.3175,
+                        "investment_cost": 30029
+                    }
+                }
+            },
+            {
+                "id": "p5_to_p7",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p5",
+                        "line_loss_percentage": 0.0334,
+                        "end_vertex": "elec_p7",
+                        "max_capacity": 7841.752,
+                        "can_expand": true,
+                        "existing_capacity": 3920.752,
+                        "investment_cost": 31369
+                    }
+                }
+            },
+            {
+                "id": "p6_to_p7",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p6",
+                        "line_loss_percentage": 0.038,
+                        "end_vertex": "elec_p7",
+                        "max_capacity": 6235.7,
+                        "can_expand": true,
+                        "existing_capacity": 3117.7,
+                        "investment_cost": 31197
+                    }
+                }
+            },
+            {
+                "id": "p6_to_p8",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p6",
+                        "line_loss_percentage": 0.0504,
+                        "end_vertex": "elec_p8",
+                        "max_capacity": 866.2875,
+                        "can_expand": true,
+                        "existing_capacity": 433.2875,
+                        "investment_cost": 20570
+                    }
+                }
+            },
+            {
+                "id": "p6_to_p9",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p6",
+                        "line_loss_percentage": 0.0509,
+                        "end_vertex": "elec_p9",
+                        "max_capacity": 9600,
+                        "can_expand": true,
+                        "existing_capacity": 4800,
+                        "investment_cost": 42967
+                    }
+                }
+            },
+            {
+                "id": "p7_to_p8",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p7",
+                        "line_loss_percentage": 0.0386,
+                        "end_vertex": "elec_p8",
+                        "max_capacity": 427.3865,
+                        "can_expand": true,
+                        "existing_capacity": 27.3865,
+                        "investment_cost": 30618
+                    }
+                }
+            },
+            {
+                "id": "p8_to_p9",
+                "edges": {
+                    "elec_edge": {
+                        "can_retire": false,
+                        "constraints": {
+                            "CapacityConstraint": true,
+                            "MaxCapacityConstraint": true
+                        },
+                        "start_vertex": "elec_p8",
+                        "line_loss_percentage": 0.0481,
+                        "end_vertex": "elec_p9",
+                        "max_capacity": 704.967,
+                        "can_expand": true,
+                        "existing_capacity": 304.967,
+                        "investment_cost": 38415
+                    }
+                }
+            }
+        ],
+        "type": "PowerLine"
+    }
+}
