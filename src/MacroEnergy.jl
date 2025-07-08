@@ -8,6 +8,7 @@ using OrderedCollections
 using JuMP
 using HiGHS
 using Revise
+using Infiltrator
 using InteractiveUtils
 using Printf: @printf
 using MacroEnergyScaling
