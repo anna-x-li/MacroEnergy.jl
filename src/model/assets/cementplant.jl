@@ -24,11 +24,11 @@ function full_default_data(::Type{CementPlant}, id=missing)
         :id => id,
         :transforms => @transform_data(
             :timedata => "Cement",
-            :fuel_consumption => 1.0,
-            :elec_consumption => 1.0,
+            :fuel_consumption_rate => 0.0,
+            :elec_consumption_rate => 0.0,
             :fuel_emission_rate => 0.0,
-            :process_emission_rate => 0.536,
-            :emission_capture_rate => 0.0,
+            :process_emission_rate => 0.0,
+            :co2_capture_rate => 0.0,
             :constraints => Dict{Symbol, Bool}(
                 :BalanceConstraint => true,
             ),
@@ -76,11 +76,11 @@ function simple_default_data(::Type{CementPlant}, id=missing)
         :investment_cost => 0.0,
         :fixed_om_cost => 0.0,
         :variable_om_cost => 0.0,
-        :fuel_consumption => 1.0,
-        :elec_consumption => 1.0,
+        :fuel_consumption_rate => 0.0,
+        :elec_consumption_rate => 0.0,
         :fuel_emission_rate => 0.0,
         :process_emission_rate => 0.0,
-        :emission_capture_rate => 0.0,
+        :co2_capture_rate => 0.0,
     )
 end
 
@@ -101,6 +101,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data, key),
         ]
     )
+
     cement_transform = Transformation(;
         id = Symbol(id, "_", cement_key),
         timedata = system.time_data[Symbol(transform_data[:timedata])],
@@ -145,6 +146,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][fuel_edge_key], key),
             (data[:edges][fuel_edge_key], Symbol("fuel_", key)),
             (data, Symbol("fuel_", key)),
+            (data, key),
         ]
     )
 
@@ -168,6 +170,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
 
     # Cement Edge
     cement_edge_key = :cement_edge
+
     @process_data(
         cement_edge_data, 
         data[:edges][cement_edge_key], 
@@ -178,6 +181,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data, key),
         ]
     )
+
     cement_start_node = cement_transform
     @end_vertex(
         cement_end_node,
@@ -203,6 +207,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][co2_emissions_edge_key], key),
             (data[:edges][co2_emissions_edge_key], Symbol("co2_", key)),
             (data, Symbol("co2_", key)),
+            (data, key),
         ]
     )
     co2_emissions_start_node = cement_transform
@@ -210,7 +215,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         co2_emissions_end_node,
         co2_emissions_edge_data,
         CO2,
-        [(co2_emissions_edge_data, :end_vertex), (data, :co2_sink), (data, :location)],
+        [(co2_emissions_edge_data, :end_vertex), (data, :location)],
     )
     co2_emissions_edge = Edge(
         Symbol(id, "_", co2_emissions_edge_key),
@@ -253,14 +258,14 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         :elec_to_cement => Dict(
             elec_edge.id => 1.0,
             fuel_edge.id => 0,
-            cement_edge.id => get(transform_data, :elec_cement_rate, 1.0),
+            cement_edge.id => get(transform_data, :elec_consumption_rate, 1.0),
             co2_emissions_edge.id => 0,
             co2_captured_edge.id => 0,
         ),
         :fuel_to_cement => Dict(
             elec_edge.id => 0,
             fuel_edge.id => 1.0,
-            cement_edge.id => get(transform_data, :fuel_cement_rate, 1.0),
+            cement_edge.id => get(transform_data, :fuel_consumption_rate, 1.0),
             co2_emissions_edge.id => 0,
             co2_captured_edge.id => 0,
         ),
@@ -279,6 +284,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             co2_captured_edge.id => -1.0,
         )
     )
-
+    
     return CementPlant(id, cement_transform, elec_edge, fuel_edge, cement_edge, co2_emissions_edge, co2_captured_edge)
 end
