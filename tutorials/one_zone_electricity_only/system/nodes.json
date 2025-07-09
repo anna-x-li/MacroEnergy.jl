@@ -22,9 +22,13 @@
             "type": "Electricity",
             "global_data": {
                 "time_interval": "Electricity",
+                "max_nsd": [1],
+                "price_nsd": [5000.0],
                 "constraints": {
-                    "BalanceConstraint": true
-                }
+                    "BalanceConstraint": true,
+                    "MaxNonServedDemandConstraint": true,
+                    "MaxNonServedDemandPerSegmentConstraint": true
+                    }
             },
             "instance_data": [
                 {
@@ -36,7 +40,7 @@
                             "header": "Demand_MW_z1"
                         }
                     }
-                }
+            }
             ]
         },
         {
