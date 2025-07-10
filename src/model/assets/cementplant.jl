@@ -117,6 +117,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][elec_edge_key], key),
             (data[:edges][elec_edge_key], Symbol("elec_", key)),
             (data, Symbol("elec_", key)),
+            (data, key),
         ]
     )
 
@@ -146,7 +147,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][fuel_edge_key], key),
             (data[:edges][fuel_edge_key], Symbol("fuel_", key)),
             (data, Symbol("fuel_", key)),
-            (data, key),
         ]
     )
 
@@ -178,7 +178,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][cement_edge_key], key),
             (data[:edges][cement_edge_key], Symbol("cement_", key)),
             (data, Symbol("cement_", key)),
-            (data, key),
         ]
     )
 
@@ -207,7 +206,6 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
             (data[:edges][co2_emissions_edge_key], key),
             (data[:edges][co2_emissions_edge_key], Symbol("co2_", key)),
             (data, Symbol("co2_", key)),
-            (data, key),
         ]
     )
     co2_emissions_start_node = cement_transform
@@ -215,7 +213,7 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         co2_emissions_end_node,
         co2_emissions_edge_data,
         CO2,
-        [(co2_emissions_edge_data, :end_vertex), (data, :location)],
+        [(co2_emissions_edge_data, :end_vertex), (data, :co2_sink), (data, :location)],
     )
     co2_emissions_edge = Edge(
         Symbol(id, "_", co2_emissions_edge_key),

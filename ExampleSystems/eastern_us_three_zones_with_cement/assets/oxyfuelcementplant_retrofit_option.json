@@ -52,17 +52,17 @@
                 {
                     "id": "oxyfuel_cement_MA",
                     "location": "MA",
-                    "existing_capacity": 10
+                    "existing_capacity": 0
                 },
                 {
                     "id": "oxyfuel_cement_CT",
                     "location": "CT",
-                    "existing_capacity": 10
+                    "existing_capacity": 0
                 },
                 {
                     "id": "oxyfuel_cement_ME",
                     "location": "ME",
-                    "existing_capacity": 10
+                    "existing_capacity": 0
                 }
             ]
         }

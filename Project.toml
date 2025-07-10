@@ -39,6 +39,7 @@ MacroEnergySolvers = {url = "https://github.com/macroenergy/MacroEnergySolvers.j
 
 [compat]
 ClusterManagers = "2.0.0"
+DataFrames = "1.7.0"
 Distributed = "1.11.0"
 DistributedArrays = "0.6.7"
 DuckDB = "^0.10.3"

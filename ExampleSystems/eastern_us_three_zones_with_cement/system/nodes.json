@@ -106,10 +106,10 @@
                 {
                     "id": "cement_co2_sink",
                     "constraints": {
-                        "CO2CapConstraint": false
+                        "CO2CapConstraint": true
                     },
                     "rhs_policy": {
-                        "CO2CapConstraint": 2.968e3
+                        "CO2CapConstraint": 3.2e5
                         }
                 }
             ]
