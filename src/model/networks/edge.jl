@@ -38,6 +38,7 @@ macro AbstractEdgeBaseAttributes()
         retrofit_efficiency::Union{Missing,Float64} = $edge_defaults[:retrofit_efficiency]
         retrofit_id::Union{Missing, Vector{Symbol}} = $edge_defaults[:retrofit_id]
         retrofitted_capacity::AffExpr = AffExpr(0.0)
+        retrofitted_capacity_track::Dict{Int64,AffExpr} = Dict(1 => AffExpr(0.0))
         retrofitted_units::Union{JuMPVariable,Float64} = 0.0
         unidirectional::Bool = $edge_defaults[:unidirectional]
         variable_om_cost::Float64 = $edge_defaults[:variable_om_cost]
@@ -227,6 +228,7 @@ retirement_period(e::AbstractEdge) = e.retirement_period;
 retrofit_efficiency(e::AbstractEdge) = e.retrofit_efficiency;
 retrofit_id(e::AbstractEdge) = e.retrofit_id;
 retrofitted_capacity(e::AbstractEdge) = e.retrofitted_capacity;
+retrofitted_capacity_track(e::AbstractEdge) = (haskey(retrofitted_capacity_track(e),s) == false) ? 0.0 : e.retrofitted_capacity_track[s];
 retrofitted_units(e::AbstractEdge) = e.retrofitted_units;
 start_vertex(e::AbstractEdge)::AbstractVertex = e.start_vertex;
 variable_om_cost(e::AbstractEdge) = e.variable_om_cost;
@@ -241,7 +243,7 @@ function add_linking_variables!(e::AbstractEdge, model::Model)
     end
 
     if can_retrofit(e)
-        e.retrofitted_units = @variable(model, lower_bound = 0.0, base_name = "vRETROFITUNIT_$(id(e))")
+        e.retrofitted_units = @variable(model, lower_bound = 0.0, base_name = "vRETROFITUNIT_$(id(e))_period$(period_index(e))")
         e.retrofitted_capacity = @expression(model, capacity_size(e) * retrofitted_units(e))
     end   
 
@@ -266,9 +268,18 @@ function define_available_capacity!(e::AbstractEdge, model::Model)
         e.retired_capacity_track[period_index(e)] = retired_capacity(e);
 
         if can_retrofit(e)
-            @constraint(model, capacity(e) == new_capacity(e) - retired_capacity(e) - retrofitted_capacity(e) + existing_capacity(e))
+
+            e.retrofitted_capacity_track[period_index(e)] = retrofitted_capacity(e);
+
+            e.capacity = @expression(
+                model,
+                new_capacity(e) - retired_capacity(e) - retrofitted_capacity(e) + existing_capacity(e)
+            )
         else
-            @constraint(model, capacity(e) == new_capacity(e) - retired_capacity(e) + existing_capacity(e))
+            e.capacity = @expression(
+                model,
+                new_capacity(e) - retired_capacity(e) + existing_capacity(e)
+            )
         end
 
         # e.capacity = @expression(
@@ -303,10 +314,10 @@ function planning_model!(e::AbstractEdge, model::Model)
 
         if can_retrofit(e)
             @constraint(model, retrofitted_capacity(e) + retired_capacity(e) <= existing_capacity(e))
+        else
             if integer_decisions(e)
                 set_integer(retrofitted_units(e))
             end
-        else
             @constraint(model, retired_capacity(e) <= existing_capacity(e))
         end
 
