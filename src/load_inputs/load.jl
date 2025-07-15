@@ -36,7 +36,9 @@ function load!(system::System, data::AbstractDict{Symbol,Any})::Nothing
             data[:instance_data][:type] = check_and_convert_type(data) # Add the type to the instance data
             push!(system.input_data, data[:instance_data]) #Store the input data for later use
 
-            make_retrofit_options(system, data) # Make retrofitting assets for assets with retrofit_options
+            if system.settings.Retrofitting
+                make_retrofit_options(system, data) # Make retrofitting assets for assets with retrofit_options
+            end
 
             add!(system, make(data[:instance_data][:type], data[:instance_data], system))
 

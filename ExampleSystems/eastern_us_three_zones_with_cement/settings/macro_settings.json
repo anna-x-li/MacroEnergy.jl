@@ -2,7 +2,8 @@
   "ConstraintScaling":true,
   "WriteSubcommodities":true,
   "AutoCreateNodes":true,
-  "AutoCreateLocations":true
+  "AutoCreateLocations":true,
+  "Retrofitting": true
 }
 
 

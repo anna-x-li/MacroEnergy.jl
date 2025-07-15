@@ -242,11 +242,6 @@ function add_linking_variables!(e::AbstractEdge, model::Model)
         e.capacity = @variable(model, lower_bound = 0.0, base_name = "vCAP_$(id(e))_period$(period_index(e))")
     end
 
-    if can_retrofit(e)
-        e.retrofitted_units = @variable(model, lower_bound = 0.0, base_name = "vRETROFITUNIT_$(id(e))_period$(period_index(e))")
-        e.retrofitted_capacity = @expression(model, capacity_size(e) * retrofitted_units(e))
-    end   
-
     return nothing
 
 end
@@ -268,6 +263,10 @@ function define_available_capacity!(e::AbstractEdge, model::Model)
         e.retired_capacity_track[period_index(e)] = retired_capacity(e);
 
         if can_retrofit(e)
+
+            e.retrofitted_units = @variable(model, lower_bound = 0.0, base_name = "vRETROFITUNIT_$(id(e))_period$(period_index(e))")
+            
+            e.retrofitted_capacity = @expression(model, capacity_size(e) * retrofitted_units(e))
 
             e.retrofitted_capacity_track[period_index(e)] = retrofitted_capacity(e);
 

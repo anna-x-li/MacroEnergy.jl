@@ -51,7 +51,11 @@
                 {
                     "id": "traditional_cement_MA",
                     "location": "MA",
-                    "existing_capacity": 100,
+                    "edges": {
+                        "cement_edge":{
+                            "existing_capacity": 100
+                        }
+                    },
                     "retrofit_options": [
                         {
                             "template_id": "oxyfuel_cement_MA",
@@ -69,7 +73,11 @@
                 {
                     "id": "traditional_cement_CT",
                     "location": "CT",
-                    "existing_capacity": 100,
+                    "edges": {
+                        "cement_edge":{
+                            "existing_capacity": 100
+                        }
+                    },
                     "retrofit_options": [
                         {
                             "template_id": "oxyfuel_cement_CT",
@@ -87,7 +95,11 @@
                 {
                     "id": "traditional_cement_ME",
                     "location": "ME",
-                    "existing_capacity": 100,
+                    "edges": {
+                        "cement_edge": {
+                            "existing_capacity": 100
+                        }
+                    },
                     "retrofit_options": [
                         {
                             "template_id": "oxyfuel_cement_ME",
