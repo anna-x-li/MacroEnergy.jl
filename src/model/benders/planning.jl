@@ -227,9 +227,11 @@ function update_with_planning_solution!(g::AbstractStorage, planning_variable_va
 end
 function update_with_planning_solution!(e::AbstractEdge, planning_variable_values::Dict)
     if has_capacity(e)
+        @infiltrate
         e.capacity = planning_variable_values[name(e.capacity)]
         e.new_capacity = value(x->planning_variable_values[name(x)], e.new_capacity)
         e.retired_capacity = value(x->planning_variable_values[name(x)], e.retired_capacity)
+        e.retrofitted_capacity = value(x->planning_variable_values[name(x)], e.retrofitted_capacity)
     end
 end
 #### Removing for now, needs more testing  

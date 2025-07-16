@@ -6,7 +6,7 @@ function add_constraints_by_type!(system::System, model::Model, constraint_type:
     add_constraints_by_type!(missing, system, model, constraint_type)
 end
 
-function add_constraints_by_type!(period_idx::Uniont{Int64,Missing}, system::System, model::Model, constraint_type::DataType)
+function add_constraints_by_type!(period_idx::Union{Int64,Missing}, system::System, model::Model, constraint_type::DataType)
 
     for n in system.locations
         add_constraints_by_type!(n, model, constraint_type)

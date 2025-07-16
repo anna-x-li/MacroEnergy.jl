@@ -1,0 +1,631 @@
+julia_worker:9998#172.17.4.61
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+Set parameter LicenseID to value 197246
+Set parameter GURO_PAR_SPECIAL
+Set parameter TokenServer to value "license.rc.princeton.edu"
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+  Activating project at `~/MacroEnergy.jl`
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
+┌ Warning: Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: Scaling constraints and RHS
