@@ -123,7 +123,6 @@ function configure_case(case_settings::AbstractDict{Symbol,Any})
     set_solution_algorithm!(settings)
     isa(settings[:SolutionAlgorithm], Benders) && configure_benders!(settings)
     validate_case_settings(settings)
-    @infiltrate
     return namedtuple(settings)
 end
 

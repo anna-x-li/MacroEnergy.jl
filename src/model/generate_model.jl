@@ -34,7 +34,7 @@ function generate_model(case::Case)
         define_available_capacity!(system, model)
 
         @info(" -- Generating planning model")
-        planning_model!(system, model)
+        planning_model!(period_idx, system, model)
 
         @info(" -- Including age-based retirements")
         add_age_based_retirements!.(system.assets, model)
@@ -91,13 +91,13 @@ function generate_model(case::Case)
     
 end
 
-function planning_model!(system::System, model::Model)
+function planning_model!(period_idx::Int64, system::System, model::Model)
 
     planning_model!.(system.locations, Ref(model))
 
     planning_model!.(system.assets, Ref(model))
 
-    add_constraints_by_type!(system, model, PlanningConstraint)
+    add_constraints_by_type!(period_idx, system, model, PlanningConstraint)
 
 end
 
@@ -239,10 +239,24 @@ function carry_over_capacities!(y::Union{AbstractEdge,AbstractStorage},y_prev::U
             if perfect_foresight
                 y.new_capacity_track[prev_period] = new_capacity_track(y_prev,prev_period)
                 y.retired_capacity_track[prev_period] = retired_capacity_track(y_prev,prev_period)
+
+                if isa(y, AbstractEdge)
+                    y.retrofitted_capacity_track[prev_period] = retrofitted_capacity_track(y_prev,prev_period)
+                else
+                    continue # Storage does not have retrofitted capacity
+                end
             else
                 y.new_capacity_track[prev_period] = value(new_capacity_track(y_prev,prev_period))
                 y.retired_capacity_track[prev_period] = value(retired_capacity_track(y_prev,prev_period))
+
+                if isa(y, AbstractEdge)
+                    y.retrofitted_capacity_track[prev_period] = value(retrofitted_capacity_track(y_prev,prev_period))
+                else
+                    continue # Storage does not have retrofitted capacity
+                    
+                end
             end
+            @infiltrate
         end
         
     end

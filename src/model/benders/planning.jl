@@ -56,7 +56,7 @@ function generate_planning_problem(case::Case)
         define_available_capacity!(system, model)
 
         @info(" -- Generating planning model")
-        planning_model!(system, model)
+        planning_model!(period_idx, system, model)
 
         @info(" -- Including age-based retirements")
         add_age_based_retirements!.(system.assets, model)
