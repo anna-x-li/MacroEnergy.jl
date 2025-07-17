@@ -20,7 +20,6 @@ function make_retrofit_options(system::System, data::Dict{Symbol,Any})
                 end
                 if get(attributes, :is_retrofit, false)
                     attributes[:retrofit_id] = [retrofit_id] # Adds the retrofit_id to the retrofitting edge
-                    attributes[:existing_capacity] = 0.0 # Set existing capacity to 0 for the retrofitting edges
                     attributes[:can_expand] = true # Make sure retroftting edge can expand
                 end
             end
@@ -41,36 +40,16 @@ function make_retrofit_options(system::System, data::Dict{Symbol,Any})
 
 end 
 
-function add_retrofit_constraints!(period_idx::Int64, system::System, model::Model)    
+function add_retrofit_constraints!(system::System, model::Model)    
     # Add retrofitting constraints
     
     can_retrofit_edges,is_retrofit_edges = get_retrofit_edges(system)
 
-    # @constraint(model, cRetrofitCapacity[edge_id in keys(can_retrofit_edges)],
-    #     retrofitted_capacity(can_retrofit_edges[edge_id]) ==
-    #     sum(new_capacity(is_retrofit_edges[retrofit_id]) / retrofit_efficiency(is_retrofit_edges[retrofit_id])
-    #     for retrofit_id in retrofit_id(can_retrofit_edges[edge_id]))
-    # )
-
-    # cname = Symbol("cRetrofitCapacity_period", period_idx)
-    # @eval @constraint(model, $cname[edge_id in keys(can_retrofit_edges)],
-    #     retrofitted_capacity(can_retrofit_edges[edge_id]) ==
-    #     sum(
-    #         new_capacity(is_retrofit_edges[retrofit_id]) / retrofit_efficiency(is_retrofit_edges[retrofit_id])
-    #         for retrofit_id in retrofit_id(can_retrofit_edges[edge_id])
-    #     )
-    # )
-
-    for edge_id in keys(can_retrofit_edges)
-        cname = Symbol("cRetrofitCapacity_period_", period_idx)
-        @eval @constraint($model, $cname[edge_id],
-            retrofitted_capacity($can_retrofit_edges[$edge_id]) ==
-            sum(
-                new_capacity($is_retrofit_edges[retrofit_id]) / retrofit_efficiency($is_retrofit_edges[retrofit_id])
-                for retrofit_id in retrofit_id($can_retrofit_edges[$edge_id])
-            )
-        )
-    end
+    @constraint(model, cRetrofitCapacity[edge_id in keys(can_retrofit_edges)],
+        retrofitted_capacity(can_retrofit_edges[edge_id]) ==
+        sum(new_capacity(is_retrofit_edges[retrofit_id]) / retrofit_efficiency(is_retrofit_edges[retrofit_id])
+        for retrofit_id in retrofit_id(can_retrofit_edges[edge_id]))
+    )
 
 end
 

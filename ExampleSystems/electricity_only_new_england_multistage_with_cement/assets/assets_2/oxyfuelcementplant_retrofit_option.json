@@ -1,0 +1,99 @@
+{
+    "OxyFuelCementPlant": [
+        {
+            "type": "CementPlant",
+            "global_data": {
+                "fuel_commodity": "NaturalGas",
+                "nodes": {},
+                "transforms": {
+                    "id": "oxyfuel_cement",
+                    "timedata": "Cement",
+                    "fuel_consumption_rate": 1.06,
+                    "elec_consumption_rate": 0.295,
+                    "fuel_emission_rate": 0.265,
+                    "process_emission_rate": 0.536,
+                    "co2_capture_rate": 0.95,
+                    "constraints": {
+                        "BalanceConstraint": true
+                    }
+                },
+                "edges":{
+                    "elec_edge":{
+                        "type": "Electricity"
+                    },
+                    "cement_edge":{
+                        "type": "Cement",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": true,
+                        "capacity_size": 125,
+                        "investment_cost": 289854,
+                        "fixed_om_cost": 58,
+                        "variable_om_cost": 0,
+                        "end_vertex": "cement_produced"
+                    },
+                    "fuel_edge": {
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "co2_emissions_edge": {
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "type": "CO2",
+                        "end_vertex": "cement_co2_sink"
+                    },
+                    "co2_captured_edge": {
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "type": "CO2Captured",
+                        "end_vertex": "co2_captured_sink"
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "oxyfuel_cement_MA",
+                    "can_expand": true,
+                    "existing_capacity": 0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_MA"
+                        },
+                        "fuel_edge": {
+                            "start_vertex": "MA_NG",
+                            "commodity": "NaturalGas"
+                        }
+                    }
+                },
+                {
+                    "id": "oxyfuel_cement_CT",
+                    "can_expand": true,
+                    "existing_capacity": 0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_CT"
+                        },
+                        "fuel_edge": {
+                            "start_vertex": "CT_NG",
+                            "commodity": "NaturalGas"
+                        }
+                    }
+                },
+                {
+                    "id": "oxyfuel_cement_ME",
+                    "can_expand": true,
+                    "existing_capacity": 0,
+                    "edges": {
+                        "elec_edge": {
+                            "start_vertex": "elec_ME"
+                        },
+                        "fuel_edge": {
+                            "start_vertex": "ME_NG",
+                            "commodity": "NaturalGas"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

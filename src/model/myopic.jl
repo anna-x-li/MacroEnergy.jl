@@ -39,7 +39,7 @@ function run_myopic_iteration!(case::Case, opt::Optimizer)
         define_available_capacity!(system, model)
 
         @info(" -- Generating planning model")
-        planning_model!(period_idx, system, model)
+        planning_model!(system, model)
 
         @info(" -- Generating operational model")
         operation_model!(system, model)

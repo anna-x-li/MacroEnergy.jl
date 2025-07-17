@@ -3,10 +3,6 @@ constraint_dual(c::AbstractTypeConstraint) = c.constraint_dual;
 constraint_ref(c::AbstractTypeConstraint) = c.constraint_ref;
 
 function add_constraints_by_type!(system::System, model::Model, constraint_type::DataType)
-    add_constraints_by_type!(missing, system, model, constraint_type)
-end
-
-function add_constraints_by_type!(period_idx::Union{Int64,Missing}, system::System, model::Model, constraint_type::DataType)
 
     for n in system.locations
         add_constraints_by_type!(n, model, constraint_type)
@@ -17,12 +13,6 @@ function add_constraints_by_type!(period_idx::Union{Int64,Missing}, system::Syst
             add_constraints_by_type!(getfield(a, t), model, constraint_type)
         end
     end
-
-    if (constraint_type == PlanningConstraint) && (period_idx !== missing)
-        @infiltrate
-        add_retrofit_constraints!(period_idx, system, model)
-    end
-
 end
 
 function add_constraints_by_type!(

@@ -56,10 +56,13 @@ function generate_planning_problem(case::Case)
         define_available_capacity!(system, model)
 
         @info(" -- Generating planning model")
-        planning_model!(period_idx, system, model)
+        planning_model!(system, model)
 
         @info(" -- Including age-based retirements")
         add_age_based_retirements!.(system.assets, model)
+
+        @info(" -- Adding retrofit constraints")
+        add_retrofit_constraints!(system, model)
 
         if period_idx < number_of_periods
             @info(" -- Available capacity in period $(period_idx) is being carried over to period $(period_idx+1)")
@@ -227,7 +230,6 @@ function update_with_planning_solution!(g::AbstractStorage, planning_variable_va
 end
 function update_with_planning_solution!(e::AbstractEdge, planning_variable_values::Dict)
     if has_capacity(e)
-        @infiltrate
         e.capacity = planning_variable_values[name(e.capacity)]
         e.new_capacity = value(x->planning_variable_values[name(x)], e.new_capacity)
         e.retired_capacity = value(x->planning_variable_values[name(x)], e.retired_capacity)

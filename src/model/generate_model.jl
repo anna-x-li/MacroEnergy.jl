@@ -34,7 +34,10 @@ function generate_model(case::Case)
         define_available_capacity!(system, model)
 
         @info(" -- Generating planning model")
-        planning_model!(period_idx, system, model)
+        planning_model!(system, model)
+
+        @info(" -- Adding retrofit constraints")
+        add_retrofit_constraints!(system, model)
 
         @info(" -- Including age-based retirements")
         add_age_based_retirements!.(system.assets, model)
@@ -91,13 +94,13 @@ function generate_model(case::Case)
     
 end
 
-function planning_model!(period_idx::Int64, system::System, model::Model)
+function planning_model!(system::System, model::Model)
 
     planning_model!.(system.locations, Ref(model))
 
     planning_model!.(system.assets, Ref(model))
 
-    add_constraints_by_type!(period_idx, system, model, PlanningConstraint)
+    add_constraints_by_type!(system, model, PlanningConstraint)
 
 end
 
@@ -256,7 +259,6 @@ function carry_over_capacities!(y::Union{AbstractEdge,AbstractStorage},y_prev::U
                     
                 end
             end
-            @infiltrate
         end
         
     end

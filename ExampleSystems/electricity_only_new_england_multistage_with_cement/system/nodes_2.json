@@ -26,7 +26,7 @@
                     "demand": {
                         "timeseries": {
                             "header": "elec_demand_MA",
-                            "path": "system/demand_1.csv"
+                            "path": "system/demand_2.csv"
                         }
                     },
                     "id": "elec_MA"
@@ -35,7 +35,7 @@
                     "demand": {
                         "timeseries": {
                             "header": "elec_demand_CT",
-                            "path": "system/demand_1.csv"
+                            "path": "system/demand_2.csv"
                         }
                     },
                     "id": "elec_CT"
@@ -44,7 +44,7 @@
                     "demand": {
                         "timeseries": {
                             "header": "elec_demand_ME",
-                            "path": "system/demand_1.csv"
+                            "path": "system/demand_2.csv"
                         }
                     },
                     "id": "elec_ME"
@@ -61,7 +61,7 @@
                     "price": {
                         "timeseries": {
                             "header": "CT_NG",
-                            "path": "system/fuel_prices_1.csv"
+                            "path": "system/fuel_prices_2.csv"
                         }
                     },
                     "id": "CT_NG"
@@ -70,7 +70,7 @@
                     "price": {
                         "timeseries": {
                             "header": "ME_NG",
-                            "path": "system/fuel_prices_1.csv"
+                            "path": "system/fuel_prices_2.csv"
                         }
                     },
                     "id": "ME_NG"
@@ -79,7 +79,7 @@
                     "price": {
                         "timeseries": {
                             "header": "MA_NG",
-                            "path": "system/fuel_prices_1.csv"
+                            "path": "system/fuel_prices_2.csv"
                         }
                     },
                     "id": "MA_NG"
@@ -129,6 +129,15 @@
                         "CO2CapConstraint": 25000
                     },
                     "id": "co2_sink_3"
+                },
+                {
+                    "id": "cement_co2_sink",
+                    "constraints": {
+                        "CO2CapConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2CapConstraint": 9.62e5
+                    }
                 }
             ],
             "type": "CO2"
@@ -143,6 +152,37 @@
                 }
             ],
             "type": "Electricity"
+        },
+        {
+            "global_data": {
+                "time_interval": "Cement",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "cement_produced",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/cement_demand.csv",
+                            "header": "Cement_Demand_Tons"
+                        }
+                    }
+                }
+            ],
+            "type": "Cement"
+        },
+        {
+            "type": "CO2Captured",
+            "global_data": {
+                "time_interval": "CO2Captured"
+            },
+            "instance_data": [
+                {
+                    "id": "co2_captured_sink"
+                }
+            ]
         }
     ]
 }
