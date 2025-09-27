@@ -19,6 +19,7 @@ using ClusterManagers
 using Gurobi
 using GitHub
 using Markdown
+using Infiltrator
 
 import MacroEnergyScaling: scale_constraints!
 import JuMP: set_optimizer, set_optimizer_attributes

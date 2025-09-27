@@ -663,7 +663,7 @@ function update_balance_end!(e::AbstractEdge, model::Model)
         effective_flow = @expression(model, [t in time_interval(e)], (1 - loss_fraction(e,t)) * flow_pos[t] - flow_neg[t])
 
     end
-
+    @infiltrate
     for i in balance_ids(v)
         add_to_expression!.(get_balance(v, i),  balance_data(e, v, i) * effective_flow)
     end
