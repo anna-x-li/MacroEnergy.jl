@@ -1,0 +1,516 @@
+{
+    "TradCementPlant": [
+        {
+            "type": "CementPlant",
+            "global_data": {
+                "fuel_commodity": "Coal",
+                "nodes": {},
+                "transforms": {
+                    "id": "traditional_cement",
+                    "timedata": "Cement",
+                    "fuel_consumption_rate": 0.9311,
+                    "elec_consumption_rate": 0.07,
+                    "fuel_emission_rate": 0.296,
+                    "process_emission_rate": 0.536,
+                    "emission_capture_rate": 0,
+                    "constraints": {
+                        "BalanceConstraint": true
+                    }
+                },
+                "edges":{
+                    "elec_edge":{
+                        "type": "Electricity"
+                    },
+                    "cement_edge":{
+                        "type": "Cement",
+                        "has_capacity": true,
+                        "can_retire": true,
+                        "can_expand": true,
+                        "capacity_size": 125,
+                        "investment_cost": 220939,
+                        "fixed_om_cost": 38,
+                        "variable_om_cost": 0,
+                        "end_vertex": "cement_produced",
+                        "can_retrofit": true
+                    },
+                    "fuel_edge": {
+                        "type": "Cement"
+                    },
+                    "co2_emissions_edge": {
+                        "type": "CO2"
+                    },
+                    "co2_captured_edge": {
+                        "type": "CO2Captured"
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "tradcement_Region1Beijing",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 3938,
+                        "end_vertex": "elec_Region1Beijing"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region1Beijing"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_1"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region2Tianjin",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 2626,
+                        "end_vertex": "elec_Region2Tianjin"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region2Tianjin"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_2"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region3Hebei",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 24623,
+                        "end_vertex": "elec_Region3Hebei"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region3Hebei"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_3"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region4Shanxi",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 17945,
+                        "end_vertex": "elec_Region4Shanxi"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region4Shanxi"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_4"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region5Innermongolia",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 18776,
+                        "end_vertex": "elec_Region5Innermongolia"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region5Innermongolia"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_5"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region6Liaoning",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 23721,
+                        "end_vertex": "elec_Region6Liaoning"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region6Liaoning"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_6"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region7Jilin",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 5616,
+                        "end_vertex": "elec_Region7Jilin"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region7Jilin"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_7"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region8Heilongjiang",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 5090,
+                        "end_vertex": "elec_Region8Heilongjiang"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region8Heilongjiang"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_8"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region9Shanghai",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 502,
+                        "end_vertex": "elec_Region9Shanghai"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region9Shanghai"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_9"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region10Jiangsu",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 16878,
+                        "end_vertex": "elec_Region10Jiangsu"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region10Jiangsu"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_10"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region11Zhejiang",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 27894,
+                        "end_vertex": "elec_Region11Zhejiang"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region11Zhejiang"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_11"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region12Anhui",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 23356,
+                        "end_vertex": "elec_Region12Anhui"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region12Anhui"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_12"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region13Fujian",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 13711,
+                        "end_vertex": "elec_Region13Fujian"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region13Fujian"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_13"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region14Jiangxi",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 21427,
+                        "end_vertex": "elec_Region14Jiangxi"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region14Jiangxi"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_14"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region15Shandong",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 34844,
+                        "end_vertex": "elec_Region15Shandong"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_15"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region16Henan",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 27689,
+                        "end_vertex": "elec_Region16Henan"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region16Henan"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_16"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region17Hubei",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 20720,
+                        "end_vertex": "elec_Region17Hubei"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region17Hubei"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_17"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region18Hunan",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 19341,
+                        "end_vertex": "elec_Region18Hunan"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region18Hunan"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_18"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region19Guangdong",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 15023,
+                        "end_vertex": "elec_Region19Guangdong"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region19Guangdong"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_19"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region20Guangxi",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 17745,
+                        "end_vertex": "elec_Region20Guangxi"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region20Guangxi"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_20"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region21Hainan",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 2647,
+                        "end_vertex": "elec_Region21Hainan"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region21Hainan"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_21"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region22Chongqing",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 9235,
+                        "end_vertex": "elec_Region22Chongqing"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region22Chongqing"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_22"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region23Sichuan",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 27350,
+                        "end_vertex": "elec_Region23Sichuan"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region23Sichuan"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_23"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region24Guizhou",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 14516,
+                        "end_vertex": "elec_Region24Guizhou"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region24Guizhou"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_24"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region25Yunnan",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 14360,
+                        "end_vertex": "elec_Region25Yunnan"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region25Yunnan"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_25"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region26Xizang",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 582,
+                        "end_vertex": "elec_Region26Xizang"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region26Xizang"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_26"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region27Shaanxi",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 14087,
+                        "end_vertex": "elec_Region27Shaanxi"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region27Shaanxi"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_27"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region28Gansu",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 11628,
+                        "end_vertex": "elec_Region28Gansu"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region28Gansu"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_28"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region29Qinghai",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 4384,
+                        "end_vertex": "elec_Region29Qinghai"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region29Qinghai"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_29"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region30Ningxia",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 4155,
+                        "end_vertex": "elec_Region30Ningxia"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region30Ningxia"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_30"
+                        }
+                    }
+                },
+                {
+                    "id": "tradcement_Region31Xinjiang",
+                    "edges": {
+                        "cement_edge": {
+                        "existing_capacity": 15875,
+                        "end_vertex": "elec_Region31Xinjiang"
+                        },
+                        "fuel_edge": {
+                        "start_vertex": "coal_Region31Xinjiang"
+                        },
+                        "co2_emissions_edge": {
+                        "end_vertex": "co2_sink_31"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
