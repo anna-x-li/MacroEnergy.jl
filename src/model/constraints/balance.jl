@@ -25,7 +25,6 @@ function add_model_constraint!(ct::BalanceConstraint, v::AbstractVertex, model::
         [i in balance_ids(v), t in time_interval(v)],
         get_balance(v, i, t) == 0.0
     )
-    @infiltrate
 
     return nothing
 end

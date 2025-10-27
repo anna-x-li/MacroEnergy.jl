@@ -1,0 +1,142 @@
+{
+    "natural_gas_dr_eaf_ccs": [
+        {
+            "type": "DrEafCCS",
+            "global_data":{
+                "nodes": {},
+                "transforms": {
+                    "timedata": "NaturalGas",
+                    "constraints": {
+                            "BalanceConstraint": true
+                    }
+                },
+                "edges":{
+                    "crudesteel_edge": {
+                        "commodity": "CrudeSteel",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": true,
+                        "can_expand": true,
+                        "constraints": {
+                            "MustRunConstraint": true
+                        }
+                    },
+                    "reductant_edge": {
+                        "commodity": "NaturalGas",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "ironore_edge":{
+                        "commodity": "IronOreDR",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "elec_edge":{
+                        "commodity": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "co2_edge": {
+                        "commodity": "CO2",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "end_vertex": "co2_sink_steel"
+                    },
+                    "co2_captured_edge": {
+                        "commodity": "CO2Captured",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "end_vertex": "co2_storage_sink_steel"              
+                    }
+                }
+            },
+            "instance_data":[
+                {
+                    "id": "SE_natural_gas_dr_eaf_ccs",
+                    "transforms":{
+                        "iron_ore_consumption": 1.59,
+                        "reductant_consumption": 3.89,
+                        "electricity_consumption": 1.53,
+                        "emission_rate": 0.09,
+                        "capture_rate": 0.77
+                    },
+                    "edges":{
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_SE",
+                                "existing_capacity": 0.0,
+                                "investment_cost": 8419583,
+                                "fixed_om_cost": 168392,
+                                "variable_om_cost": 165
+                            },
+                            "reductant_edge": {
+                                "start_vertex": "natgas_SE"
+                            },
+                            "elec_edge":{
+                                "start_vertex": "elec_SE"
+                            },
+                            "ironore_edge":{    
+                                "start_vertex": "ironoredr_source"
+                            }
+                        }
+                },
+                {
+                    "id": "MIDAT_natural_gas_dr_eaf_ccs",
+                    "transforms":{
+                        "iron_ore_consumption": 1.59,
+                        "reductant_consumption": 3.89,
+                        "electricity_consumption": 1.53,
+                        "emission_rate": 0.09,
+                        "capture_rate": 0.77
+                    },
+                    "edges":{
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_MIDAT",
+                                "existing_capacity": 0.0,
+                                "investment_cost": 8419583,
+                                "fixed_om_cost": 168392,
+                                "variable_om_cost": 165
+                            },
+                            "reductant_edge": {
+                                "start_vertex": "natgas_MIDAT"
+                            },
+                            "elec_edge":{
+                                "start_vertex": "elec_MIDAT"
+                            },
+                            "ironore_edge":{
+                                "start_vertex": "ironoredr_source"
+                            }
+                        }
+                },
+                {
+                    "id": "NE_natural_gas_dr_eaf_ccs",
+                    "transforms":{
+                        "iron_ore_consumption": 1.59,
+                        "reductant_consumption": 3.89,
+                        "electricity_consumption": 1.53,
+                        "emission_rate": 0.09,
+                        "capture_rate": 0.77
+                    },
+                    "edges":{
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_NE",
+                                "existing_capacity": 0.0,
+                                "investment_cost": 8419583,
+                                "fixed_om_cost": 168392,
+                                "variable_om_cost": 165
+                            },
+                            "reductant_edge": {
+                                "start_vertex": "natgas_NE"
+                            },
+                            "elec_edge":{
+                                "start_vertex": "elec_NE"
+                            },
+                            "ironore_edge":{
+                                "start_vertex": "ironoredr_source"
+                            }
+                        }
+                }
+
+            ]
+        }
+    ]
+}

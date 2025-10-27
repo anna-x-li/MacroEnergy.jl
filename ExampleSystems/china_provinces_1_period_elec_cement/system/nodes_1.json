@@ -1520,6 +1520,17 @@
                 }
             ],
             "type": "Electricity"
+        },
+        {
+            "type": "CO2Captured",
+            "global_data": {
+                "time_interval": "CO2Captured"
+            },
+            "instance_data": [
+                {
+                    "id": "co2_captured_sink"
+                }
+            ]
         }
     ]
 }

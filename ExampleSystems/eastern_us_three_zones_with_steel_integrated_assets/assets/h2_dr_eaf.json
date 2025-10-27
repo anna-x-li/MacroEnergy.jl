@@ -1,0 +1,151 @@
+{
+    "hydrogen_dr_eaf": [
+        {
+            "type": "DrEaf",
+            "global_data":{
+                "nodes": {},
+                "transforms": {
+                    "timedata": "Hydrogen",
+                    "constraints": {
+                            "BalanceConstraint": true
+                    }
+                },
+                "edges":{
+                    "crudesteel_edge": {
+                        "commodity": "CrudeSteel",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": true,
+                        "can_expand": true,
+                        "integer_decisions": false,
+                        "constraints": {
+                            "CapacityConstraint": true
+                        }
+                    },
+                    "reductant_edge": {
+                        "commodity": "Hydrogen",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "ironore_edge":{
+                        "commodity": "IronOreDR",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "elec_edge":{
+                        "commodity": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "carbonsource_edge": {
+                        "commodity": "MetCoal",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "co2_edge": {
+                        "commodity": "CO2",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "end_vertex": "co2_sink_steel"
+                    }
+                }
+            },
+            "instance_data":[
+                {
+                    "id": "SE_hydrogen_dr_eaf",
+                    "transforms":{
+                        "ironore_consumption": 1.59,
+                        "reductant_consumption": 2.43,
+                        "electricity_consumption": 1.66,
+                        "carbonsource_consumption": 0.03,
+                        "emission_rate": 0.08
+                    },
+                    "edges":{
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_SE",
+                                "existing_capacity": 0.0,
+                                "investment_cost": 6973921,
+                                "fixed_om_cost": 139478,
+                                "variable_om_cost": 135
+                            },
+                            "reductant_edge": {
+                                "start_vertex": "h2_SE"
+                            },
+                            "elec_edge":{
+                                "start_vertex": "elec_SE"
+                            },
+                            "ironore_edge":{
+                                "start_vertex": "ironoredr_source"
+                            },
+                            "carbonsource_edge": {
+                                "start_vertex": "metcoal_source"
+                            }
+                        }
+                },
+                {
+                    "id": "MIDAT_hydrogen_dr_eaf",
+                    "transforms":{
+                       "ironore_consumption": 1.59,
+                        "reductant_consumption": 2.43,
+                        "electricity_consumption": 1.66,
+                        "carbonsource_consumption": 0.03,
+                        "emission_rate": 0.08
+                    },
+                    "edges":{
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_MIDAT",
+                                "existing_capacity": 0.0,
+                                "investment_cost": 6973921,
+                                "fixed_om_cost": 139478,
+                                "variable_om_cost": 135
+                            },
+                            "reductant_edge": {
+                                "start_vertex": "h2_MIDAT"
+                            },
+                            "elec_edge":{
+                                "start_vertex": "elec_MIDAT"
+                            },
+                            "ironore_edge":{
+                                "start_vertex": "ironoredr_source"
+                            },
+                            "carbonsource_edge": {
+                                "start_vertex": "metcoal_source"
+                            }
+                        }
+                },
+                {
+                    "id": "NE_hydrogen_dr_eaf",
+                    "transforms":{
+                        "ironore_consumption": 1.59,
+                        "reductant_consumption": 2.43,
+                        "electricity_consumption": 1.66,
+                        "carbonsource_consumption": 0.03,
+                        "emission_rate": 0.08
+                    },
+                    "edges":{
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_NE",
+                                "existing_capacity": 0.0,
+                                "investment_cost": 6973921,
+                                "fixed_om_cost": 139478,
+                                "variable_om_cost": 135
+                            },
+                            "reductant_edge": {
+                                "start_vertex": "h2_NE"
+                            },
+                            "elec_edge":{
+                                "start_vertex": "elec_NE"
+                            },
+                            "ironore_edge":{
+                                "start_vertex": "ironoredr_source"
+                            },
+                            "carbonsource_edge": {
+                                "start_vertex": "metcoal_source"
+                            }
+                        }
+                }
+
+            ]
+        }
+    ]
+}

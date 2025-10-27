@@ -5,7 +5,8 @@
         "CO2": 1,
 		"Coal": 1,
 		"Uranium": 1,
-        "Cement": 1
+        "Cement": 1,
+        "CO2Captured": 1
     },
     "NumberOfSubperiods": 12,
 	
@@ -15,7 +16,8 @@
         "Electricity": 24,
         "CO2": 24,
 		"Uranium":24,
-        "Cement": 24
+        "Cement": 24,
+        "CO2Captured": 24
     },
     "TotalHoursModeled": 288
 }

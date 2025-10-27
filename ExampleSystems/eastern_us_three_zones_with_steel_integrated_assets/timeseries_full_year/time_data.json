@@ -1,0 +1,39 @@
+{
+    "NumberOfSubperiods": 1,
+    "HoursPerTimeStep": {
+        "Electricity": 1,
+        "Hydrogen": 1,
+        "NaturalGas": 1,
+        "CO2": 1,
+        "CO2Captured": 1,
+        "Biomass": 1,
+        "Uranium": 1,
+        "LiquidFuels": 1,
+        "CrudeSteel": 1,
+        "SteelScrap": 1,
+        "DRI": 1,
+        "MetCoal": 1,
+        "ThermalCoal": 1,
+        "IronOreBF": 1,
+        "IronOreDR": 1
+    },
+    "HoursPerSubperiod": {
+        "Electricity": 8760,
+        "NaturalGas": 8760,
+        "CO2": 8760,
+        "Hydrogen": 8760,
+        "CO2Captured": 8760,
+        "Biomass": 8760,
+        "Uranium": 8760,
+        "LiquidFuels": 8760,
+        "CrudeSteel": 8760,
+        "SteelScrap": 8760,
+        "DRI": 8760,
+        "MetCoal": 8760,
+        "ThermalCoal": 8760,
+        "IronOreBF": 8760,
+        "IronOreDR": 8760
+    },
+    "TotalHoursModeled": 8760
+    
+}

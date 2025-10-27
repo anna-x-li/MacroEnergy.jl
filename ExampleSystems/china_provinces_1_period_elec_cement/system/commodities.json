@@ -5,6 +5,7 @@
 		"Coal",
         "CO2",
 		"Uranium",
-        "Cement"
+        "Cement",
+        "CO2Captured"
     ]
 }

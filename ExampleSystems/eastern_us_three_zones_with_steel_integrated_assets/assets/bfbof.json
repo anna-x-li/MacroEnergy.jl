@@ -1,0 +1,180 @@
+{
+    "BfBof": [
+        {
+            "type": "BfBof",
+            "global_data":{
+                "nodes": {},
+                "transforms": {
+                    "timedata": "CrudeSteel"
+                },
+                "edges":{
+                    "crudesteel_edge": {
+                        "commodity": "CrudeSteel",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_retire": true,
+                        "can_expand": true,
+                        "integer_decisions": false
+                    },
+                    "ironore_edge":{
+                        "commodity": "IronOreBF", 
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "metcoal_edge": {
+                        "commodity": "MetCoal",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "thermalcoal_edge": {
+                        "commodity": "ThermalCoal",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "steelscrap_edge":{
+                        "commodity": "SteelScrap",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "elec_edge":{
+                        "commodity": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "natgas_edge": {
+                        "commodity": "NaturalGas",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "co2_edge": {
+                        "commodity": "CO2",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "end_vertex": "co2_sink_steel"
+                    }
+                }
+            },
+            "instance_data":[
+                {
+                    "id": "SE_bfbof",
+                    "transforms":{
+                        "ironore_consumption": 1.12,
+                        "metcoal_consumption": 0.44,
+                        "thermalcoal_consumption": 0.38,
+                        "steelscrap_consumption": 0.26,
+                        "electricity_production": 0.23,
+                        "natgas_consumption": 0.06,
+                        "emission_rate": 1.79
+                    },
+                    "edges":{
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_SE",
+                                "existing_capacity": 0.0,
+                                "investment_cost": 2846124,
+                                "fixed_om_cost": 56922,
+                                "variable_om_cost": 148
+                            },
+                            "metcoal_edge": {
+                                "start_vertex": "metcoal_source"
+                            },
+                            "thermalcoal_edge": {
+                                "start_vertex": "thermalcoal_source"
+                            },
+                            "elec_edge":{
+                                "end_vertex": "elec_SE"
+                            },
+                            "natgas_edge":{
+                                "start_vertex": "natgas_SE"
+                            },
+                            "ironore_edge":{
+                                "start_vertex": "ironorebf_source"
+                            },
+                            "steelscrap_edge":{
+                                "start_vertex": "steelscrap_source"
+                            }
+
+                        }
+                },
+                {
+                    "id": "MIDAT_bfbof",
+                    "transforms":{
+                        "ironore_consumption": 1.12,
+                        "metcoal_consumption": 0.44,
+                        "thermalcoal_consumption": 0.38,
+                        "steelscrap_consumption": 0.26,
+                        "electricity_production": 0.23,
+                        "natgas_consumption": 0.06,
+                        "emission_rate": 1.79
+                    },
+                    "edges":{
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_MIDAT",
+                                "existing_capacity": 0.0,
+                                "investment_cost": 2846124,
+                                "fixed_om_cost": 56922,
+                                "variable_om_cost": 148
+                            },
+                            "metcoal_edge": {
+                                "start_vertex": "metcoal_source"
+                            },
+                            "thermalcoal_edge": {
+                                "start_vertex": "thermalcoal_source"
+                            },
+                            "elec_edge":{
+                                "end_vertex": "elec_MIDAT"
+                            },
+                            "natgas_edge":{
+                                "start_vertex": "natgas_MIDAT"
+                            },
+                            "ironore_edge":{
+                                "start_vertex": "ironorebf_source"
+                            },
+                            "steelscrap_edge":{
+                                "start_vertex": "steelscrap_source"
+                            }
+                        }
+                },
+                {
+                    "id": "NE_bfbof",
+                    "transforms":{
+                        "ironore_consumption": 1.12,
+                        "metcoal_consumption": 0.44,
+                        "thermalcoal_consumption": 0.38,
+                        "steelscrap_consumption": 0.26,
+                        "electricity_production": 0.23,
+                        "natgas_consumption": 0.06,
+                        "emission_rate": 1.79
+                    },
+                    "edges":{
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_NE",
+                                "existing_capacity": 0.0,
+                                "investment_cost": 2846124,
+                                "fixed_om_cost": 56922,
+                                "variable_om_cost": 148
+                            },
+                            "metcoal_edge": {
+                                "start_vertex": "metcoal_source"
+                            },
+                            "thermalcoal_edge": {
+                                "start_vertex": "thermalcoal_source"
+                            },
+                            "elec_edge":{
+                                "end_vertex": "elec_NE"
+                            },
+                            "natgas_edge":{
+                                "start_vertex": "natgas_NE"
+                            },
+                            "ironore_edge":{
+                                "start_vertex": "ironorebf_source"
+                            },
+                            "steelscrap_edge":{
+                                "start_vertex": "steelscrap_source"
+                            }
+                        }
+                }
+
+            ]
+        }
+    ]
+}

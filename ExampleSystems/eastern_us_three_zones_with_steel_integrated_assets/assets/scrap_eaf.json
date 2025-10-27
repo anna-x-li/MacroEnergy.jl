@@ -1,0 +1,149 @@
+{
+    "Scrap_eaf": [
+        {
+            "type": "Eaf",
+            "global_data":{
+                "transforms": {
+                    "timedata": "Electricity",
+                    "constraints": {
+                            "BalanceConstraint": true
+                    }
+                },
+                "edges":{
+                    "crudesteel_edge":{
+                        "type": "CrudeSteel",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_expand": true,
+                        "can_retire": true,
+                        "integer_decisions": false,
+                        "constraints": {
+                            "CapacityConstraint": true
+                        }
+                    },
+                    "feedstock_edge":{
+                        "commodity": "SteelScrap",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "elec_edge":{
+                        "commodity": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "naturalgas_edge": {
+                        "commodity": "NaturalGas",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "carbonsource_edge": {
+                        "commodity": "MetCoal",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "co2_edge": {
+                        "commodity": "CO2",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "end_vertex": "co2_sink"
+                    }
+                }
+            },
+            "instance_data":[
+                {
+                    "id": "SE_scrap_eaf",
+                    "transforms": {
+                        "feedstock_consumption": 1.14,
+                        "electricity_consumption": 0.63,
+                        "naturalgas_consumption": 0.41,
+                        "carbonsource_consumption": 0.02,
+                        "emission_rate": 0.16
+                    },
+                    "edges": {
+                        "crudesteel_edge": {
+                            "end_vertex": "crudesteel_SE",
+                            "existing_capacity": 0.0,
+                            "investment_cost": 2097144,
+                            "fixed_om_cost": 41943,
+                            "variable_om_cost": 72
+                        },
+                        "feedstock_edge": {
+                            "start_vertex": "steelscrap_source"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_SE"
+                        },
+                        "naturalgas_edge": {
+                            "start_vertex": "natgas_SE"
+                        },
+                        "carbonsource_edge": {
+                            "start_vertex": "metcoal_source"
+                        }
+                    }
+                },
+                {
+                    "id": "MIDAT_scrap_eaf",
+                    "transforms": {
+                        "feedstock_consumption": 1.14,
+                        "electricity_consumption": 0.63,
+                        "naturalgas_consumption": 0.41,
+                        "carbonsource_consumption": 0.02,
+                        "emission_rate": 0.16   
+                    },
+                    "edges": {
+                        "crudesteel_edge": {
+                            "end_vertex": "crudesteel_MIDAT",
+                            "existing_capacity": 0.0,
+                            "investment_cost": 2097144,
+                            "fixed_om_cost": 41943,
+                            "variable_om_cost": 72
+                        },
+                        "feedstock_edge": {
+                            "start_vertex": "steelscrap_source"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_MIDAT"
+                        },
+                        "naturalgas_edge": {
+                            "start_vertex": "natgas_MIDAT"
+                        },
+                        "carbonsource_edge": {
+                            "start_vertex": "metcoal_source"
+                        }
+                    }
+                },
+                {
+                    "id": "NE_scrap_eaf",
+                    "transforms": {
+                        "feedstock_consumption": 1.14,
+                        "electricity_consumption": 0.63,
+                        "naturalgas_consumption": 0.41,
+                        "carbonsource_consumption": 0.02,
+                        "emission_rate": 0.16
+                    },
+                    "edges": {
+                        "crudesteel_edge": {
+                            "end_vertex": "crudesteel_NE",
+                            "existing_capacity": 0.0,
+                            "investment_cost": 2097144,
+                            "fixed_om_cost": 41943,
+                            "variable_om_cost": 72
+                        },
+                        "feedstock_edge": {
+                            "start_vertex": "steelscrap_source"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_NE"
+                        },
+                        "naturalgas_edge": {
+                            "start_vertex": "natgas_NE"
+                        },
+                        "carbonsource_edge": {
+                            "start_vertex": "metcoal_source"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
