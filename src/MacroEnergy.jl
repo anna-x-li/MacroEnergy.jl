@@ -16,9 +16,10 @@ using Pkg
 using DistributedArrays
 using Distributed
 using ClusterManagers
-using Gurobi
 using GitHub
 using Markdown
+using Logging
+using LoggingExtras
 using Infiltrator
 
 import MacroEnergyScaling: scale_constraints!
@@ -91,19 +92,31 @@ const JuMPVariable =
     Union{Array,Containers.DenseAxisArray,Containers.SparseAxisArray,VariableRef}
 
 # Load subcommodities from file when MacroEnergy is loaded
-# Also load the Gurobi environment
-const GRB_ENV = Ref{Gurobi.Env}()
-function __init__()
-    isdir(ME_DEPOT_PATH) && load_subcommodities_from_file(ME_DEPOT_PATH)
+
+# Default optimizer environment
+const OPT_ENV_REGISTRY = Dict{Symbol,Any}(
+    :HiGHS => nothing
+)
+
+function opt_env(optimizer::Symbol)
+    return get(OPT_ENV_REGISTRY, optimizer, nothing)
+end
+
+function opt_env(optimizer::Type{T}) where {T}
     try
-        GRB_ENV[] = Gurobi.Env()
+        module_name = Symbol(parentmodule(optimizer))
+        return get(OPT_ENV_REGISTRY, module_name, nothing)
     catch e
-        if isa(e, ErrorException) && occursin("Gurobi Error", string(e))
-            @debug "Gurobi is not available."
-        else
-            rethrow(e)
-        end
+        return nothing
     end
+end
+
+function set_opt_env!(optimizer::Symbol, env::Any)
+    OPT_ENV_REGISTRY[optimizer] = env
+end
+
+function has_opt_env(optimizer::Symbol)
+    return haskey(OPT_ENV_REGISTRY, optimizer) && !isnothing(opt_env(optimizer))
 end
 
 function include_all_in_folder(folder::AbstractString, root_path::AbstractString=@__DIR__)
@@ -135,6 +148,7 @@ include("model/case.jl")
 include("model/networks/macroobject.jl")
 include("model/generate_model.jl")
 include("model/optimizer.jl")
+include("model/retrofit.jl")
 include("model/scaling.jl")
 include("model/solver.jl")
 include("model/myopic.jl")
@@ -179,6 +193,7 @@ include_all_in_folder("write_outputs/")
 export AbstractAsset,
     AbstractTypeConstraint,
     AgeBasedRetirementConstraint,
+    AggregatedDemandConstraint,
     Alumina,
     Aluminum,
     AluminumScrap,
@@ -282,6 +297,8 @@ export AbstractAsset,
     download_examples,
     example_readme,
     example_contents,
-    authenticate_github
+    authenticate_github,
+    mermaid_diagram,
+    save_mermaid_diagram
     
 end # module MacroEnergy

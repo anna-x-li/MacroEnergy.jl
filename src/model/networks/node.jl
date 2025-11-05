@@ -50,6 +50,12 @@ Base.@kwdef mutable struct Node{T} <: AbstractVertex
     @AbstractNodeBaseAttributes()
 end
 
+commodity_type(::Type{Node{T}}) where {T} = T
+function commodity_type(t::Type{Node{<:T}}) where {T}
+    ub_type = t.var.ub
+    return commodity_type(Node{ub_type})
+end
+
 function make_node(data::AbstractDict{Symbol,Any}, time_data::TimeData, commodity::DataType)
     node_kwargs = Base.fieldnames(Node)
     filtered_data = Dict{Symbol, Any}(
@@ -252,6 +258,9 @@ function make(commodity::Type{<:Commodity}, input_data::AbstractDict{Symbol,Any}
     elseif any(isa.(node.constraints, CO2StorageConstraint))
         node.balance_data =
             get(data, :balance_data, Dict(:co2_storage => Dict{Symbol,Float64}()))
+    elseif any(isa.(node.constraints, AggregatedDemandConstraint))
+        node.balance_data =
+            get(data, :balance_data, Dict(:demand_flow => Dict{Symbol,Float64}()))
     else
         node.balance_data =
             get(data, :balance_data, Dict(:exogenous => Dict{Symbol,Float64}()))
