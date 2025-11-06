@@ -28,7 +28,7 @@ function add_model_constraint!(ct::RampingLimitConstraint, e::Edge, model::Model
     #### For now these are set to zero because we are not modeling reserves
     reserves_term = @expression(model, [t in time_interval(e)], 0 * model[:vREF])
     regulation_term = @expression(model, [t in time_interval(e)], 0 * model[:vREF])
-
+    
     eRampUp = @expression(
         model,
         [t in time_interval(e)],

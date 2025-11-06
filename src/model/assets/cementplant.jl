@@ -48,6 +48,7 @@ function full_default_data(::Type{CementPlant}, id=missing)
                 :can_retire => true,
                 :constraints => Dict{Symbol, Bool}(
                     :CapacityConstraint => true,
+                    :RampingLimitConstraint => true,
                 )
             ),
             :co2_emissions_edge => @edge_data(
