@@ -1,0 +1,514 @@
+{
+    "CementPlant": {
+        "type": "CementPlant",
+        "global_data": {
+            "edges": {
+                "co2_emissions_edge": {
+                    "end_vertex": "co2_sink",
+                    "type": "CO2"
+                },
+                "elec_edge": {
+                    "type": "Electricity"
+                },
+                "fuel_edge": {
+                    "type": "Cement"
+                },
+                "co2_captured_edge": {
+                    "type": "CO2Captured",
+                    "end_vertex": "co2_captured_sink"
+                },
+                "cement_edge": {
+                    "can_retire": true,
+                    "fixed_om_cost": 38,
+                    "variable_om_cost": 0,
+                    "type": "Cement",
+                    "investment_cost": 220939,
+                    "capacity_size": 125,
+                    "can_expand": true,
+                    "can_retrofit": true,
+                    "has_capacity": true
+                }
+            },
+            "fuel_commodity": "Coal",
+            "transforms": {
+                "constraints": {
+                    "BalanceConstraint": true
+                },
+                "fuel_emission_rate": 0.296,
+                "id": "traditional_cement",
+                "timedata": "Cement",
+                "emission_capture_rate": 0,
+                "fuel_consumption_rate": 0.9311,
+                "process_emission_rate": 0.536,
+                "elec_consumption_rate": 0.07
+            }
+        },
+        "instance_data": [
+            {
+                "id": "Region1Beijing_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region1Beijing",
+                        "existing_capacity": 3938
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region1Beijing"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region1Beijing"
+                    }
+                }
+            },
+            {
+                "id": "Region2Tianjin_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region2Tianjin",
+                        "existing_capacity": 2626
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region2Tianjin"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region2Tianjin"
+                    }
+                }
+            },
+            {
+                "id": "Region3Hebei_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region3Hebei",
+                        "existing_capacity": 24623
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region3Hebei"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region3Hebei"
+                    }
+                }
+            },
+            {
+                "id": "Region4Shanxi_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region4Shanxi",
+                        "existing_capacity": 17945
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region4Shanxi"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region4Shanxi"
+                    }
+                }
+            },
+            {
+                "id": "Region5Innermongolia_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region5Innermongolia",
+                        "existing_capacity": 18776
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region5Innermongolia"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region5Innermongolia"
+                    }
+                }
+            },
+            {
+                "id": "Region6Liaoning_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region6Liaoning",
+                        "existing_capacity": 23721
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region6Liaoning"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region6Liaoning"
+                    }
+                }
+            },
+            {
+                "id": "Region7Jilin_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region7Jilin",
+                        "existing_capacity": 5616
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region7Jilin"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region7Jilin"
+                    }
+                }
+            },
+            {
+                "id": "Region8Heilongjiang_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region8Heilongjiang",
+                        "existing_capacity": 5090
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region8Heilongjiang"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region8Heilongjiang"
+                    }
+                }
+            },
+            {
+                "id": "Region9Shanghai_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region9Shanghai",
+                        "existing_capacity": 502
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region9Shanghai"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region9Shanghai"
+                    }
+                }
+            },
+            {
+                "id": "Region10Jiangsu_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region10Jiangsu",
+                        "existing_capacity": 16878
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region10Jiangsu"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region10Jiangsu"
+                    }
+                }
+            },
+            {
+                "id": "Region11Zhejiang_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region11Zhejiang",
+                        "existing_capacity": 27894
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region11Zhejiang"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region11Zhejiang"
+                    }
+                }
+            },
+            {
+                "id": "Region12Anhui_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region12Anhui",
+                        "existing_capacity": 23356
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region12Anhui"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region12Anhui"
+                    }
+                }
+            },
+            {
+                "id": "Region13Fujian_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region13Fujian",
+                        "existing_capacity": 13711
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region13Fujian"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region13Fujian"
+                    }
+                }
+            },
+            {
+                "id": "Region14Jiangxi_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region14Jiangxi",
+                        "existing_capacity": 21427
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region14Jiangxi"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region14Jiangxi"
+                    }
+                }
+            },
+            {
+                "id": "Region15Shandong_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region15Shandong",
+                        "existing_capacity": 34844
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region15Shandong"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region15Shandong"
+                    }
+                }
+            },
+            {
+                "id": "Region16Henan_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region16Henan",
+                        "existing_capacity": 27689
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region16Henan"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region16Henan"
+                    }
+                }
+            },
+            {
+                "id": "Region17Hubei_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region17Hubei",
+                        "existing_capacity": 20720
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region17Hubei"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region17Hubei"
+                    }
+                }
+            },
+            {
+                "id": "Region18Hunan_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region18Hunan",
+                        "existing_capacity": 19341
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region18Hunan"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region18Hunan"
+                    }
+                }
+            },
+            {
+                "id": "Region19Guangdong_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region19Guangdong",
+                        "existing_capacity": 15023
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region19Guangdong"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region19Guangdong"
+                    }
+                }
+            },
+            {
+                "id": "Region20Guangxi_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region20Guangxi",
+                        "existing_capacity": 17745
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region20Guangxi"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region20Guangxi"
+                    }
+                }
+            },
+            {
+                "id": "Region21Hainan_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region21Hainan",
+                        "existing_capacity": 2647
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region21Hainan"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region21Hainan"
+                    }
+                }
+            },
+            {
+                "id": "Region22Chongqing_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region22Chongqing",
+                        "existing_capacity": 9235
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region22Chongqing"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region22Chongqing"
+                    }
+                }
+            },
+            {
+                "id": "Region23Sichuan_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region23Sichuan",
+                        "existing_capacity": 27350
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region23Sichuan"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region23Sichuan"
+                    }
+                }
+            },
+            {
+                "id": "Region24Guizhou_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region24Guizhou",
+                        "existing_capacity": 14516
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region24Guizhou"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region24Guizhou"
+                    }
+                }
+            },
+            {
+                "id": "Region25Yunnan_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region25Yunnan",
+                        "existing_capacity": 14360
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region25Yunnan"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region25Yunnan"
+                    }
+                }
+            },
+            {
+                "id": "Region26Tibet_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region26Tibet",
+                        "existing_capacity": 582
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region26Tibet"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region26Tibet"
+                    }
+                }
+            },
+            {
+                "id": "Region27Shaanxi_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region27Shaanxi",
+                        "existing_capacity": 14087
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region27Shaanxi"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region27Shaanxi"
+                    }
+                }
+            },
+            {
+                "id": "Region28Gansu_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region28Gansu",
+                        "existing_capacity": 11628
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region28Gansu"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region28Gansu"
+                    }
+                }
+            },
+            {
+                "id": "Region29Qinghai_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region29Qinghai",
+                        "existing_capacity": 4384
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region29Qinghai"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region29Qinghai"
+                    }
+                }
+            },
+            {
+                "id": "Region30Ningxia_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region30Ningxia",
+                        "existing_capacity": 4155
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region30Ningxia"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region30Ningxia"
+                    }
+                }
+            },
+            {
+                "id": "Region31Xinjiang_tradcement",
+                "edges": {
+                    "cement_edge": {
+                        "end_vertex": "cement_Region31Xinjiang",
+                        "existing_capacity": 15875
+                    },
+                    "elec_edge": {
+                        "start_vertex": "elec_Region31Xinjiang"
+                    },
+                    "fuel_edge": {
+                        "start_vertex": "coal_Region31Xinjiang"
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,490 @@
+{
+    "TransmissionLink": {
+        "type": "TransmissionLink",
+        "global_data": {
+            "edges": {
+                "transmission_edge": {
+                    "capital_recovery_period": 100,
+                    "unidirectional": false,
+                    "commodity": "Electricity",
+                    "wacc": 0.062,
+                    "lifetime": 100,
+                    "has_capacity": true,
+                    "constraints": {
+                        "MaxCapacityConstraint": true,
+                        "CapacityConstraint": true,
+                        "MaxNewCapacityConstraint": true
+                    },
+                    "can_retire": false
+                }
+            }
+        },
+        "instance_data": [
+            {
+                "id": "Line156ExistingDC_Region25Yunnan_to_Region19Guangdong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 16479.0677,
+                        "max_capacity": 6400,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 6400,
+                        "start_vertex": "elec_Region25Yunnan",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region19Guangdong"
+                    }
+                }
+            },
+            {
+                "id": "Line157ExistingDC_Region5Innermongolia_to_Region15Shandong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 18461.69808,
+                        "max_capacity": 10000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 10000,
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region15Shandong"
+                    }
+                }
+            },
+            {
+                "id": "Line158ExistingDC_Region5Innermongolia_to_Region15Shandong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 18480.75297,
+                        "max_capacity": 10000,
+                        "loss_fraction": 0.07,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 10000,
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region15Shandong"
+                    }
+                }
+            },
+            {
+                "id": "Line159ExistingDC_Region5Innermongolia_to_Region10Jiangsu_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 20357.65986,
+                        "max_capacity": 10000,
+                        "loss_fraction": 0.07,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 10000,
+                        "start_vertex": "elec_Region5Innermongolia",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region10Jiangsu"
+                    }
+                }
+            },
+            {
+                "id": "Line160ExistingDC_Region4Shanxi_to_Region10Jiangsu_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 19265.57635,
+                        "max_capacity": 8000,
+                        "loss_fraction": 0.07,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 8000,
+                        "start_vertex": "elec_Region4Shanxi",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region10Jiangsu"
+                    }
+                }
+            },
+            {
+                "id": "Line161ExistingDC_Region31Xinjiang_to_Region12Anhui_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 36586.89911,
+                        "max_capacity": 12000,
+                        "loss_fraction": 0.07,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 12000,
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region12Anhui"
+                    }
+                }
+            },
+            {
+                "id": "Line162ExistingDC_Region22Chongqing_to_Region17Hubei_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 11880.18955,
+                        "max_capacity": 2600,
+                        "loss_fraction": 0.007,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 2600,
+                        "start_vertex": "elec_Region22Chongqing",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region17Hubei"
+                    }
+                }
+            },
+            {
+                "id": "Line163ExistingDC_Region25Yunnan_to_Region19Guangdong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 27284.11319,
+                        "max_capacity": 5000,
+                        "loss_fraction": 0.0657,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 5000,
+                        "start_vertex": "elec_Region25Yunnan",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region19Guangdong"
+                    }
+                }
+            },
+            {
+                "id": "Line164ExistingDC_Region25Yunnan_to_Region19Guangdong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 31266.58568,
+                        "max_capacity": 5000,
+                        "loss_fraction": 0.0657,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 5000,
+                        "start_vertex": "elec_Region25Yunnan",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region19Guangdong"
+                    }
+                }
+            },
+            {
+                "id": "Line165ExistingDC_Region24Guizhou_to_Region19Guangdong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 24428.15445,
+                        "max_capacity": 1800,
+                        "loss_fraction": 0.0563,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 1800,
+                        "start_vertex": "elec_Region24Guizhou",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region19Guangdong"
+                    }
+                }
+            },
+            {
+                "id": "Line166ExistingDC_Region24Guizhou_to_Region19Guangdong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 15864.1684,
+                        "max_capacity": 6000,
+                        "loss_fraction": 0.0705,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 6000,
+                        "start_vertex": "elec_Region24Guizhou",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region19Guangdong"
+                    }
+                }
+            },
+            {
+                "id": "Line167ExistingDC_Region25Yunnan_to_Region19Guangdong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 25683.50225,
+                        "max_capacity": 5000,
+                        "loss_fraction": 0.0657,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 5000,
+                        "start_vertex": "elec_Region25Yunnan",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region19Guangdong"
+                    }
+                }
+            },
+            {
+                "id": "Line168ExistingDC_Region25Yunnan_to_Region20Guangxi_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 20004.50667,
+                        "max_capacity": 3200,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 3200,
+                        "start_vertex": "elec_Region25Yunnan",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region20Guangxi"
+                    }
+                }
+            },
+            {
+                "id": "Line169ExistingDC_Region29Qinghai_to_Region16Henan_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 22052.35434,
+                        "max_capacity": 8000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 8000,
+                        "start_vertex": "elec_Region29Qinghai",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region16Henan"
+                    }
+                }
+            },
+            {
+                "id": "Line170ExistingDC_Region25Yunnan_to_Region24Guizhou_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 4961.726222,
+                        "max_capacity": 3000,
+                        "loss_fraction": 0.01,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 3000,
+                        "start_vertex": "elec_Region25Yunnan",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region24Guizhou"
+                    }
+                }
+            },
+            {
+                "id": "Line171ExistingDC_Region3Hebei_to_Region1Beijing_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 13934.9188,
+                        "max_capacity": 3000,
+                        "loss_fraction": 0.06,
+                        "max_new_capacity": 0,
+                        "existing_capacity": 3000,
+                        "start_vertex": "elec_Region3Hebei",
+                        "can_expand": false,
+                        "end_vertex": "elec_Region1Beijing"
+                    }
+                }
+            },
+            {
+                "id": "Line172CandidateDC_Region25Yunnan_to_Region19Guangdong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 21248.47607,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region25Yunnan",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region19Guangdong"
+                    }
+                }
+            },
+            {
+                "id": "Line173CandidateDC_Region31Xinjiang_to_Region23Sichuan_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 30686.60725,
+                        "max_capacity": 24000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 24000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region23Sichuan"
+                    }
+                }
+            },
+            {
+                "id": "Line174CandidateDC_Region23Sichuan_to_Region11Zhejiang_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 25660.87456,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region23Sichuan",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region11Zhejiang"
+                    }
+                }
+            },
+            {
+                "id": "Line175CandidateDC_Region23Sichuan_to_Region10Jiangsu_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 25535.82683,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region23Sichuan",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region10Jiangsu"
+                    }
+                }
+            },
+            {
+                "id": "Line176CandidateDC_Region27Shaanxi_to_Region17Hubei_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 19372.76012,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region27Shaanxi",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region17Hubei"
+                    }
+                }
+            },
+            {
+                "id": "Line177CandidateDC_Region23Sichuan_to_Region14Jiangxi_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 22790.73142,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region23Sichuan",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region14Jiangxi"
+                    }
+                }
+            },
+            {
+                "id": "Line178CandidateDC_Region31Xinjiang_to_Region16Henan_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 27111.08768,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region16Henan"
+                    }
+                }
+            },
+            {
+                "id": "Line179CandidateDC_Region31Xinjiang_to_Region12Anhui_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 29844.49874,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region12Anhui"
+                    }
+                }
+            },
+            {
+                "id": "Line180CandidateDC_Region31Xinjiang_to_Region22Chongqing_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 25702.55714,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region22Chongqing"
+                    }
+                }
+            },
+            {
+                "id": "Line181CandidateDC_Region31Xinjiang_to_Region17Hubei_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 29058.14532,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region17Hubei"
+                    }
+                }
+            },
+            {
+                "id": "Line182CandidateDC_Region31Xinjiang_to_Region14Jiangxi_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 30541.36302,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region14Jiangxi"
+                    }
+                }
+            },
+            {
+                "id": "Line183CandidateDC_Region31Xinjiang_to_Region18Hunan_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 29518.90429,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region31Xinjiang",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region18Hunan"
+                    }
+                }
+            },
+            {
+                "id": "Line184CandidateDC_Region30Ningxia_to_Region15Shandong_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 18358.11145,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region30Ningxia",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region15Shandong"
+                    }
+                }
+            },
+            {
+                "id": "Line185CandidateDC_Region30Ningxia_to_Region11Zhejiang_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 21935.30332,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region30Ningxia",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region11Zhejiang"
+                    }
+                }
+            },
+            {
+                "id": "Line186CandidateDC_Region30Ningxia_to_Region13Fujian_transmission",
+                "edges": {
+                    "transmission_edge": {
+                        "investment_cost": 23556.28211,
+                        "max_capacity": 16000,
+                        "loss_fraction": 0.065,
+                        "max_new_capacity": 16000,
+                        "existing_capacity": 0,
+                        "start_vertex": "elec_Region30Ningxia",
+                        "can_expand": true,
+                        "end_vertex": "elec_Region13Fujian"
+                    }
+                }
+            }
+        ]
+    }
+}
