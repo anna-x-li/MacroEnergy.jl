@@ -3,12 +3,12 @@ struct CementPlant{T} <: AbstractAsset
     cement_transform::Transformation
     elec_edge::Union{Edge{<:Electricity},EdgeWithUC{<:Electricity}} # Electricity consumed
     fuel_edge::Edge{<:T} # Fuel consumed
-    cement_edge::Edge{<:Cement} # Cement produced
+    cement_edge::Union{Edge{<:Cement},EdgeWithUC{<:Cement}} # Cement produced
     co2_emissions_edge::Edge{<:CO2} # CO2 emissions
     co2_captured_edge::Edge{<:CO2Captured} # CO2 captured
 end
 
-CementPlant(id::AssetId, cement_transform::Transformation, elec_edge::Union{Edge{Electricity},EdgeWithUC{Electricity}}, fuel_edge::Edge{T}, cement_edge::Edge{Cement}, co2_emissions_edge::Edge{CO2}, co2_captured_edge::Edge{CO2Captured}) where T<:Commodity =
+CementPlant(id::AssetId, cement_transform::Transformation, elec_edge::Edge{<:Electricity}, fuel_edge::Edge{T}, cement_edge::Union{Edge{<:Cement},EdgeWithUC{<:Cement}}, co2_emissions_edge::Edge{<:CO2}, co2_captured_edge::Edge{<:CO2Captured}) where T<:Commodity =
     CementPlant{T}(id, cement_transform, elec_edge, fuel_edge, cement_edge, co2_emissions_edge, co2_captured_edge)
 
 function default_data(t::Type{CementPlant}, id=missing, style="full")
@@ -197,6 +197,28 @@ function make(asset_type::Type{CementPlant}, data::AbstractDict{Symbol,Any}, sys
         cement_start_node,
         cement_end_node,
     )
+
+    # Check if the edge has unit commitment constraints
+    has_uc = get(cement_edge_data, :uc, false)
+    EdgeType = has_uc ? EdgeWithUC : Edge
+    # Create the elec edge with the appropriate type
+    cement_edge = EdgeType(
+        Symbol(id, "_", cement_edge_key),
+        cement_edge_data,
+        system.time_data[:Cement],
+        Cement,
+        cement_start_node,
+        cement_end_node,
+    )
+    if has_uc
+        uc_constraints = [MinUpTimeConstraint(), MinDownTimeConstraint()]
+        for c in uc_constraints
+            if !(c in cement_edge.constraints)
+                push!(cement_edge.constraints, c)
+            end
+        end
+        cement_edge.startup_fuel_balance_id = :fuel_to_cement
+    end
 
     # CO2 Emissions Edge
     co2_emissions_edge_key = :co2_emissions_edge
