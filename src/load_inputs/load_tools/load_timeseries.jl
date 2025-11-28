@@ -25,6 +25,9 @@ function load_time_series_data(
     file_path::AbstractString,
     header::T,
 )::Vector{Float64} where {T<:Union{Symbol,String}}
+    if file_path == "/Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/china_provinces_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/system/vre_availability_1.csv"
+        @infiltrate
+    end
     time_series = read_csv(file_path, Symbol(header))
     return time_series[!, header]
 end

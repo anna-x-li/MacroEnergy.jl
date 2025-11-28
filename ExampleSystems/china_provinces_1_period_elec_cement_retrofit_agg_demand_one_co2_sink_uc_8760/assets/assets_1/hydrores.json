@@ -1,0 +1,556 @@
+{
+    "HydroRes": {
+        "type": "HydroRes",
+        "global_data": {
+            "storage": {
+                "constraints": {
+                    "MinStorageOutflowConstraint": false
+                },
+                "can_retire": false,
+                "commodity": "HydroRes",
+                "can_expand": false,
+                "charge_discharge_ratio": 1,
+                "min_outflow_fraction": 0.2
+            },
+            "edges": {
+                "inflow_edge": {
+                    "constraints": {
+                        "MustRunConstraint": true
+                    },
+                    "type": "Electricity",
+                    "unidirectional": true,
+                    "start_vertex": "hydro_source",
+                    "has_capacity": true,
+                    "efficiency": 1,
+                    "availability": {
+                        "timeseries": {
+                            "path": "system/vre_availability_1.csv"
+                        }
+                    }
+                },
+                "spill_edge": {
+                    "has_capacity": false,
+                    "can_retire": false,
+                    "type": "Electricity",
+                    "unidirectional": true,
+                    "can_expand": false,
+                    "end_vertex": "hydro_source"
+                },
+                "discharge_edge": {
+                    "constraints": {
+                        "CapacityConstraint": true,
+                        "RampingLimitConstraint": true
+                    },
+                    "can_retire": false,
+                    "type": "Electricity",
+                    "unidirectional": true,
+                    "can_expand": false,
+                    "has_capacity": true,
+                    "efficiency": 1,
+                    "fixed_om_cost": 36013.88889,
+                    "ramp_up_fraction": 0.083,
+                    "capacity_size": 200,
+                    "ramp_down_fraction": 0.083
+                }
+            }
+        },
+        "instance_data": [
+            {
+                "id": "Region1Beijing_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region1Beijing_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 168.0,
+                        "end_vertex": "elec_Region1Beijing"
+                    }
+                }
+            },
+            {
+                "id": "Region2Tianjin_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region2Tianjin_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 10.0,
+                        "end_vertex": "elec_Region2Tianjin"
+                    }
+                }
+            },
+            {
+                "id": "Region3Hebei_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region3Hebei_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 542.0,
+                        "end_vertex": "elec_Region3Hebei"
+                    }
+                }
+            },
+            {
+                "id": "Region4Shanxi_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region4Shanxi_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 1031.0,
+                        "end_vertex": "elec_Region4Shanxi"
+                    }
+                }
+            },
+            {
+                "id": "Region5Innermongolia_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region5Innermongolia_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 1190.0,
+                        "end_vertex": "elec_Region5Innermongolia"
+                    }
+                }
+            },
+            {
+                "id": "Region6Liaoning_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region6Liaoning_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 1821.0,
+                        "end_vertex": "elec_Region6Liaoning"
+                    }
+                }
+            },
+            {
+                "id": "Region7Jilin_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region7Jilin_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 4840.0,
+                        "end_vertex": "elec_Region7Jilin"
+                    }
+                }
+            },
+            {
+                "id": "Region8Heilongjiang_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region8Heilongjiang_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 1100.0,
+                        "end_vertex": "elec_Region8Heilongjiang"
+                    }
+                }
+            },
+            {
+                "id": "Region9Shanghai_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region9Shanghai_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 0.0,
+                        "end_vertex": "elec_Region9Shanghai"
+                    }
+                }
+            },
+            {
+                "id": "Region10Jiangsu_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region10Jiangsu_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 50.0,
+                        "end_vertex": "elec_Region10Jiangsu"
+                    }
+                }
+            },
+            {
+                "id": "Region11Zhejiang_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region11Zhejiang_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 7150.0,
+                        "end_vertex": "elec_Region11Zhejiang"
+                    }
+                }
+            },
+            {
+                "id": "Region12Anhui_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region12Anhui_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 1930.0,
+                        "end_vertex": "elec_Region12Anhui"
+                    }
+                }
+            },
+            {
+                "id": "Region13Fujian_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region13Fujian_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 12140.0,
+                        "end_vertex": "elec_Region13Fujian"
+                    }
+                }
+            },
+            {
+                "id": "Region14Jiangxi_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region14Jiangxi_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 4330.0,
+                        "end_vertex": "elec_Region14Jiangxi"
+                    }
+                }
+            },
+            {
+                "id": "Region15Shandong_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region15Shandong_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 80.0,
+                        "end_vertex": "elec_Region15Shandong"
+                    }
+                }
+            },
+            {
+                "id": "Region16Henan_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region16Henan_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 2760.0,
+                        "end_vertex": "elec_Region16Henan"
+                    }
+                }
+            },
+            {
+                "id": "Region17Hubei_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region17Hubei_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 36170.0,
+                        "end_vertex": "elec_Region17Hubei"
+                    }
+                }
+            },
+            {
+                "id": "Region18Hunan_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region18Hunan_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 15150.0,
+                        "end_vertex": "elec_Region18Hunan"
+                    }
+                }
+            },
+            {
+                "id": "Region19Guangdong_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region19Guangdong_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 8480.0,
+                        "end_vertex": "elec_Region19Guangdong"
+                    }
+                }
+            },
+            {
+                "id": "Region20Guangxi_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region20Guangxi_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 17250.0,
+                        "end_vertex": "elec_Region20Guangxi"
+                    }
+                }
+            },
+            {
+                "id": "Region21Hainan_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region21Hainan_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 940.0,
+                        "end_vertex": "elec_Region21Hainan"
+                    }
+                }
+            },
+            {
+                "id": "Region22Chongqing_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region22Chongqing_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 7720.0,
+                        "end_vertex": "elec_Region22Chongqing"
+                    }
+                }
+            },
+            {
+                "id": "Region23Sichuan_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region23Sichuan_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 82588.0,
+                        "end_vertex": "elec_Region23Sichuan"
+                    }
+                }
+            },
+            {
+                "id": "Region24Guizhou_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region24Guizhou_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 22360.0,
+                        "end_vertex": "elec_Region24Guizhou"
+                    }
+                }
+            },
+            {
+                "id": "Region25Yunnan_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region25Yunnan_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 71190.0,
+                        "end_vertex": "elec_Region25Yunnan"
+                    }
+                }
+            },
+            {
+                "id": "Region26Tibet_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region26Tibet_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 2360.0,
+                        "end_vertex": "elec_Region26Tibet"
+                    }
+                }
+            },
+            {
+                "id": "Region27Shaanxi_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region27Shaanxi_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 4200.0,
+                        "end_vertex": "elec_Region27Shaanxi"
+                    }
+                }
+            },
+            {
+                "id": "Region28Gansu_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region28Gansu_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 9560.0,
+                        "end_vertex": "elec_Region28Gansu"
+                    }
+                }
+            },
+            {
+                "id": "Region29Qinghai_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region29Qinghai_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 11926.0,
+                        "end_vertex": "elec_Region29Qinghai"
+                    }
+                }
+            },
+            {
+                "id": "Region30Ningxia_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region30Ningxia_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 430.4,
+                        "end_vertex": "elec_Region30Ningxia"
+                    }
+                }
+            },
+            {
+                "id": "Region31Xinjiang_Hydropower",
+                "edges": {
+                    "inflow_edge": {
+                        "availability": {
+                            "timeseries": {
+                                "header": "Region31Xinjiang_Hydropower"
+                            }
+                        }
+                    },
+                    "discharge_edge": {
+                        "existing_capacity": 7780.0,
+                        "end_vertex": "elec_Region31Xinjiang"
+                    }
+                }
+            }
+        ]
+    }
+}
