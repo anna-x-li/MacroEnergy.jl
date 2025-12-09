@@ -19,10 +19,10 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 # Move to MacroEnergy directory so relative paths work reliably
 cd /home/al3792/MacroEnergy.jl
 
-# Always re-activate, instantiate, and link the package
+# # Always re-activate, instantiate, and link the package
 # julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate()'
 # julia -e 'using Pkg; Pkg.develop(path=".")'
 # julia -e 'using Pkg; Pkg.add("Gurobi")'
 
 # Run the case
-julia --project=. "ExampleSystems/china_elec_8760_one_stage/run.jl"
+julia --project=. "ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/run.jl"

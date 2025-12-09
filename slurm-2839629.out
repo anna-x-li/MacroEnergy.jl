@@ -1,0 +1,226 @@
+Set parameter LicenseID to value 197246
+Set parameter GURO_PAR_SPECIAL
+Set parameter TokenServer to value "license.rc.princeton.edu"
+Precompiling packages...
+   6137.8 ms  ✓ UserAdditions (serial)
+  1 dependency successfully precompiled in 9 seconds
+ERROR: LoadError: Gurobi Error 10009: Request denied: license not valid for Gurobi version 13
+Stacktrace:
+  [1] _check_ret
+    @ ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:442 [inlined]
+  [2] Gurobi.Env(params::Nothing; started::Bool, output_flag::Int64, memory_limit::Nothing)
+    @ Gurobi ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:176
+  [3] Env (repeats 2 times)
+    @ ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:143 [inlined]
+  [4] Gurobi.Optimizer(env::Nothing; enable_interrupts::Bool)
+    @ Gurobi ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:372
+  [5] Optimizer
+    @ ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:366 [inlined]
+  [6] Gurobi.Optimizer()
+    @ Gurobi ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:366
+  [7] _instantiate_and_check(optimizer_constructor::Any)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/tVdNJ/src/instantiate.jl:96
+  [8] instantiate(optimizer_constructor::Any; with_bridge_type::Type{Float64}, with_cache_type::Nothing)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/tVdNJ/src/instantiate.jl:177
+  [9] set_optimizer(model::JuMP.Model, optimizer_constructor::Any; add_bridges::Bool, kwargs::@Kwargs{})
+    @ JuMP ~/.julia/packages/JuMP/e83v9/src/optimizer_interface.jl:503
+ [10] set_optimizer
+    @ ~/.julia/packages/JuMP/e83v9/src/optimizer_interface.jl:495 [inlined]
+ [11] set_optimizer(model::JuMP.Model, opt::MacroEnergy.Optimizer)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:22
+ [12] solve_case(case::MacroEnergy.Case, opt::MacroEnergy.Optimizer, ::MacroEnergy.Monolithic)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/solver.jl:11
+ [13] solve_case(case::MacroEnergy.Case, opt::MacroEnergy.Optimizer)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/solver.jl:2
+ [14] run_case(case_path::String; lazy_load::Bool, log_level::Base.CoreLogging.LogLevel, log_to_console::Bool, log_to_file::Bool, log_file_path::String, log_file_attribution::Bool, optimizer::DataType, optimizer_env::Nothing, optimizer_attributes::Tuple{Pair{String, Int64}, Pair{String, Int64}, Pair{String, Float64}}, planning_optimizer::DataType, subproblem_optimizer::DataType, planning_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}}, subproblem_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}})
+    @ MacroEnergy ~/MacroEnergy.jl/src/utilities/run_tools.jl:54
+ [15] top-level scope
+    @ ~/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/run.jl:4
+ [16] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+ [17] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:317
+ [18] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/run.jl:4
+[ Info: 2025-12-08 19:32:34 Running case at /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage
+[ Info: 2025-12-08 19:32:35  ++ Loading user additions from ExampleSystems/china_elec_8760_one_stage/tmp/UserAdditions.jl
+[ Info: 2025-12-08 19:32:44  ++ Successfully loaded UserAdditions module.
+[ Info: 2025-12-08 19:32:44 Loading case from /home/al3792/MacroEnergy.jl/ExampleSystems/china_elec_8760_one_stage/system_data.json
+[ Info: 2025-12-08 19:32:44 Loading system data
+[ Info: 2025-12-08 19:32:45 Done loading system data. It took 0.93 seconds
+[ Info: 2025-12-08 19:32:45 Done loading case data. It took 0.93 seconds
+[ Info: 2025-12-08 19:32:45 *** Generating case ***
+[ Info: 2025-12-08 19:32:46 Configuring case from settings/case_settings.json
+[ Info: 2025-12-08 19:32:46 Configuring case
+[ Info: 2025-12-08 19:32:46  -- Setting solution algorithm
+[ Info: 2025-12-08 19:32:46  -- Solution algorithm set to MacroEnergy.Monolithic()
+[ Info: 2025-12-08 19:32:46 Generating systems
+[ Info: 2025-12-08 19:32:46 Generating system
+┌ Warning: 2025-12-08 19:32:48 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-08 19:32:49 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:32:49 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:32:49 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:32:49 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:32:49 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-08 19:35:21 Done generating system. It took 154.28 seconds
+[ Info: 2025-12-08 19:35:21 Generating system
+┌ Warning: 2025-12-08 19:35:21 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-08 19:35:21 Done generating system. It took 0.42 seconds
+[ Info: 2025-12-08 19:35:21 Generating system
+┌ Warning: 2025-12-08 19:35:21 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:21 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-08 19:35:21 Done generating system. It took 0.38 seconds
+[ Info: 2025-12-08 19:35:21 Generating system
+┌ Warning: 2025-12-08 19:35:22 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-08 19:35:22 Done generating system. It took 0.39 seconds
+[ Info: 2025-12-08 19:35:22 Generating system
+┌ Warning: 2025-12-08 19:35:22 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-08 19:35:22 Done generating system. It took 0.38 seconds
+[ Info: 2025-12-08 19:35:22 Generating system
+┌ Warning: 2025-12-08 19:35:23 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-08 19:35:23 Done generating system. It took 0.39 seconds
+[ Info: 2025-12-08 19:35:23 Generating system
+┌ Warning: 2025-12-08 19:35:23 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 19:35:23 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-08 19:35:23 Done generating system. It took 0.38 seconds
+[ Info: 2025-12-08 19:35:23  -- Discounting fixed costs for period 1
+[ Info: 2025-12-08 19:35:24  -- Computing retirement case for period 1
+[ Info: 2025-12-08 19:35:24  -- Discounting fixed costs for period 2
+[ Info: 2025-12-08 19:35:24  -- Computing retirement case for period 2
+[ Info: 2025-12-08 19:35:24  -- Discounting fixed costs for period 3
+[ Info: 2025-12-08 19:35:24  -- Computing retirement case for period 3
+[ Info: 2025-12-08 19:35:24  -- Discounting fixed costs for period 4
+[ Info: 2025-12-08 19:35:24  -- Computing retirement case for period 4
+[ Info: 2025-12-08 19:35:24  -- Discounting fixed costs for period 5
+[ Info: 2025-12-08 19:35:24  -- Computing retirement case for period 5
+[ Info: 2025-12-08 19:35:24  -- Discounting fixed costs for period 6
+[ Info: 2025-12-08 19:35:24  -- Computing retirement case for period 6
+[ Info: 2025-12-08 19:35:24  -- Discounting fixed costs for period 7
+[ Info: 2025-12-08 19:35:24  -- Computing retirement case for period 7
+[ Info: 2025-12-08 19:35:24 *** Done generating case. It took 158.2 seconds ***
+[ Info: 2025-12-08 19:35:24 *** Running simulation with monolithic solver ***
+[ Info: 2025-12-08 19:35:24 Generating model
+[ Info: 2025-12-08 19:35:24  -- Period 1
+[ Info: 2025-12-08 19:35:24  -- Adding linking variables
+[ Info: 2025-12-08 19:35:25  -- Defining available capacity
+[ Info: 2025-12-08 19:35:26  -- Generating planning model
+[ Info: 2025-12-08 19:35:27  -- Including age-based retirements
+[ Info: 2025-12-08 19:35:27  -- Available capacity in period 1 is being carried over to period 2
+[ Info: 2025-12-08 19:35:27  -- Generating operational model
+[ Info: 2025-12-08 20:06:05  -- Period 2
+[ Info: 2025-12-08 20:06:05  -- Adding linking variables
+[ Info: 2025-12-08 20:06:05  -- Defining available capacity
+[ Info: 2025-12-08 20:06:05  -- Generating planning model
+[ Info: 2025-12-08 20:06:05  -- Including age-based retirements
+[ Info: 2025-12-08 20:06:05  -- Available capacity in period 2 is being carried over to period 3
+[ Info: 2025-12-08 20:06:05  -- Generating operational model
+[ Info: 2025-12-08 20:06:05  -- Period 3
+[ Info: 2025-12-08 20:06:05  -- Adding linking variables
+[ Info: 2025-12-08 20:06:05  -- Defining available capacity
+[ Info: 2025-12-08 20:06:05  -- Generating planning model
+[ Info: 2025-12-08 20:06:05  -- Including age-based retirements
+[ Info: 2025-12-08 20:06:05  -- Available capacity in period 3 is being carried over to period 4
+[ Info: 2025-12-08 20:06:05  -- Generating operational model
+[ Info: 2025-12-08 20:06:05  -- Period 4
+[ Info: 2025-12-08 20:06:05  -- Adding linking variables
+[ Info: 2025-12-08 20:06:05  -- Defining available capacity
+[ Info: 2025-12-08 20:06:05  -- Generating planning model
+[ Info: 2025-12-08 20:06:05  -- Including age-based retirements
+[ Info: 2025-12-08 20:06:05  -- Available capacity in period 4 is being carried over to period 5
+[ Info: 2025-12-08 20:06:05  -- Generating operational model
+[ Info: 2025-12-08 20:06:05  -- Period 5
+[ Info: 2025-12-08 20:06:05  -- Adding linking variables
+[ Info: 2025-12-08 20:06:05  -- Defining available capacity
+[ Info: 2025-12-08 20:06:05  -- Generating planning model
+[ Info: 2025-12-08 20:06:05  -- Including age-based retirements
+[ Info: 2025-12-08 20:06:05  -- Available capacity in period 5 is being carried over to period 6
+[ Info: 2025-12-08 20:06:05  -- Generating operational model
+[ Info: 2025-12-08 20:06:05  -- Period 6
+[ Info: 2025-12-08 20:06:05  -- Adding linking variables
+[ Info: 2025-12-08 20:06:05  -- Defining available capacity
+[ Info: 2025-12-08 20:06:05  -- Generating planning model
+[ Info: 2025-12-08 20:06:05  -- Including age-based retirements
+[ Info: 2025-12-08 20:06:05  -- Available capacity in period 6 is being carried over to period 7
+[ Info: 2025-12-08 20:06:05  -- Generating operational model
+[ Info: 2025-12-08 20:06:05  -- Period 7
+[ Info: 2025-12-08 20:06:05  -- Adding linking variables
+[ Info: 2025-12-08 20:06:05  -- Defining available capacity
+[ Info: 2025-12-08 20:06:05  -- Generating planning model
+[ Info: 2025-12-08 20:06:05  -- Including age-based retirements
+[ Info: 2025-12-08 20:06:05  -- Generating operational model
+[ Info: 2025-12-08 20:06:20  -- Model generation complete, it took 1855.9127790927887 seconds
+┌ Warning: 2025-12-08 20:06:22 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065
+┌ Warning: 2025-12-08 20:06:24 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065

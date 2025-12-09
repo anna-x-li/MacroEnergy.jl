@@ -1,0 +1,89 @@
+Set parameter LicenseID to value 197246
+Set parameter GURO_PAR_SPECIAL
+Set parameter TokenServer to value "license.rc.princeton.edu"
+  Activating new project at `~/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760`
+ERROR: LoadError: Gurobi Error 10009: Request denied: license not valid for Gurobi version 13
+Stacktrace:
+  [1] _check_ret
+    @ ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:442 [inlined]
+  [2] Gurobi.Env(params::Nothing; started::Bool, output_flag::Int64, memory_limit::Nothing)
+    @ Gurobi ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:176
+  [3] Env (repeats 2 times)
+    @ ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:143 [inlined]
+  [4] Gurobi.Optimizer(env::Nothing; enable_interrupts::Bool)
+    @ Gurobi ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:372
+  [5] Optimizer
+    @ ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:366 [inlined]
+  [6] Gurobi.Optimizer()
+    @ Gurobi ~/.julia/packages/Gurobi/GGGtE/src/MOI_wrapper/MOI_wrapper.jl:366
+  [7] _instantiate_and_check(optimizer_constructor::Any)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/9lCV5/src/instantiate.jl:96
+  [8] instantiate(optimizer_constructor::Any; with_bridge_type::Type{Float64}, with_cache_type::Nothing)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/9lCV5/src/instantiate.jl:177
+  [9] set_optimizer(model::JuMP.Model, optimizer_constructor::Any; add_bridges::Bool, kwargs::@Kwargs{})
+    @ JuMP ~/.julia/packages/JuMP/e83v9/src/optimizer_interface.jl:503
+ [10] set_optimizer
+    @ ~/.julia/packages/JuMP/e83v9/src/optimizer_interface.jl:495 [inlined]
+ [11] set_optimizer(model::JuMP.Model, opt::MacroEnergy.Optimizer)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:22
+ [12] solve_case(case::MacroEnergy.Case, opt::MacroEnergy.Optimizer, ::MacroEnergy.Monolithic)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/solver.jl:11
+ [13] solve_case(case::MacroEnergy.Case, opt::MacroEnergy.Optimizer)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/solver.jl:2
+ [14] run_case(case_path::String; lazy_load::Bool, log_level::Base.CoreLogging.LogLevel, log_to_console::Bool, log_to_file::Bool, log_file_path::String, log_file_attribution::Bool, optimizer::DataType, optimizer_env::Nothing, optimizer_attributes::Tuple{Pair{String, Int64}, Pair{String, Int64}, Pair{String, Float64}}, planning_optimizer::DataType, subproblem_optimizer::DataType, planning_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}}, subproblem_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}})
+    @ MacroEnergy ~/MacroEnergy.jl/src/utilities/run_tools.jl:54
+ [15] top-level scope
+    @ ~/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/run.jl:7
+ [16] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+ [17] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:317
+ [18] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/run.jl:7
+[ Info: 2025-12-08 20:52:48 Running case at /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760
+[ Info: 2025-12-08 20:52:48  ++ Loading user additions from ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/tmp/UserAdditions.jl
+[ Info: 2025-12-08 20:52:49  ++ Successfully loaded UserAdditions module.
+[ Info: 2025-12-08 20:52:49 Loading case from /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/system_data.json
+[ Info: 2025-12-08 20:52:49 Loading system data
+[ Info: 2025-12-08 20:52:50 Done loading system data. It took 1.01 seconds
+[ Info: 2025-12-08 20:52:50 Done loading case data. It took 1.01 seconds
+[ Info: 2025-12-08 20:52:50 *** Generating case ***
+[ Info: 2025-12-08 20:52:50 Configuring case from settings/case_settings.json
+[ Info: 2025-12-08 20:52:50 Configuring case
+[ Info: 2025-12-08 20:52:50  -- Setting solution algorithm
+[ Info: 2025-12-08 20:52:50  -- Solution algorithm set to MacroEnergy.Monolithic()
+[ Info: 2025-12-08 20:52:50 Generating systems
+[ Info: 2025-12-08 20:52:51 Generating system
+┌ Warning: 2025-12-08 20:52:52 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-08 20:52:53 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 20:52:53 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 20:52:53 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 20:52:53 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 20:52:53 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-08 20:52:53 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-08 20:53:08 Done generating system. It took 17.12 seconds
+[ Info: 2025-12-08 20:53:08  -- Discounting fixed costs for period 1
+[ Info: 2025-12-08 20:53:09  -- Computing retirement case for period 1
+[ Info: 2025-12-08 20:53:09 *** Done generating case. It took 18.62 seconds ***
+[ Info: 2025-12-08 20:53:09 *** Running simulation with monolithic solver ***
+[ Info: 2025-12-08 20:53:09 Generating model
+[ Info: 2025-12-08 20:53:09  -- Period 1
+[ Info: 2025-12-08 20:53:09  -- Adding linking variables
+[ Info: 2025-12-08 20:53:10  -- Defining available capacity
+[ Info: 2025-12-08 20:53:10  -- Generating planning model
+[ Info: 2025-12-08 20:53:12  -- Adding retrofit constraints
+[ Info: 2025-12-08 20:53:12  -- Including age-based retirements
+[ Info: 2025-12-08 20:53:12  -- Generating operational model
+[ Info: 2025-12-08 20:53:50  -- Model generation complete, it took 41.06089496612549 seconds
+┌ Warning: 2025-12-08 20:53:51 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065
+┌ Warning: 2025-12-08 20:53:52 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065
