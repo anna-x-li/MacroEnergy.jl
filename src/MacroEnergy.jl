@@ -16,7 +16,7 @@ using Pkg
 using DistributedArrays
 using Distributed
 using ClusterManagers
-using GitHub
+# using GitHub
 using Markdown
 using Logging
 using LoggingExtras
@@ -320,12 +320,12 @@ export AbstractAsset,
     template_subcommodity,
     asset_ids,
     asset_ids_from_dir,
-    list_examples,
-    download_example,
-    download_examples,
-    example_readme,
-    example_contents,
-    authenticate_github,
+    # list_examples,
+    # download_example,
+    # download_examples,
+    # example_readme,
+    # example_contents,
+    # authenticate_github,
     mermaid_diagram,
     save_mermaid_diagram
     
