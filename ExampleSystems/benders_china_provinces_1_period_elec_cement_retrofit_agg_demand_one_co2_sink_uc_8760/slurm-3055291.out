@@ -1,0 +1,154 @@
+Unloading gurobi/13.0.0
+  ERROR: No such file or directory on
+    '/usr/licensed/Modules/modulefiles/gurobi/13.0.0'
+ERROR: Unable to locate a modulefile for 'gurobi/13.0.0'
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+Set parameter LicenseID to value 197246
+Set parameter GURO_PAR_SPECIAL
+Set parameter TokenServer to value "license.rc.princeton.edu"
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter BarConvTol to value 0.001
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter BarConvTol to value 0.001
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Red Hat Enterprise Linux 9.6 (Plow)")
+
+CPU model: AMD EPYC 9654 96-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 192 physical cores, 192 logical processors, using up to 32 threads
+
+Non-default parameters:
+Method  2
+BarConvTol  0.001
+Crossover  0
+
+Optimize a model with 51598262 rows, 29059340 columns and 267526777 nonzeros (Min)
+Model fingerprint: 0xc908923a
+Model has 11678304 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e-03, 2e+05]
+  Objective range  [3e+00, 6e+07]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-01, 1e+06]
+Presolve removed 8608860 rows and 4300194 columns (presolve time = 5s)...
+Presolve removed 10752730 rows and 6271335 columns (presolve time = 11s)...
+Presolve removed 10752730 rows and 6271335 columns (presolve time = 15s)...
+Presolve removed 10822810 rows and 6271335 columns (presolve time = 20s)...
+Presolve removed 17211475 rows and 12660000 columns (presolve time = 25s)...
+Presolve removed 22558351 rows and 13064484 columns (presolve time = 33s)...
+Presolve removed 22558351 rows and 13064484 columns (presolve time = 39s)...
+Presolve removed 22558351 rows and 13064484 columns (presolve time = 41s)...
+Presolve removed 22558351 rows and 13064484 columns (presolve time = 46s)...
+Presolve removed 22558351 rows and 13064484 columns (presolve time = 54s)...
+Presolve removed 22558351 rows and 13064484 columns (presolve time = 57s)...
+Presolve removed 22623667 rows and 13064485 columns (presolve time = 63s)...
+Presolve removed 22623667 rows and 13064485 columns (presolve time = 66s)...
+Presolve removed 22658707 rows and 13064485 columns (presolve time = 70s)...
+Presolve removed 22658707 rows and 13064485 columns (presolve time = 78s)...
+Presolve removed 22658707 rows and 13064485 columns (presolve time = 80s)...
+Presolve removed 22921507 rows and 13064485 columns
+Presolve time: 84.41s
+Presolved: 28676755 rows, 16257655 columns, 214162476 nonzeros
+Elapsed ordering time = 22s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 92s
+Elapsed ordering time = 113s
+Elapsed ordering time = 115s
+Elapsed ordering time = 120s
+Elapsed ordering time = 125s
+Elapsed ordering time = 130s
+Elapsed ordering time = 135s
+Elapsed ordering time = 140s
+Elapsed ordering time = 145s
+Ordering time: 262.76s
+
+Barrier statistics:
+ Dense cols : 512
+ AA' NZ     : 6.689e+08
+ Factor NZ  : 3.410e+09 (roughly 50.0 GB of memory)
+ Factor Ops : 1.022e+13 (roughly 20 seconds per iteration)
+ Threads    : 32
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   1.64215487e+17 -8.25854156e+15  7.75e+11 2.51e+02  1.44e+12   414s
+   1   1.09116226e+17 -1.05103984e+16  5.89e+11 3.27e+06  1.16e+12   425s
+   2   1.06411427e+17 -1.63957374e+16  5.77e+11 1.45e+07  1.11e+12   438s
+   3   8.67660740e+16 -1.64424862e+16  5.03e+11 1.40e+07  1.01e+12   452s
+   4   7.81700452e+16 -2.41265029e+16  4.57e+11 9.15e+07  8.33e+11   465s
+   5   2.92396750e+16 -3.06114618e+16  1.58e+11 1.86e+08  2.89e+11   480s
+   6   5.76506581e+15 -3.14784901e+16  2.19e+10 3.46e+07  4.78e+10   501s
+   7   5.30248087e+15 -2.74980893e+16  1.77e+10 1.98e+07  3.43e+10   520s
+   8   3.48292190e+15 -2.14980103e+16  5.32e+09 5.15e+06  1.08e+10   536s
+   9   2.34284941e+15 -1.22659175e+16  8.09e+08 1.60e+06  2.42e+09   549s
+  10   1.57719912e+15 -3.61872113e+15  1.09e+08 2.25e+05  3.96e+08   564s
+  11   1.00526829e+15 -8.50990677e+14  5.55e+07 4.57e+04  1.34e+08   578s
+  12   5.12531919e+14  5.65339573e+11  2.32e+07 1.06e+04  4.70e+07   591s
+  13   4.74253006e+14  3.70080549e+14  2.12e+07 5.65e+03  4.02e+07   605s
+  14   3.35981703e+14  6.57076454e+14  1.44e+07 3.32e+03  2.46e+07   619s
+  15   2.75819438e+14  1.57811680e+15  1.15e+07 2.14e+03  1.79e+07   634s
+  16   2.58312949e+14  9.07231994e+15  1.07e+07 1.15e+03  2.03e+07   647s
+  17   2.38907265e+14  3.06043106e+16  9.86e+06 6.85e+02  2.31e+07   664s
+  18   2.38021703e+14  5.44823119e+16  9.83e+06 6.81e+02  2.48e+07   680s
+  19   2.35428806e+14  2.28046432e+17  9.71e+06 6.52e+02  2.40e+07   696s
+  20   2.35181529e+14  1.93677891e+18  9.70e+06 6.50e+02  6.00e+07   718s
+  21   2.35115729e+14  2.13966827e+19  9.70e+06 6.49e+02  3.87e+08   753s
+  22   2.38009420e+14  2.22211068e+20  9.73e+06 5.83e+02  3.08e+10   801s
+  23   1.64211947e+17 -8.25854202e+15  7.75e+11 2.51e+02  1.44e+12   856s
+  24*  5.50228107e+19 -4.43358201e+16  6.05e+11 1.71e+08  9.77e+09   877s
+  25*  3.38744144e+19 -2.23018872e+16  5.79e+11 1.29e+08  7.30e+09   902s
+  26*  2.60714422e+19 -1.30000859e+16  5.57e+11 4.47e+07  2.79e+09   923s
+  27*  2.85938287e+19 -5.94321024e+16  5.25e+11 8.82e+07  6.76e+09   944s
+  28   3.08124786e+18 -7.03253446e+16  1.53e+13 1.60e+06  5.79e+13   971s
+  29   1.29552150e+17 -2.75319720e+16  7.20e+11 2.09e+05  1.31e+12   992s
+  30   9.43915188e+15 -4.08316880e+15  6.33e+10 1.14e+04  1.57e+10  1010s
+  31   3.89944348e+15 -6.96214200e+14  2.66e+10 1.32e+03  1.40e+09  1031s
+  32   3.90191579e+14 -2.75348330e+14  3.46e+09 2.30e+02  1.11e+08  1049s
+  33   1.22228234e+14 -7.59631503e+13  1.08e+09 5.79e+01  2.25e+07  1065s
+  34   8.91719395e+13 -4.36839781e+13  7.90e+08 3.17e+01  1.35e+07  1081s
+  35   6.92449757e+13 -3.00519054e+13  6.12e+08 2.06e+01  9.36e+06  1096s
+  36   5.70885346e+13 -1.98559586e+13  5.02e+08 1.26e+01  6.79e+06  1112s
+  37   4.07691362e+13 -1.43885572e+13  3.57e+08 8.88e+00  4.54e+06  1128s
+  38   3.86030786e+13 -9.01451600e+12  3.37e+08 5.07e+00  3.85e+06  1146s
+  39   2.89550272e+13 -6.11757362e+12  2.51e+08 3.67e+00  2.71e+06  1167s
+  40   2.54221065e+13 -2.65110771e+12  2.18e+08 2.09e+00  2.17e+06  1190s
+  41   1.90404402e+13 -1.13447104e+12  1.59e+08 1.42e+00  1.54e+06  1216s
+  42   1.53085886e+13 -3.06778711e+11  1.24e+08 1.07e+00  1.20e+06  1242s
+  43   1.29438525e+13  1.05239624e+12  1.00e+08 5.32e-01  9.78e+05  1269s
+  44   1.04979423e+13  1.98019936e+12  7.58e+07 2.84e-01  7.79e+05  1295s
+  45   9.27350488e+12  2.90088230e+12  6.07e+07 1.54e-01  6.94e+05  1321s
+  46   8.74936767e+12  3.77312074e+12  5.28e+07 9.00e-02  6.94e+05  1345s
+  47   8.64886650e+12  4.33341852e+12  4.90e+07 7.52e-02  7.22e+05  1365s
+  48   8.64173673e+12  4.60873399e+12  4.66e+07 7.10e-02  7.28e+05  1383s
+  49   8.67570663e+12  4.87262656e+12  4.49e+07 6.75e-02  7.38e+05  1402s
+  50   8.76514312e+12  5.06281729e+12  4.23e+07 6.53e-02  7.25e+05  1425s
+  51   8.78440970e+12  5.30032165e+12  4.19e+07 6.30e-02  7.49e+05  1444s
+  52   8.86734848e+12  5.91035351e+12  4.10e+07 5.80e-02  8.11e+05  1463s
+  53   9.28497452e+12  6.28556910e+12  3.87e+07 5.59e-02  8.23e+05  1484s
+  54   9.48579596e+12  6.91369377e+12  3.78e+07 5.28e-02  8.82e+05  1508s
+  55   9.97035797e+12  7.80844437e+12  3.66e+07 4.98e-02  9.71e+05  1534s
+  56   1.04590337e+13  8.53741059e+12  3.59e+07 4.79e-02  1.05e+06  1556s
+  57   1.10152176e+13  9.44021474e+12  3.53e+07 4.59e-02  1.15e+06  1582s
+  58   1.22091655e+13  1.06748066e+13  3.44e+07 4.41e-02  1.29e+06  1609s
+  59   1.40661312e+13  1.35033823e+13  3.32e+07 4.04e-02  1.60e+06  1635s
+  60   1.47906877e+13  1.50870824e+13  3.30e+07 3.93e-02  1.78e+06  1659s
+  61   1.68623142e+13  1.68112944e+13  3.26e+07 3.81e-02  2.00e+06  1685s
+  62   1.84051442e+13  1.95152826e+13  3.21e+07 3.65e-02  2.31e+06  1712s
+  63   2.05916904e+13  2.42202819e+13  3.21e+07 3.39e-02  2.88e+06  1733s
+  64   2.47157117e+13  2.66165491e+13  3.22e+07 3.32e-02  3.27e+06  1757s
+  65   3.29872236e+13  3.70516733e+13  3.23e+07 3.04e-02  4.67e+06  1783s
+  66   4.24233299e+13  6.47742878e+13  3.21e+07 3.04e-02  8.09e+06  1810s
+  67   6.02335978e+13  9.82175829e+13  3.32e+07 3.07e-02  1.33e+07  1836s
+  68   9.03623321e+13  1.85757306e+14  3.38e+07 3.29e-02  2.74e+07  1862s

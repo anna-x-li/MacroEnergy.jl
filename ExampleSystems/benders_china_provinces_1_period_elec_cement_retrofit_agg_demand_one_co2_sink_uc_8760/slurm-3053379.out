@@ -1,0 +1,90 @@
+Unloading gurobi/13.0.0
+  ERROR: No such file or directory on
+    '/usr/licensed/Modules/modulefiles/gurobi/13.0.0'
+ERROR: Unable to locate a modulefile for 'gurobi/13.0.0'
+Precompiling packages...
+   5585.4 ms  ✓ UserAdditions (serial)
+  1 dependency successfully precompiled in 8 seconds
+ERROR: LoadError: MethodError: no method matching add_model_constraint!(::MinDownTimeConstraint, ::Edge{Cement}, ::JuMP.Model)
+The function `add_model_constraint!` exists, but no method is defined for this combination of argument types.
+
+Closest candidates are:
+  add_model_constraint!(!Matched::MinCapacityConstraint, ::Union{MacroEnergy.AbstractEdge, MacroEnergy.AbstractStorage}, ::JuMP.Model)
+   @ MacroEnergy ~/MacroEnergy.jl/src/model/constraints/min_capacity.jl:18
+  add_model_constraint!(!Matched::CapacityConstraint, ::Edge, ::JuMP.Model)
+   @ MacroEnergy ~/MacroEnergy.jl/src/model/constraints/capacity.jl:28
+  add_model_constraint!(!Matched::MinFlowConstraint, ::Edge, ::JuMP.Model)
+   @ MacroEnergy ~/MacroEnergy.jl/src/model/constraints/min_flow.jl:21
+  ...
+
+Stacktrace:
+  [1] add_constraints_by_type!(y::Edge{Cement}, model::JuMP.Model, constraint_type::DataType)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/constraints/constraints_utils.jl:25
+  [2] add_constraints_by_type!(system::MacroEnergy.System, model::JuMP.Model, constraint_type::DataType)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/constraints/constraints_utils.jl:13
+  [3] operation_model!(system::MacroEnergy.System, model::JuMP.Model)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/generate_model.jl:116
+  [4] generate_model(case::MacroEnergy.Case)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/generate_model.jl:53
+  [5] solve_case(case::MacroEnergy.Case, opt::MacroEnergy.Optimizer, ::MacroEnergy.Monolithic)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/solver.jl:9
+  [6] solve_case(case::MacroEnergy.Case, opt::MacroEnergy.Optimizer)
+    @ MacroEnergy ~/MacroEnergy.jl/src/model/solver.jl:2
+  [7] run_case(case_path::String; lazy_load::Bool, log_level::Base.CoreLogging.LogLevel, log_to_console::Bool, log_to_file::Bool, log_file_path::String, log_file_attribution::Bool, optimizer::DataType, optimizer_env::Nothing, optimizer_attributes::Tuple{Pair{String, Int64}, Pair{String, Int64}, Pair{String, Float64}}, planning_optimizer::DataType, subproblem_optimizer::DataType, planning_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}}, subproblem_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}})
+    @ MacroEnergy ~/MacroEnergy.jl/src/utilities/run_tools.jl:54
+  [8] top-level scope
+    @ ~/MacroEnergy.jl/ExampleSystems/china_provinces_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/run.jl:4
+  [9] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+ [10] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:317
+ [11] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/al3792/MacroEnergy.jl/ExampleSystems/china_provinces_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/run.jl:4
+[ Info: 2025-12-16 13:52:26 Running case at /home/al3792/MacroEnergy.jl/ExampleSystems/china_provinces_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760
+[ Info: 2025-12-16 13:52:26  ++ Loading user additions from ExampleSystems/china_provinces_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/tmp/UserAdditions.jl
+[ Info: 2025-12-16 13:52:35  ++ Successfully loaded UserAdditions module.
+[ Info: 2025-12-16 13:52:35 Loading case from /home/al3792/MacroEnergy.jl/ExampleSystems/china_provinces_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/system_data.json
+[ Info: 2025-12-16 13:52:35 Loading system data
+[ Info: 2025-12-16 13:52:36 Done loading system data. It took 0.85 seconds
+[ Info: 2025-12-16 13:52:36 Done loading case data. It took 0.85 seconds
+[ Info: 2025-12-16 13:52:36 *** Generating case ***
+[ Info: 2025-12-16 13:52:36 Configuring case from settings/case_settings.json
+[ Info: 2025-12-16 13:52:36 Configuring case
+[ Info: 2025-12-16 13:52:36  -- Setting solution algorithm
+[ Info: 2025-12-16 13:52:36  -- Solution algorithm set to MacroEnergy.Monolithic()
+[ Info: 2025-12-16 13:52:36 Generating systems
+[ Info: 2025-12-16 13:52:37 Generating system
+┌ Warning: 2025-12-16 13:52:38 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-16 13:52:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:52:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:52:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:52:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:52:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:52:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:52:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-16 13:55:01 Done generating system. It took 144.57 seconds
+[ Info: 2025-12-16 13:55:02  -- Discounting fixed costs for period 1
+[ Info: 2025-12-16 13:55:02  -- Computing retirement case for period 1
+[ Info: 2025-12-16 13:55:03 *** Done generating case. It took 146.21 seconds ***
+[ Info: 2025-12-16 13:55:03 *** Running simulation with monolithic solver ***
+[ Info: 2025-12-16 13:55:03 Generating model
+[ Info: 2025-12-16 13:55:03  -- Period 1
+[ Info: 2025-12-16 13:55:03  -- Adding linking variables
+[ Info: 2025-12-16 13:55:04  -- Defining available capacity
+[ Info: 2025-12-16 13:55:04  -- Generating planning model
+[ Info: 2025-12-16 13:55:06  -- Adding retrofit constraints
+[ Info: 2025-12-16 13:55:06  -- Including age-based retirements
+[ Info: 2025-12-16 13:55:06  -- Generating operational model
+┌ Warning: 2025-12-16 13:58:26 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065
+┌ Warning: 2025-12-16 13:58:27 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065

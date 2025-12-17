@@ -1,0 +1,20 @@
+{
+    "HoursPerTimeStep": {
+        "NaturalGas": 1,
+        "Electricity": 1,
+        "CO2": 1,
+		"Coal": 1,
+		"Uranium": 1,
+        "CO2Captured": 1
+    },
+    "NumberOfSubperiods": 52,
+    "HoursPerSubperiod": {
+        "NaturalGas": 168,
+		"Coal": 168,
+        "Electricity": 168,
+        "CO2": 168,
+		"Uranium": 168,
+        "CO2Captured": 168
+    },
+    "TotalHoursModeled": 8736
+}

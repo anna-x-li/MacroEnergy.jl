@@ -1,0 +1,163 @@
+Unloading gurobi/13.0.0
+  ERROR: No such file or directory on
+    '/usr/licensed/Modules/modulefiles/gurobi/13.0.0'
+ERROR: Unable to locate a modulefile for 'gurobi/13.0.0'
+Precompiling packages...
+              ✗ MbedTLS_jll
+              ✗ MbedTLS
+              ✗ HTTP
+              ✗ GitHub
+   9485.9 ms  ✓ MacroEnergy
+   4819.3 ms  ✓ MacroEnergy → MacroEnergyGurobiExt
+  2 dependencies successfully precompiled in 30 seconds. 190 already precompiled.
+
+ERROR: LoadError: The following 1 direct dependency failed to precompile:
+
+GitHub 
+
+Failed to precompile GitHub [bc5e4493-9b4d-5f90-b8aa-2b2bcaad7a26] to "/home/al3792/.julia/compiled/v1.12/GitHub/jl_u7sn4y".
+ERROR: LoadError: ArgumentError: Package MbedTLS_jll [c8ffd9c3-330d-5841-b78e-0817d7145fa1] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+Stacktrace:
+  [1] __require_prelocked(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:2587
+  [2] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:2465
+  [3] macro expansion
+    @ ./loading.jl:2393 [inlined]
+  [4] macro expansion
+    @ ./lock.jl:376 [inlined]
+  [5] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2358
+  [6] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2334
+  [7] top-level scope
+    @ ~/.julia/packages/MbedTLS/Vaaz8/src/MbedTLS.jl:3
+  [8] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+  [9] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+    @ Base ./loading.jl:2996
+ [10] top-level scope
+    @ stdin:5
+ [11] eval(m::Module, e::Any)
+    @ Core ./boot.jl:489
+ [12] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base ./loading.jl:2842
+ [13] include_string
+    @ ./loading.jl:2852 [inlined]
+ [14] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:315
+ [15] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/al3792/.julia/packages/MbedTLS/Vaaz8/src/MbedTLS.jl:1
+in expression starting at stdin:5
+ERROR: LoadError: Failed to precompile MbedTLS [739be429-bea8-5141-9913-cc70e7f3736d] to "/home/al3792/.julia/compiled/v1.12/MbedTLS/jl_wdp1dE".
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:44
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool; flags::Cmd, cacheflags::Base.CacheFlags, reasons::Dict{String, Int64}, loadable_exts::Nothing)
+    @ Base ./loading.jl:3283
+  [3] (::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}})()
+    @ Base ./loading.jl:2651
+  [4] mkpidlock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+    @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:93
+  [5] #mkpidlock#7
+    @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:88 [inlined]
+  [6] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:114
+  [7] #invokelatest_gr#232
+    @ ./reflection.jl:1282 [inlined]
+  [8] invokelatest_gr
+    @ ./reflection.jl:1274 [inlined]
+  [9] maybe_cachefile_lock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+    @ Base ./loading.jl:3854
+ [10] maybe_cachefile_lock
+    @ ./loading.jl:3851 [inlined]
+ [11] __require_prelocked(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:2637
+ [12] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:2465
+ [13] macro expansion
+    @ ./loading.jl:2393 [inlined]
+ [14] macro expansion
+    @ ./lock.jl:376 [inlined]
+ [15] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2358
+ [16] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2334
+ [17] top-level scope
+    @ ~/.julia/packages/HTTP/ShTJs/src/HTTP.jl:10
+ [18] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+ [19] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+    @ Base ./loading.jl:2996
+ [20] top-level scope
+    @ stdin:5
+ [21] eval(m::Module, e::Any)
+    @ Core ./boot.jl:489
+ [22] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base ./loading.jl:2842
+ [23] include_string
+    @ ./loading.jl:2852 [inlined]
+ [24] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:315
+ [25] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/al3792/.julia/packages/HTTP/ShTJs/src/HTTP.jl:1
+in expression starting at stdin:5
+ERROR: LoadError: Failed to precompile HTTP [cd3eb016-35fb-5094-929b-558a96fad6f3] to "/home/al3792/.julia/compiled/v1.12/HTTP/jl_fLUujr".
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:44
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool; flags::Cmd, cacheflags::Base.CacheFlags, reasons::Dict{String, Int64}, loadable_exts::Nothing)
+    @ Base ./loading.jl:3283
+  [3] (::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}})()
+    @ Base ./loading.jl:2651
+  [4] mkpidlock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+    @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:93
+  [5] #mkpidlock#7
+    @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:88 [inlined]
+  [6] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:114
+  [7] #invokelatest_gr#232
+    @ ./reflection.jl:1282 [inlined]
+  [8] invokelatest_gr
+    @ ./reflection.jl:1274 [inlined]
+  [9] maybe_cachefile_lock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+    @ Base ./loading.jl:3854
+ [10] maybe_cachefile_lock
+    @ ./loading.jl:3851 [inlined]
+ [11] __require_prelocked(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:2637
+ [12] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:2465
+ [13] macro expansion
+    @ ./loading.jl:2393 [inlined]
+ [14] macro expansion
+    @ ./lock.jl:376 [inlined]
+ [15] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2358
+ [16] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2334
+ [17] top-level scope
+    @ ~/.julia/packages/GitHub/QJctz/src/GitHub.jl:10
+ [18] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+ [19] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::Nothing)
+    @ Base ./loading.jl:2996
+ [20] top-level scope
+    @ stdin:5
+ [21] eval(m::Module, e::Any)
+    @ Core ./boot.jl:489
+ [22] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base ./loading.jl:2842
+ [23] include_string
+    @ ./loading.jl:2852 [inlined]
+ [24] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:315
+ [25] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/al3792/.julia/packages/GitHub/QJctz/src/GitHub.jl:1
+in expression starting at stdin:
+in expression starting at /home/al3792/MacroEnergy.jl/ExampleSystems/china_provinces_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/run.jl:1
