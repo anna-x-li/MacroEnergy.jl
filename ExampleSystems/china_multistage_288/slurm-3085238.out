@@ -1,0 +1,460 @@
+ERROR: Unable to locate a modulefile for 'gurobi/13.0.0'
+ERROR:   getOptionIndex: Option "BarConvTol" is unknown
+┌ Warning: The active manifest file has dependencies that were resolved with a different julia version (1.11.3). Unexpected behavior may occur.
+└ @ ~/MacroEnergy.jl/Manifest.toml:0
+┌ Warning: The project dependencies or compat requirements have changed since the manifest was last resolved.
+│ It is recommended to `Pkg.resolve()` or consider `Pkg.update()` if necessary.
+└ @ Pkg.API /usr/licensed/julia/1.12.1/share/julia/stdlib/v1.12/Pkg/src/API.jl:1227
+Precompiling packages...
+              ✗ MbedTLS_jll
+              ✗ MbedTLS
+              ✗ HTTP
+              ✗ GitHub
+  0 dependencies successfully precompiled in 82 seconds. 192 already precompiled.
+
+The following 1 direct dependency failed to precompile:
+
+GitHub 
+
+Failed to precompile GitHub [bc5e4493-9b4d-5f90-b8aa-2b2bcaad7a26] to "/home/al3792/.julia/compiled/v1.12/GitHub/jl_RifH2r".
+ERROR: LoadError: ArgumentError: Package MbedTLS_jll [c8ffd9c3-330d-5841-b78e-0817d7145fa1] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+Stacktrace:
+  [1] __require_prelocked(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:2587
+  [2] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:2465
+  [3] macro expansion
+    @ ./loading.jl:2393 [inlined]
+  [4] macro expansion
+    @ ./lock.jl:376 [inlined]
+  [5] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2358
+  [6] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2334
+  [7] top-level scope
+    @ ~/.julia/packages/MbedTLS/Vaaz8/src/MbedTLS.jl:3
+  [8] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+  [9] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+    @ Base ./loading.jl:2996
+ [10] top-level scope
+    @ stdin:5
+ [11] eval(m::Module, e::Any)
+    @ Core ./boot.jl:489
+ [12] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base ./loading.jl:2842
+ [13] include_string
+    @ ./loading.jl:2852 [inlined]
+ [14] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:315
+ [15] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/al3792/.julia/packages/MbedTLS/Vaaz8/src/MbedTLS.jl:1
+in expression starting at stdin:5
+ERROR: LoadError: Failed to precompile MbedTLS [739be429-bea8-5141-9913-cc70e7f3736d] to "/home/al3792/.julia/compiled/v1.12/MbedTLS/jl_lqjO26".
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:44
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool; flags::Cmd, cacheflags::Base.CacheFlags, reasons::Dict{String, Int64}, loadable_exts::Nothing)
+    @ Base ./loading.jl:3283
+  [3] (::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}})()
+    @ Base ./loading.jl:2651
+  [4] mkpidlock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+    @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:93
+  [5] #mkpidlock#7
+    @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:88 [inlined]
+  [6] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:114
+  [7] #invokelatest_gr#232
+    @ ./reflection.jl:1282 [inlined]
+  [8] invokelatest_gr
+    @ ./reflection.jl:1274 [inlined]
+  [9] maybe_cachefile_lock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+    @ Base ./loading.jl:3854
+ [10] maybe_cachefile_lock
+    @ ./loading.jl:3851 [inlined]
+ [11] __require_prelocked(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:2637
+ [12] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:2465
+ [13] macro expansion
+    @ ./loading.jl:2393 [inlined]
+ [14] macro expansion
+    @ ./lock.jl:376 [inlined]
+ [15] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2358
+ [16] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2334
+ [17] top-level scope
+    @ ~/.julia/packages/HTTP/ShTJs/src/HTTP.jl:10
+ [18] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+ [19] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+    @ Base ./loading.jl:2996
+ [20] top-level scope
+    @ stdin:5
+ [21] eval(m::Module, e::Any)
+    @ Core ./boot.jl:489
+ [22] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base ./loading.jl:2842
+ [23] include_string
+    @ ./loading.jl:2852 [inlined]
+ [24] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:315
+ [25] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/al3792/.julia/packages/HTTP/ShTJs/src/HTTP.jl:1
+in expression starting at stdin:5
+ERROR: LoadError: Failed to precompile HTTP [cd3eb016-35fb-5094-929b-558a96fad6f3] to "/home/al3792/.julia/compiled/v1.12/HTTP/jl_GlBxdv".
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:44
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool; flags::Cmd, cacheflags::Base.CacheFlags, reasons::Dict{String, Int64}, loadable_exts::Nothing)
+    @ Base ./loading.jl:3283
+  [3] (::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}})()
+    @ Base ./loading.jl:2651
+  [4] mkpidlock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+    @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:93
+  [5] #mkpidlock#7
+    @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:88 [inlined]
+  [6] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:114
+  [7] #invokelatest_gr#232
+    @ ./reflection.jl:1282 [inlined]
+  [8] invokelatest_gr
+    @ ./reflection.jl:1274 [inlined]
+  [9] maybe_cachefile_lock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+    @ Base ./loading.jl:3854
+ [10] maybe_cachefile_lock
+    @ ./loading.jl:3851 [inlined]
+ [11] __require_prelocked(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:2637
+ [12] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:2465
+ [13] macro expansion
+    @ ./loading.jl:2393 [inlined]
+ [14] macro expansion
+    @ ./lock.jl:376 [inlined]
+ [15] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2358
+ [16] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:2334
+ [17] top-level scope
+    @ ~/.julia/packages/GitHub/QJctz/src/GitHub.jl:10
+ [18] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+ [19] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::Nothing)
+    @ Base ./loading.jl:2996
+ [20] top-level scope
+    @ stdin:5
+ [21] eval(m::Module, e::Any)
+    @ Core ./boot.jl:489
+ [22] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+    @ Base ./loading.jl:2842
+ [23] include_string
+    @ ./loading.jl:2852 [inlined]
+ [24] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:315
+ [25] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/al3792/.julia/packages/GitHub/QJctz/src/GitHub.jl:1
+in expression starting at stdin:[ Info: 2025-12-17 17:51:54 Running case at /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760
+[ Info: 2025-12-17 17:51:55  ++ Loading user additions from ExampleSystems/china_multistage_8760/tmp/UserAdditions.jl
+[ Info: 2025-12-17 17:51:55  ++ Successfully loaded UserAdditions module.
+[ Info: 2025-12-17 17:51:55 Loading case from /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/system_data.json
+[ Info: 2025-12-17 17:51:55 Loading system data
+[ Info: 2025-12-17 17:51:56 Done loading system data. It took 0.96 seconds
+[ Info: 2025-12-17 17:51:56 Done loading case data. It took 0.96 seconds
+[ Info: 2025-12-17 17:51:56 *** Generating case ***
+[ Info: 2025-12-17 17:51:57 Configuring case from settings/case_settings.json
+[ Info: 2025-12-17 17:51:57 Configuring case
+[ Info: 2025-12-17 17:51:57  -- Setting solution algorithm
+[ Info: 2025-12-17 17:51:57  -- Solution algorithm set to MacroEnergy.Benders()
+[ Info: 2025-12-17 17:51:57 Configuring benders
+[ Info: 2025-12-17 17:51:57 Generating systems
+[ Info: 2025-12-17 17:51:57 Generating system
+┌ Warning: 2025-12-17 17:51:58 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 17:51:59 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:51:59 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:51:59 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:52:00 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:52:00 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 17:54:25 Done generating system. It took 148.08 seconds
+[ Info: 2025-12-17 17:54:25 Generating system
+┌ Warning: 2025-12-17 17:54:26 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 17:54:26 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:54:26 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:54:26 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:54:26 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:54:26 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 17:56:40 Done generating system. It took 134.45 seconds
+[ Info: 2025-12-17 17:56:40 Generating system
+┌ Warning: 2025-12-17 17:56:40 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 17:56:40 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:56:40 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:56:40 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:56:40 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:56:40 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 17:58:56 Done generating system. It took 136.45 seconds
+[ Info: 2025-12-17 17:58:56 Generating system
+┌ Warning: 2025-12-17 17:58:56 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 17:58:56 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:58:56 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:58:56 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:58:56 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:58:56 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 18:01:13 Done generating system. It took 136.64 seconds
+[ Info: 2025-12-17 18:01:13 Generating system
+┌ Warning: 2025-12-17 18:01:13 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 18:01:13 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:01:13 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:01:13 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:01:13 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:01:13 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 18:03:27 Done generating system. It took 134.28 seconds
+[ Info: 2025-12-17 18:03:27 Generating system
+┌ Warning: 2025-12-17 18:03:27 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 18:03:27 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:03:27 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:03:27 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:03:27 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:03:27 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 18:06:10 Done generating system. It took 163.49 seconds
+[ Info: 2025-12-17 18:06:10 Generating system
+┌ Warning: 2025-12-17 18:06:11 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 18:06:11 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:06:11 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:06:11 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:06:11 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 18:06:11 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 18:08:26 Done generating system. It took 135.55 seconds
+[ Info: 2025-12-17 18:08:27  -- Discounting fixed costs for period 1
+[ Info: 2025-12-17 18:08:27  -- Computing retirement case for period 1
+[ Info: 2025-12-17 18:08:27  -- Discounting fixed costs for period 2
+[ Info: 2025-12-17 18:08:27  -- Computing retirement case for period 2
+[ Info: 2025-12-17 18:08:28  -- Discounting fixed costs for period 3
+[ Info: 2025-12-17 18:08:28  -- Computing retirement case for period 3
+[ Info: 2025-12-17 18:08:28  -- Discounting fixed costs for period 4
+[ Info: 2025-12-17 18:08:28  -- Computing retirement case for period 4
+[ Info: 2025-12-17 18:08:28  -- Discounting fixed costs for period 5
+[ Info: 2025-12-17 18:08:28  -- Computing retirement case for period 5
+[ Info: 2025-12-17 18:08:28  -- Discounting fixed costs for period 6
+[ Info: 2025-12-17 18:08:28  -- Computing retirement case for period 6
+[ Info: 2025-12-17 18:08:28  -- Discounting fixed costs for period 7
+[ Info: 2025-12-17 18:08:28  -- Computing retirement case for period 7
+[ Info: 2025-12-17 18:08:28 *** Done generating case. It took 991.1 seconds ***
+┌ Warning: 2025-12-17 18:08:32 The Slurm functionality in the `ClusterManagers.jl` package is deprecated (including `ClusterManagers.addprocs_slurm` and `ClusterManagers.SlurmManager`). It will be removed from ClusterManagers.jl in a future release. We recommend migrating to the [https://github.com/JuliaParallel/SlurmClusterManager.jl](https://github.com/JuliaParallel/SlurmClusterManager.jl) package instead.
+│   caller = ip:0x0
+└ @ Core :-1
+[ Info: 2025-12-17 18:08:32 Starting SLURM job julia-3889028: `srun -J julia-3889028 -n 1 -D /home/al3792/MacroEnergy.jl -o /home/al3792/MacroEnergy.jl/./julia-3889028-17660129124-%4t.out /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/bin/julia '-t 32' --worker=Z7F6Kn8QhM597ENJ`
+[ Info: 2025-12-17 18:08:32 Worker 0 (after 0 s): No output file "/home/al3792/MacroEnergy.jl/./julia-3889028-17660129124-0000.out" yet
+[ Info: 2025-12-17 18:08:33 Worker 0 (after 1 s): Output file found, but no connection details yet
+[ Info: 2025-12-17 18:08:35 Worker 0 ready after 3 s on host 172.17.9.18, port 9097
+[ Info: 2025-12-17 18:08:53 Number of procs: 2
+[ Info: 2025-12-17 18:08:53 Number of workers: 1
+[ Info: 2025-12-17 18:08:53 *** Running simulation with Benders decomposition ***
+[ Info: 2025-12-17 18:09:01 Generating planning problem
+[ Info: 2025-12-17 18:09:01  -- Period 1
+[ Info: 2025-12-17 18:09:01  -- Adding linking variables
+[ Info: 2025-12-17 18:09:02  -- Defining available capacity
+[ Info: 2025-12-17 18:09:02  -- Generating planning model
+[ Info: 2025-12-17 18:09:04  -- Including age-based retirements
+[ Info: 2025-12-17 18:09:04  -- Available capacity in period 1 is being carried over to period 2
+[ Info: 2025-12-17 18:09:05  -- Period 2
+[ Info: 2025-12-17 18:09:05  -- Adding linking variables
+[ Info: 2025-12-17 18:09:05  -- Defining available capacity
+[ Info: 2025-12-17 18:09:05  -- Generating planning model
+[ Info: 2025-12-17 18:09:05  -- Including age-based retirements
+[ Info: 2025-12-17 18:09:05  -- Available capacity in period 2 is being carried over to period 3
+[ Info: 2025-12-17 18:09:05  -- Period 3
+[ Info: 2025-12-17 18:09:05  -- Adding linking variables
+[ Info: 2025-12-17 18:09:05  -- Defining available capacity
+[ Info: 2025-12-17 18:09:06  -- Generating planning model
+[ Info: 2025-12-17 18:09:06  -- Including age-based retirements
+[ Info: 2025-12-17 18:09:06  -- Available capacity in period 3 is being carried over to period 4
+[ Info: 2025-12-17 18:09:06  -- Period 4
+[ Info: 2025-12-17 18:09:06  -- Adding linking variables
+[ Info: 2025-12-17 18:09:06  -- Defining available capacity
+[ Info: 2025-12-17 18:09:06  -- Generating planning model
+[ Info: 2025-12-17 18:09:06  -- Including age-based retirements
+[ Info: 2025-12-17 18:09:06  -- Available capacity in period 4 is being carried over to period 5
+[ Info: 2025-12-17 18:09:06  -- Period 5
+[ Info: 2025-12-17 18:09:06  -- Adding linking variables
+[ Info: 2025-12-17 18:09:06  -- Defining available capacity
+[ Info: 2025-12-17 18:09:06  -- Generating planning model
+[ Info: 2025-12-17 18:09:06  -- Including age-based retirements
+[ Info: 2025-12-17 18:09:06  -- Available capacity in period 5 is being carried over to period 6
+[ Info: 2025-12-17 18:09:06  -- Period 6
+[ Info: 2025-12-17 18:09:06  -- Adding linking variables
+[ Info: 2025-12-17 18:09:06  -- Defining available capacity
+[ Info: 2025-12-17 18:09:06  -- Generating planning model
+[ Info: 2025-12-17 18:09:06  -- Including age-based retirements
+[ Info: 2025-12-17 18:09:06  -- Available capacity in period 6 is being carried over to period 7
+[ Info: 2025-12-17 18:09:06  -- Period 7
+[ Info: 2025-12-17 18:09:06  -- Adding linking variables
+[ Info: 2025-12-17 18:09:06  -- Defining available capacity
+[ Info: 2025-12-17 18:09:06  -- Generating planning model
+[ Info: 2025-12-17 18:09:06  -- Including age-based retirements
+[ Info: 2025-12-17 18:09:07  -- Planning problem generation complete, it took 5.564450025558472 seconds
+┌ Warning: 2025-12-17 18:09:07 Error setting optimizer attributes. Check that the optimizer is valid.
+└ @ MacroEnergy ~/MacroEnergy.jl/src/model/optimizer.jl:39
+[ Info: 2025-12-17 18:09:07 Scaling constraints and RHS
+[ Info: 2025-12-17 18:11:37 Distributed operational subproblems generation took 147.982 seconds
+[ Info: 2025-12-17 18:11:38 Running Benders decomposition algorithm from `MacroEnergySolvers.jl`
+[ Info: 2025-12-17 18:14:38 Solving the subproblems required 155.107 seconds
+[ Info: 2025-12-17 18:14:38 Updating the planning problem....
+[ Info: 2025-12-17 18:14:38 Done updating the planning problem. It took 0.282 seconds).
+[ Info: 2025-12-17 18:14:39 Solving the planning problem required 0.194 seconds
+[ Info: 2025-12-17 18:14:39 The optimal value of the planning problem is 2.903128584029623e11
+[ Info: 2025-12-17 18:14:39 k = 0      LB = 2.903128584029623e11     UB = 3.497756828329281e14       Gap = 1203.82325       CPU Time = 157.341
+[ Info: 2025-12-17 18:14:39 Solving the interior level set problem with γ = 0.5
+[ Info: 2025-12-17 18:14:39 Solving the interior level set problem required 0.23 seconds
+[ Info: 2025-12-17 18:15:01 Solving the subproblems required 22.558 seconds
+[ Info: 2025-12-17 18:15:01 Updating the planning problem....
+[ Info: 2025-12-17 18:15:02 Done updating the planning problem. It took 0.093 seconds).
+[ Info: 2025-12-17 18:15:02 Solving the planning problem required 0.385 seconds
+[ Info: 2025-12-17 18:15:02 The optimal value of the planning problem is 3.002177616295363e11
+[ Info: 2025-12-17 18:15:02 k = 1      LB = 3.002177616295363e11     UB = 3.497756828329281e14       Gap = 1164.07325       CPU Time = 180.68
+[ Info: 2025-12-17 18:15:02 Solving the interior level set problem with γ = 0.5
+[ Info: 2025-12-17 18:15:02 Solving the interior level set problem required 0.046 seconds
+[ Info: 2025-12-17 18:15:37 Solving the subproblems required 35.417 seconds
+[ Info: 2025-12-17 18:15:37 Updating the planning problem....
+[ Info: 2025-12-17 18:15:37 Done updating the planning problem. It took 0.097 seconds).
+[ Info: 2025-12-17 18:15:38 Solving the planning problem required 0.421 seconds
+[ Info: 2025-12-17 18:15:38 The optimal value of the planning problem is 6.346571455310579e11
+[ Info: 2025-12-17 18:15:38 k = 2      LB = 6.346571455310579e11     UB = 3.49532222977837e14       Gap = 549.74181       CPU Time = 216.671
+[ Info: 2025-12-17 18:15:38 Solving the interior level set problem with γ = 0.5
+[ Info: 2025-12-17 18:15:38 Solving the interior level set problem required 0.045 seconds
+[ Info: 2025-12-17 18:48:59 Solving the subproblems required 2001.493 seconds
+[ Info: 2025-12-17 18:48:59 Updating the planning problem....
+[ Info: 2025-12-17 18:49:00 Done updating the planning problem. It took 0.09 seconds).
+[ Info: 2025-12-17 18:49:00 Solving the planning problem required 0.234 seconds
+[ Info: 2025-12-17 18:49:00 The optimal value of the planning problem is 6.650699345328547e11
+[ Info: 2025-12-17 18:49:00 k = 3      LB = 6.650699345328547e11     UB = 1.0937251402705284e14       Gap = 163.45265       CPU Time = 2218.541
+[ Info: 2025-12-17 18:49:00 Solving the interior level set problem with γ = 0.5
+[ Info: 2025-12-17 18:49:00 Solving the interior level set problem required 0.046 seconds
+[ Info: 2025-12-17 19:19:02 Solving the subproblems required 1801.762 seconds
+[ Info: 2025-12-17 19:19:02 Updating the planning problem....
+[ Info: 2025-12-17 19:19:02 Done updating the planning problem. It took 0.096 seconds).
+[ Info: 2025-12-17 19:19:03 Solving the planning problem required 0.446 seconds
+[ Info: 2025-12-17 19:19:03 The optimal value of the planning problem is 7.073199956450773e11
+[ Info: 2025-12-17 19:19:03 k = 4      LB = 7.073199956450773e11     UB = 7.10555928088805e13       Gap = 99.45749       CPU Time = 4021.296
+[ Info: 2025-12-17 19:19:03 Solving the interior level set problem with γ = 0.5
+[ Info: 2025-12-17 19:19:03 Solving the interior level set problem required 0.045 seconds
+[ Info: 2025-12-17 19:56:35 Solving the subproblems required 2252.858 seconds
+[ Info: 2025-12-17 19:56:35 Updating the planning problem....
+[ Info: 2025-12-17 19:56:36 Done updating the planning problem. It took 0.099 seconds).
+[ Info: 2025-12-17 19:56:36 Solving the planning problem required 0.34 seconds
+[ Info: 2025-12-17 19:56:36 The optimal value of the planning problem is 7.221407933597557e11
+[ Info: 2025-12-17 19:56:36 k = 5      LB = 7.221407933597557e11     UB = 7.10555928088805e13       Gap = 97.39576       CPU Time = 6274.639
+[ Info: 2025-12-17 19:56:36 Solving the interior level set problem with γ = 0.5
+[ Info: 2025-12-17 19:56:36 Solving the interior level set problem required 0.049 seconds
+[ Info: 2025-12-17 20:27:09 Solving the subproblems required 1832.844 seconds
+[ Info: 2025-12-17 20:27:09 Updating the planning problem....
+[ Info: 2025-12-17 20:27:09 Done updating the planning problem. It took 0.1 seconds).
+[ Info: 2025-12-17 20:27:09 Found negative capacity values, setting them to zero.
+[ Info: 2025-12-17 20:27:10 Solving the planning problem required 1.454 seconds
+[ Info: 2025-12-17 20:27:10 The optimal value of the planning problem is 7.278045167105049e11
+[ Info: 2025-12-17 20:27:10 k = 6      LB = 7.27804516710505e11     UB = 6.11286347431328e13       Gap = 82.99046       CPU Time = 8109.093
+[ Info: 2025-12-17 20:27:35 Writing results for period 1
+[ Info: 2025-12-17 20:27:35 Writing capacity results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_1/capacity.csv
+[ Info: 2025-12-17 20:27:39 Writing flow results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_1/flows.csv
+[ Info: 2025-12-17 20:27:55 Writing discounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_1/costs.csv
+[ Info: 2025-12-17 20:27:55 Writing undiscounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_1/undiscounted_costs.csv
+[ Info: 2025-12-17 20:27:56 Writing constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_1
+[ Info: 2025-12-17 20:27:56 Writing balance constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_1
+[ Info: 2025-12-17 20:27:56 Writing CO2 cap constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_1
+[ Info: 2025-12-17 20:27:56 Writing results for period 2
+[ Info: 2025-12-17 20:27:56 Writing capacity results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_2/capacity.csv
+[ Info: 2025-12-17 20:27:56 Writing flow results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_2/flows.csv
+[ Info: 2025-12-17 20:27:57 Writing discounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_2/costs.csv
+[ Info: 2025-12-17 20:27:57 Writing undiscounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_2/undiscounted_costs.csv
+[ Info: 2025-12-17 20:27:57 Writing constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_2
+[ Info: 2025-12-17 20:27:57 Writing balance constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_2
+[ Info: 2025-12-17 20:27:57 Writing CO2 cap constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_2
+[ Info: 2025-12-17 20:27:57 Writing results for period 3
+[ Info: 2025-12-17 20:27:57 Writing capacity results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_3/capacity.csv
+[ Info: 2025-12-17 20:27:57 Writing flow results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_3/flows.csv
+[ Info: 2025-12-17 20:27:58 Writing discounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_3/costs.csv
+[ Info: 2025-12-17 20:27:58 Writing undiscounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_3/undiscounted_costs.csv
+[ Info: 2025-12-17 20:27:58 Writing constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_3
+[ Info: 2025-12-17 20:27:58 Writing balance constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_3
+[ Info: 2025-12-17 20:27:58 Writing CO2 cap constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_3
+[ Info: 2025-12-17 20:27:58 Writing results for period 4
+[ Info: 2025-12-17 20:27:58 Writing capacity results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_4/capacity.csv
+[ Info: 2025-12-17 20:27:58 Writing flow results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_4/flows.csv
+[ Info: 2025-12-17 20:27:58 Writing discounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_4/costs.csv
+[ Info: 2025-12-17 20:27:58 Writing undiscounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_4/undiscounted_costs.csv
+[ Info: 2025-12-17 20:27:58 Writing constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_4
+[ Info: 2025-12-17 20:27:58 Writing balance constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_4
+[ Info: 2025-12-17 20:27:58 Writing CO2 cap constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_4
+[ Info: 2025-12-17 20:27:58 Writing results for period 5
+[ Info: 2025-12-17 20:27:58 Writing capacity results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_5/capacity.csv
+[ Info: 2025-12-17 20:27:58 Writing flow results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_5/flows.csv
+[ Info: 2025-12-17 20:27:58 Writing discounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_5/costs.csv
+[ Info: 2025-12-17 20:27:58 Writing undiscounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_5/undiscounted_costs.csv
+[ Info: 2025-12-17 20:27:58 Writing constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_5
+[ Info: 2025-12-17 20:27:58 Writing balance constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_5
+[ Info: 2025-12-17 20:27:58 Writing CO2 cap constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_5
+[ Info: 2025-12-17 20:27:58 Writing results for period 6
+[ Info: 2025-12-17 20:27:58 Writing capacity results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_6/capacity.csv
+[ Info: 2025-12-17 20:27:59 Writing flow results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_6/flows.csv
+[ Info: 2025-12-17 20:27:59 Writing discounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_6/costs.csv
+[ Info: 2025-12-17 20:27:59 Writing undiscounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_6/undiscounted_costs.csv
+[ Info: 2025-12-17 20:27:59 Writing constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_6
+[ Info: 2025-12-17 20:27:59 Writing balance constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_6
+[ Info: 2025-12-17 20:27:59 Writing CO2 cap constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_6
+[ Info: 2025-12-17 20:27:59 Writing results for period 7
+[ Info: 2025-12-17 20:27:59 Writing capacity results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_7/capacity.csv
+[ Info: 2025-12-17 20:27:59 Writing flow results to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_7/flows.csv
+[ Info: 2025-12-17 20:27:59 Writing discounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_7/costs.csv
+[ Info: 2025-12-17 20:27:59 Writing undiscounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_7/undiscounted_costs.csv
+[ Info: 2025-12-17 20:27:59 Writing constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_7
+[ Info: 2025-12-17 20:27:59 Writing balance constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_7
+[ Info: 2025-12-17 20:27:59 Writing CO2 cap constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/results_001/results_period_7
+┌ Warning: 2025-12-17 20:28:03 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065

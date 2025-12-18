@@ -1,0 +1,332 @@
+ERROR: Unable to locate a modulefile for 'gurobi/13.0.0'
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+Precompiling packages...
+Info Given UserAdditions was explicitly requested, output will be shown live [0K
+[0K
+[0Klibgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+   8077.4 ms  ✓ UserAdditions (serial)
+  1 dependency successfully precompiled in 11 seconds
+  1 dependency had output during precompilation:
+┌ UserAdditions
+│  [Output was shown above]
+└  
+ERROR: LoadError: TaskFailedException
+
+    nested task error: On worker 2:
+    The following 1 direct dependency failed to precompile:
+    
+    GitHub 
+    
+    Failed to precompile GitHub [bc5e4493-9b4d-5f90-b8aa-2b2bcaad7a26] to "/home/al3792/.julia/compiled/v1.12/GitHub/jl_nTUOyJ".
+    ERROR: LoadError: ArgumentError: Package MbedTLS_jll [c8ffd9c3-330d-5841-b78e-0817d7145fa1] is required but does not seem to be installed:
+     - Run `Pkg.instantiate()` to install all recorded dependencies.
+    
+    Stacktrace:
+      [1] __require_prelocked(pkg::Base.PkgId, env::String)
+        @ Base ./loading.jl:2587
+      [2] _require_prelocked(uuidkey::Base.PkgId, env::String)
+        @ Base ./loading.jl:2465
+      [3] macro expansion
+        @ ./loading.jl:2393 [inlined]
+      [4] macro expansion
+        @ ./lock.jl:376 [inlined]
+      [5] __require(into::Module, mod::Symbol)
+        @ Base ./loading.jl:2358
+      [6] require(into::Module, mod::Symbol)
+        @ Base ./loading.jl:2334
+      [7] top-level scope
+        @ ~/.julia/packages/MbedTLS/Vaaz8/src/MbedTLS.jl:3
+      [8] include(mod::Module, _path::String)
+        @ Base ./Base.jl:306
+      [9] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+        @ Base ./loading.jl:2996
+     [10] top-level scope
+        @ stdin:5
+     [11] eval(m::Module, e::Any)
+        @ Core ./boot.jl:489
+     [12] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+        @ Base ./loading.jl:2842
+     [13] include_string
+        @ ./loading.jl:2852 [inlined]
+     [14] exec_options(opts::Base.JLOptions)
+        @ Base ./client.jl:315
+     [15] _start()
+        @ Base ./client.jl:550
+    in expression starting at /home/al3792/.julia/packages/MbedTLS/Vaaz8/src/MbedTLS.jl:1
+    in expression starting at stdin:5
+    ERROR: LoadError: Failed to precompile MbedTLS [739be429-bea8-5141-9913-cc70e7f3736d] to "/home/al3792/.julia/compiled/v1.12/MbedTLS/jl_5NCl44".
+    Stacktrace:
+      [1] error(s::String)
+        @ Base ./error.jl:44
+      [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool; flags::Cmd, cacheflags::Base.CacheFlags, reasons::Dict{String, Int64}, loadable_exts::Nothing)
+        @ Base ./loading.jl:3283
+      [3] (::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}})()
+        @ Base ./loading.jl:2651
+      [4] mkpidlock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+        @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:93
+      [5] #mkpidlock#7
+        @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:88 [inlined]
+      [6] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+        @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:114
+      [7] #invokelatest_gr#232
+        @ ./reflection.jl:1282 [inlined]
+      [8] invokelatest_gr
+        @ ./reflection.jl:1274 [inlined]
+      [9] maybe_cachefile_lock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+        @ Base ./loading.jl:3854
+     [10] maybe_cachefile_lock
+        @ ./loading.jl:3851 [inlined]
+     [11] __require_prelocked(pkg::Base.PkgId, env::String)
+        @ Base ./loading.jl:2637
+     [12] _require_prelocked(uuidkey::Base.PkgId, env::String)
+        @ Base ./loading.jl:2465
+     [13] macro expansion
+        @ ./loading.jl:2393 [inlined]
+     [14] macro expansion
+        @ ./lock.jl:376 [inlined]
+     [15] __require(into::Module, mod::Symbol)
+        @ Base ./loading.jl:2358
+     [16] require(into::Module, mod::Symbol)
+        @ Base ./loading.jl:2334
+     [17] top-level scope
+        @ ~/.julia/packages/HTTP/ShTJs/src/HTTP.jl:10
+     [18] include(mod::Module, _path::String)
+        @ Base ./Base.jl:306
+     [19] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+        @ Base ./loading.jl:2996
+     [20] top-level scope
+        @ stdin:5
+     [21] eval(m::Module, e::Any)
+        @ Core ./boot.jl:489
+     [22] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+        @ Base ./loading.jl:2842
+     [23] include_string
+        @ ./loading.jl:2852 [inlined]
+     [24] exec_options(opts::Base.JLOptions)
+        @ Base ./client.jl:315
+     [25] _start()
+        @ Base ./client.jl:550
+    in expression starting at /home/al3792/.julia/packages/HTTP/ShTJs/src/HTTP.jl:1
+    in expression starting at stdin:5
+    ERROR: LoadError: Failed to precompile HTTP [cd3eb016-35fb-5094-929b-558a96fad6f3] to "/home/al3792/.julia/compiled/v1.12/HTTP/jl_G2G0qo".
+    Stacktrace:
+      [1] error(s::String)
+        @ Base ./error.jl:44
+      [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, keep_loaded_modules::Bool; flags::Cmd, cacheflags::Base.CacheFlags, reasons::Dict{String, Int64}, loadable_exts::Nothing)
+        @ Base ./loading.jl:3283
+      [3] (::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}})()
+        @ Base ./loading.jl:2651
+      [4] mkpidlock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64, wait::Bool})
+        @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:93
+      [5] #mkpidlock#7
+        @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:88 [inlined]
+      [6] trymkpidlock(::Function, ::Vararg{Any}; kwargs::@Kwargs{stale_age::Int64})
+        @ FileWatching.Pidfile /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/FileWatching/src/pidfile.jl:114
+      [7] #invokelatest_gr#232
+        @ ./reflection.jl:1282 [inlined]
+      [8] invokelatest_gr
+        @ ./reflection.jl:1274 [inlined]
+      [9] maybe_cachefile_lock(f::Base.var"#__require_prelocked##0#__require_prelocked##1"{Base.PkgId, String, Dict{String, Int64}}, pkg::Base.PkgId, srcpath::String; stale_age::Int64)
+        @ Base ./loading.jl:3854
+     [10] maybe_cachefile_lock
+        @ ./loading.jl:3851 [inlined]
+     [11] __require_prelocked(pkg::Base.PkgId, env::String)
+        @ Base ./loading.jl:2637
+     [12] _require_prelocked(uuidkey::Base.PkgId, env::String)
+        @ Base ./loading.jl:2465
+     [13] macro expansion
+        @ ./loading.jl:2393 [inlined]
+     [14] macro expansion
+        @ ./lock.jl:376 [inlined]
+     [15] __require(into::Module, mod::Symbol)
+        @ Base ./loading.jl:2358
+     [16] require(into::Module, mod::Symbol)
+        @ Base ./loading.jl:2334
+     [17] top-level scope
+        @ ~/.julia/packages/GitHub/QJctz/src/GitHub.jl:10
+     [18] include(mod::Module, _path::String)
+        @ Base ./Base.jl:306
+     [19] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::Nothing)
+        @ Base ./loading.jl:2996
+     [20] top-level scope
+        @ stdin:5
+     [21] eval(m::Module, e::Any)
+        @ Core ./boot.jl:489
+     [22] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+        @ Base ./loading.jl:2842
+     [23] include_string
+        @ ./loading.jl:2852 [inlined]
+     [24] exec_options(opts::Base.JLOptions)
+        @ Base ./client.jl:315
+     [25] _start()
+        @ Base ./client.jl:550
+    in expression starting at /home/al3792/.julia/packages/GitHub/QJctz/src/GitHub.jl:1
+    in expression starting at stdin:
+    Stacktrace:
+     [1] remotecall_fetch(::Function, ::Distributed.Worker, ::Module, ::Vararg{Any}; kwargs::@Kwargs{})
+       @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/remotecall.jl:465
+     [2] remotecall_fetch(::Function, ::Distributed.Worker, ::Module, ::Vararg{Any})
+       @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/remotecall.jl:454
+     [3] remotecall_fetch
+       @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/remotecall.jl:492 [inlined]
+     [4] remotecall_eval
+       @ /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/macros.jl:245 [inlined]
+     [5] create_worker_process(pid::Int64, project::String, case_path::String)
+       @ MacroEnergy ~/MacroEnergy.jl/src/model/benders/prepare_benders_run.jl:88
+     [6] (::MacroEnergy.var"#start_distributed_processes!##0#start_distributed_processes!##1"{String, String, Int64})()
+       @ MacroEnergy ~/MacroEnergy.jl/src/model/benders/prepare_benders_run.jl:71
+Stacktrace:
+ [1] sync_end(c::Channel{Any})
+   @ Base ./task.jl:601
+ [2] macro expansion
+   @ ./task.jl:634 [inlined]
+ [3] start_distributed_processes!(number_of_processes::Int64, case_path::String)
+   @ MacroEnergy ~/MacroEnergy.jl/src/model/benders/prepare_benders_run.jl:70
+ [4] run_case(case_path::String; lazy_load::Bool, log_level::Base.CoreLogging.LogLevel, log_to_console::Bool, log_to_file::Bool, log_file_path::String, log_file_attribution::Bool, optimizer::DataType, optimizer_env::Nothing, optimizer_attributes::Tuple{Pair{String, Int64}, Pair{String, Int64}, Pair{String, Float64}}, planning_optimizer::DataType, subproblem_optimizer::DataType, planning_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}}, subproblem_optimizer_attributes::Tuple{Pair{String, Float64}, Pair{String, Int64}, Pair{String, Int64}})
+   @ MacroEnergy ~/MacroEnergy.jl/src/utilities/run_tools.jl:50
+ [5] top-level scope
+   @ ~/MacroEnergy.jl/ExampleSystems/china_multistage_8760/run.jl:4
+ [6] include(mod::Module, _path::String)
+   @ Base ./Base.jl:306
+ [7] exec_options(opts::Base.JLOptions)
+   @ Base ./client.jl:317
+ [8] _start()
+   @ Base ./client.jl:550
+in expression starting at /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/run.jl:4
+[ Info: 2025-12-17 16:47:18 Running case at /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760
+[ Info: 2025-12-17 16:47:19  ++ Loading user additions from ExampleSystems/china_multistage_8760/tmp/UserAdditions.jl
+[ Info: 2025-12-17 16:47:30  ++ Successfully loaded UserAdditions module.
+[ Info: 2025-12-17 16:47:30 Loading case from /home/al3792/MacroEnergy.jl/ExampleSystems/china_multistage_8760/system_data.json
+[ Info: 2025-12-17 16:47:30 Loading system data
+[ Info: 2025-12-17 16:47:31 Done loading system data. It took 0.96 seconds
+[ Info: 2025-12-17 16:47:31 Done loading case data. It took 0.96 seconds
+[ Info: 2025-12-17 16:47:31 *** Generating case ***
+[ Info: 2025-12-17 16:47:32 Configuring case from settings/case_settings.json
+[ Info: 2025-12-17 16:47:32 Configuring case
+[ Info: 2025-12-17 16:47:32  -- Setting solution algorithm
+[ Info: 2025-12-17 16:47:32  -- Solution algorithm set to MacroEnergy.Benders()
+[ Info: 2025-12-17 16:47:32 Configuring benders
+[ Info: 2025-12-17 16:47:32 Generating systems
+[ Info: 2025-12-17 16:47:32 Generating system
+┌ Warning: 2025-12-17 16:47:34 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 16:47:35 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:47:35 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:47:35 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:47:35 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:47:35 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 16:50:05 Done generating system. It took 152.7 seconds
+[ Info: 2025-12-17 16:50:05 Generating system
+┌ Warning: 2025-12-17 16:50:06 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 16:50:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:50:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:50:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:50:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:50:06 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 16:52:22 Done generating system. It took 136.84 seconds
+[ Info: 2025-12-17 16:52:22 Generating system
+┌ Warning: 2025-12-17 16:52:22 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 16:52:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:52:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:52:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:52:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:52:22 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 16:54:38 Done generating system. It took 136.47 seconds
+[ Info: 2025-12-17 16:54:38 Generating system
+┌ Warning: 2025-12-17 16:54:39 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 16:54:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:54:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:54:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:54:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:54:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 16:56:55 Done generating system. It took 136.14 seconds
+[ Info: 2025-12-17 16:56:55 Generating system
+┌ Warning: 2025-12-17 16:56:55 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 16:56:55 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:56:55 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:56:55 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:56:55 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:56:55 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 16:59:11 Done generating system. It took 136.65 seconds
+[ Info: 2025-12-17 16:59:11 Generating system
+┌ Warning: 2025-12-17 16:59:12 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 16:59:12 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:59:12 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:59:12 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:59:12 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 16:59:12 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 17:01:28 Done generating system. It took 137.01 seconds
+[ Info: 2025-12-17 17:01:28 Generating system
+┌ Warning: 2025-12-17 17:01:29 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-17 17:01:29 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:01:29 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:01:29 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:01:29 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-17 17:01:29 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-17 17:03:49 Done generating system. It took 141.31 seconds
+[ Info: 2025-12-17 17:03:50  -- Discounting fixed costs for period 1
+[ Info: 2025-12-17 17:03:50  -- Computing retirement case for period 1
+[ Info: 2025-12-17 17:03:51  -- Discounting fixed costs for period 2
+[ Info: 2025-12-17 17:03:51  -- Computing retirement case for period 2
+[ Info: 2025-12-17 17:03:51  -- Discounting fixed costs for period 3
+[ Info: 2025-12-17 17:03:51  -- Computing retirement case for period 3
+[ Info: 2025-12-17 17:03:51  -- Discounting fixed costs for period 4
+[ Info: 2025-12-17 17:03:51  -- Computing retirement case for period 4
+[ Info: 2025-12-17 17:03:51  -- Discounting fixed costs for period 5
+[ Info: 2025-12-17 17:03:51  -- Computing retirement case for period 5
+[ Info: 2025-12-17 17:03:51  -- Discounting fixed costs for period 6
+[ Info: 2025-12-17 17:03:51  -- Computing retirement case for period 6
+[ Info: 2025-12-17 17:03:51  -- Discounting fixed costs for period 7
+[ Info: 2025-12-17 17:03:51  -- Computing retirement case for period 7
+[ Info: 2025-12-17 17:03:51 *** Done generating case. It took 979.41 seconds ***
+┌ Warning: 2025-12-17 17:03:52 The Slurm functionality in the `ClusterManagers.jl` package is deprecated (including `ClusterManagers.addprocs_slurm` and `ClusterManagers.SlurmManager`). It will be removed from ClusterManagers.jl in a future release. We recommend migrating to the [https://github.com/JuliaParallel/SlurmClusterManager.jl](https://github.com/JuliaParallel/SlurmClusterManager.jl) package instead.
+│   caller = ip:0x0
+└ @ Core :-1
+[ Info: 2025-12-17 17:03:53 Starting SLURM job julia-2155426: `srun -J julia-2155426 -n 1 -D /home/al3792/MacroEnergy.jl -o /home/al3792/MacroEnergy.jl/./julia-2155426-17660090334-%4t.out /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/bin/julia '-t 32' --worker=ibpNFVZYGoSJEWBk`
+[ Info: 2025-12-17 17:03:53 Worker 0 (after 0 s): No output file "/home/al3792/MacroEnergy.jl/./julia-2155426-17660090334-0000.out" yet
+[ Info: 2025-12-17 17:03:54 Worker 0 (after 1 s): Output file found, but no connection details yet
+[ Info: 2025-12-17 17:03:56 Worker 0 ready after 3 s on host 172.17.9.67, port 9802
+┌ Warning: 2025-12-17 17:05:17 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065

@@ -1,0 +1,35 @@
+julia_worker:9802#172.17.9.67
+  Activating project at `~/MacroEnergy.jl`
+Precompiling packages...
+              ✗ MbedTLS_jll
+   3734.0 ms  ✓ OpenSSL
+              ✗ MbedTLS
+   1706.5 ms  ✓ ClusterManagers
+   2942.9 ms  ✓ MacroEnergySolvers
+              ✗ HTTP
+              ✗ GitHub
+   6877.2 ms  ✓ Revise
+    963.9 ms  ✓ Revise → DistributedExt
+Info Given MacroEnergy was explicitly requested, output will be shown live [0K
+[0K
+[0Klibgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+  10638.8 ms  ✓ MacroEnergy
+   6342.2 ms  ✓ MacroEnergy → MacroEnergyGurobiExt
+  7 dependencies successfully precompiled in 72 seconds. 185 already precompiled.
+  4 dependencies had output during precompilation:
+┌ MacroEnergy → MacroEnergyGurobiExt
+│  libgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+└  
+┌ MacroEnergy
+│  [Output was shown above]
+└  
+┌ MacroEnergySolvers
+│  libgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+└  
+┌ Revise
+│  ┌ Warning: precompile directive
+│  │     precompile(Tuple{mbody.sig.parameters[1], Symbol, Bool, Bool, Iterators.Pairs{Symbol, Bool, Tuple{Symbol}, NamedTuple{(:skip_include,), Tuple{Bool}}}, typeof(methods_by_execution!), Compiled, MI, Module, Expr})
+│  │ failed. Please report an issue in Revise (after checking for duplicates) or remove this directive.
+│  └ @ Revise ~/.julia/packages/Revise/KjLt4/src/precompile.jl:65
+└  
+
