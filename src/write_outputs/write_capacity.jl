@@ -255,6 +255,14 @@ function get_optimal_capacity_by_field(
     # Calculate total number of rows needed
     total_rows = length(objs) * length(field_list)
     
+    compute_values() = [Float64(value(f(obj))) * scaling for obj in objs for f in field_list]
+    zero_values() = fill(0.0, total_rows)
+
+    values =
+        (T == Storage) && (field_list[1] === retrofitted_capacity) ?
+        zero_values() :
+        compute_values()
+    
     if isempty(obj_asset_map)
         return DataFrame(
             case_name = fill(missing, total_rows),
@@ -265,7 +273,7 @@ function get_optimal_capacity_by_field(
             component_type = [get_type(obj) for obj in objs for f in field_list],
             variable = [Symbol(f) for obj in objs for f in field_list],
             year = fill(missing, total_rows),
-            value = [Float64(value(f(obj))) * scaling for obj in objs for f in field_list]
+            value = values
         )
     else
         return DataFrame(
@@ -278,7 +286,7 @@ function get_optimal_capacity_by_field(
             component_type = [get_type(obj) for obj in objs for f in field_list],
             variable = [Symbol(f) for obj in objs for f in field_list],
             year = fill(missing, total_rows),
-            value = [Float64(value(f(obj))) * scaling for obj in objs for f in field_list]
+            value = values
         )
     end
 end
