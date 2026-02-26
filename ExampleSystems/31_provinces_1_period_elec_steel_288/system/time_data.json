@@ -1,0 +1,27 @@
+{
+    "HoursPerTimeStep": {
+        "NaturalGas": 1,
+        "Electricity": 1,
+        "CO2": 1,
+		"Coal": 1,
+		"Uranium": 1,
+        "CO2Captured": 1,
+        "IronOre": 1,
+        "SteelScrap": 1,
+        "CrudeSteel": 1
+    },
+    "NumberOfSubperiods": 1,
+	
+    "HoursPerSubperiod": {
+        "NaturalGas": 288,
+		"Coal": 288,
+        "Electricity": 288,
+        "CO2": 288,
+		"Uranium": 288,
+        "CO2Captured": 288,
+        "IronOre": 288,
+        "SteelScrap": 288,
+        "CrudeSteel": 288
+    },
+    "TotalHoursModeled": 288
+}

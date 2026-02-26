@@ -9,6 +9,7 @@ struct BlastFurnaceBasicOxygenFurnace <: AbstractAsset
     crudesteel_edge::Edge{CrudeSteel}
     elec_edge::Edge{Electricity}
     co2_edge::Edge{CO2}
+    co2_captured_edge::Edge{CO2Captured}
 end
 
 function default_data(t::Type{BlastFurnaceBasicOxygenFurnace}, id=missing, style="full")
@@ -28,12 +29,13 @@ function full_default_data(::Type{BlastFurnaceBasicOxygenFurnace}, id=missing)
                 :BalanceConstraint => true,
             ),
             :ironore_consumption => 0.0,
-            :electricity_production => 0.0,
+            :electricity_consumption => 0.0,
             :metcoal_consumption => 0.0,
             :thermalcoal_consumption => 0.0,
             :natgas_consumption => 0.0,
             :steelscrap_consumption => 0.0,
-            :emission_rate => 0.0
+            :emission_rate => 0.0,
+            :capture_rate => 0.0
         ),
         :edges => Dict{Symbol,Any}(
             :crudesteel_edge => @edge_data(
@@ -65,6 +67,9 @@ function full_default_data(::Type{BlastFurnaceBasicOxygenFurnace}, id=missing)
             ),
             :co2_edge => @edge_data(
                 :commodity => "CO2"
+            ),
+            :co2_captured_edge => @edge_data(
+                :commodity => "CO2Captured"
             )
         ),
     )
@@ -78,12 +83,13 @@ function simple_default_data(::Type{BlastFurnaceBasicOxygenFurnace}, id=missing)
         :can_retire => true,
         :existing_capacity => 0.0,
         :ironore_consumption => 0.0,
-        :electricity_production => 0.0,
+        :electricity_consumption => 0.0,
         :metcoal_consumption => 0.0,
         :thermalcoal_consumption => 0.0,
         :natgas_consumption => 0.0,
         :steelscrap_consumption => 0.0,
-        :emission_rate => 0.0
+        :emission_rate => 0.0,
+        :capture_rate => 0.0,
         :investment_cost => 0.0,
         :fixed_om_cost => 0.0,
         :variable_om_cost => 0.0,
@@ -281,13 +287,13 @@ function make(asset_type::Type{BlastFurnaceBasicOxygenFurnace}, data::AbstractDi
             (data, Symbol("elec_", key)),
         ]
     )
-    elec_start_node = bfbof_transform 
-    @end_vertex(
-        elec_end_node,
+    @start_vertex(
+        elec_start_node,
         elec_edge_data,
         Electricity,
-        [(elec_edge_data, :end_vertex), (data, :location)],
+        [(elec_edge_data, :start_vertex), (data, :location)],
     )
+    elec_end_node = bfbof_transform
     elec_edge = Edge(
         Symbol(id, "_", elec_edge_key),
         elec_edge_data,
@@ -328,7 +334,34 @@ function make(asset_type::Type{BlastFurnaceBasicOxygenFurnace}, data::AbstractDi
     co2_edge.constraints = Vector{AbstractTypeConstraint}()
     co2_edge.unidirectional = true;
 
+    # CO2 captured edge
 
+    co2_captured_edge_key = :co2_captured_edge
+    @process_data(
+        co2_captured_edge_data, 
+        data[:edges][co2_captured_edge_key], 
+        [
+            (data[:edges][co2_captured_edge_key], key),
+            (data[:edges][co2_captured_edge_key], Symbol("co2_captured_", key)),
+            (data, Symbol("co2_captured_", key)),
+        ]
+    )
+    co2_captured_start_node = bfbof_transform
+    @end_vertex(
+        co2_captured_end_node,
+        co2_captured_edge_data,
+        CO2Captured,
+        [(co2_captured_edge_data, :end_vertex), (data, :co2_sink), (data, :location)],
+    )    
+    co2_captured_edge = Edge(
+        Symbol(id, "_", co2_captured_edge_key),
+        co2_captured_edge_data,
+        system.time_data[:CO2Captured],
+        CO2Captured,
+        co2_captured_start_node,
+        co2_captured_end_node,
+    )
+    co2_captured_edge.unidirectional = true;
 
     # crude steel edge
 
@@ -375,9 +408,9 @@ function make(asset_type::Type{BlastFurnaceBasicOxygenFurnace}, data::AbstractDi
             crudesteel_edge.id => get(transform_data, :steelscrap_consumption, 0.0),
             steelscrap_edge.id => 1.0
         ),
-        :electricity_production => Dict(
-            crudesteel_edge.id => get(transform_data, :electricity_production, 0.0),
-            elec_edge.id => -1.0
+        :electricity_consumption => Dict(
+            crudesteel_edge.id => get(transform_data, :electricity_consumption, 0.0),
+            elec_edge.id => 1.0
         ),
         :metcoal_consumption => Dict(
             crudesteel_edge.id => get(transform_data, :metcoal_consumption, 0.0),
@@ -392,8 +425,12 @@ function make(asset_type::Type{BlastFurnaceBasicOxygenFurnace}, data::AbstractDi
             natgas_edge.id => 1.0
         ),
         :emissions => Dict(
-            crudesteel_edge.id => get(transform_data, :emission_rate, 0.0),
+            crudesteel_edge.id => (1 - get(transform_data, :capture_rate, 1.0) * get(transform_data, :emission_rate, 1.0)),
             co2_edge.id => -1.0,
+        ),
+        :capture => Dict(
+            crudesteel_edge.id => get(transform_data, :capture_rate, 1.0) * get(transform_data, :emission_rate, 1.0),
+            co2_captured_edge.id => -1.0,
         )
     )
 
@@ -406,6 +443,7 @@ function make(asset_type::Type{BlastFurnaceBasicOxygenFurnace}, data::AbstractDi
             natgas_edge, 
             crudesteel_edge, 
             elec_edge, 
-            co2_edge
+            co2_edge,
+            co2_captured_edge,
         )
 end

@@ -1,0 +1,287 @@
+Unloading gurobi/13.0.0
+  ERROR: No such file or directory on
+    '/usr/licensed/Modules/modulefiles/gurobi/13.0.0'
+ERROR: Unable to locate a modulefile for 'gurobi/13.0.0'
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+Set parameter LicenseID to value 197246
+Set parameter GURO_PAR_SPECIAL
+Set parameter TokenServer to value "license.rc.princeton.edu"
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter BarConvTol to value 0.001
+Set parameter Method to value 2
+Set parameter Crossover to value 0
+Set parameter BarConvTol to value 0.001
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Red Hat Enterprise Linux 9.6 (Plow)")
+
+CPU model: AMD EPYC 9654 96-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 192 physical cores, 192 logical processors, using up to 32 threads
+
+Non-default parameters:
+Method  2
+BarConvTol  0.001
+Crossover  0
+
+Optimize a model with 1270249 rows, 683345 columns and 5684122 nonzeros (Min)
+Model fingerprint: 0xbacad2af
+Model has 297874 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e-03, 2e+05]
+  Objective range  [3e+00, 7e+06]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [8e+01, 1e+06]
+Presolve removed 485921 rows and 230543 columns
+Presolve time: 2.06s
+Presolved: 784328 rows, 461562 columns, 5466389 nonzeros
+Ordering time: 6.19s
+
+Barrier statistics:
+ Dense cols : 15
+ AA' NZ     : 1.464e+07
+ Factor NZ  : 5.779e+07 (roughly 1.0 GB of memory)
+ Factor Ops : 1.928e+10 (less than 1 second per iteration)
+ Threads    : 32
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   6.61792512e+15 -1.39502983e+13  7.74e+09 1.56e+06  6.10e+11    12s
+   1   2.90835695e+15 -1.95222927e+14  4.43e+09 3.28e+06  3.67e+11    12s
+   2   1.70032007e+15 -3.98897399e+14  3.07e+09 1.45e+06  2.07e+11    12s
+   3   3.73732499e+14 -5.80830499e+14  7.55e+08 3.51e+05  5.36e+10    12s
+   4   1.60483379e+14 -4.58221048e+14  1.88e+08 1.33e+05  1.62e+10    13s
+   5   1.01004142e+14 -2.32622243e+14  8.90e+07 4.57e+04  6.84e+09    13s
+   6   5.65575839e+13 -1.92584756e+14  3.24e+07 3.33e+04  3.39e+09    13s
+   7   4.07662276e+13 -1.22244249e+14  1.88e+07 1.48e+04  1.78e+09    13s
+   8   1.85653411e+13 -4.32371693e+13  4.25e+06 5.32e+02  2.85e+08    14s
+   9   4.72787642e+12 -2.57340942e+13  2.98e+05 1.10e+02  4.29e+07    14s
+  10   1.92145437e+12 -6.77351056e+12  6.26e+04 1.53e+01  8.96e+06    14s
+  11   1.68836989e+12 -3.19905993e+12  5.26e+04 6.47e+00  4.89e+06    15s
+  12   1.42619553e+12 -2.37410900e+12  4.14e+04 4.78e+00  3.71e+06    15s
+  13   1.38462884e+12 -2.20818656e+12  3.96e+04 4.45e+00  3.49e+06    15s
+  14   1.29670106e+12 -2.07616281e+12  3.61e+04 4.18e+00  3.25e+06    15s
+  15   1.17287155e+12 -1.94991212e+12  3.24e+04 3.93e+00  2.98e+06    16s
+  16   1.15529023e+12 -1.86748862e+12  3.16e+04 3.76e+00  2.88e+06    16s
+  17   1.04170195e+12 -1.50348489e+12  2.71e+04 3.08e+00  2.40e+06    17s
+  18   8.04194196e+11 -1.39558204e+12  1.89e+04 2.87e+00  2.02e+06    17s
+  19   7.95436470e+11 -1.26047940e+12  1.87e+04 2.60e+00  1.89e+06    17s
+  20   7.37483115e+11 -1.17256923e+12  1.70e+04 2.41e+00  1.74e+06    18s
+  21   7.12405507e+11 -1.14814355e+12  1.63e+04 2.37e+00  1.69e+06    18s
+  22   6.66672485e+11 -1.03667396e+12  1.47e+04 2.17e+00  1.54e+06    18s
+  23   5.84078298e+11 -8.74282305e+11  1.19e+04 1.87e+00  1.30e+06    19s
+  24   5.63894912e+11 -7.16074701e+11  1.12e+04 1.59e+00  1.14e+06    19s
+  25   5.22062938e+11 -6.60708385e+11  9.82e+03 1.49e+00  1.05e+06    19s
+  26   5.14717544e+11 -6.06968604e+11  9.46e+03 1.40e+00  9.92e+05    20s
+  27   4.49878500e+11 -5.26725566e+11  7.23e+03 1.26e+00  8.55e+05    20s
+  28   4.15950154e+11 -4.26953095e+11  6.14e+03 1.07e+00  7.33e+05    20s
+  29   4.00881483e+11 -3.42248526e+11  5.67e+03 9.10e-01  6.44e+05    21s
+  30   3.55581193e+11 -2.88228192e+11  4.18e+03 8.19e-01  5.54e+05    21s
+  31   3.32126524e+11 -2.08833146e+11  3.21e+03 6.89e-01  4.62e+05    22s
+  32   3.11938729e+11 -1.70029654e+11  2.60e+03 6.21e-01  4.10e+05    22s
+  33   3.02617168e+11 -1.25180831e+11  2.36e+03 5.44e-01  3.64e+05    22s
+  34   2.94780067e+11 -1.09446229e+11  2.21e+03 5.13e-01  3.43e+05    23s
+  35   2.86631474e+11 -9.46547114e+10  2.04e+03 4.88e-01  3.23e+05    23s
+  36   2.80935429e+11 -4.23081950e+10  1.88e+03 3.97e-01  2.74e+05    23s
+  37   2.74100832e+11 -3.62054371e+10  1.74e+03 3.86e-01  2.62e+05    24s
+  38   2.68488038e+11 -1.70701038e+10  1.63e+03 3.52e-01  2.41e+05    24s
+  39   2.66386966e+11 -9.28295715e+09  1.59e+03 3.38e-01  2.33e+05    25s
+  40   2.63256622e+11 -2.32368099e+09  1.54e+03 3.24e-01  2.24e+05    25s
+  41   2.58152372e+11 -1.00846453e+08  1.48e+03 3.18e-01  2.18e+05    25s
+  42   2.49913095e+11  8.71591835e+09  1.38e+03 2.96e-01  2.03e+05    26s
+  43   2.46546172e+11  1.86282482e+10  1.33e+03 2.78e-01  1.92e+05    26s
+  44   2.41450440e+11  2.53934590e+10  1.24e+03 2.66e-01  1.82e+05    26s
+  45   2.36680611e+11  3.36535852e+10  1.17e+03 2.47e-01  1.71e+05    27s
+  46   2.33097075e+11  4.00381197e+10  1.12e+03 2.34e-01  1.63e+05    27s
+  47   2.28201385e+11  4.58074768e+10  1.05e+03 2.22e-01  1.53e+05    28s
+  48   2.26059324e+11  4.96370984e+10  1.02e+03 2.15e-01  1.48e+05    28s
+  49   2.24243758e+11  5.43754350e+10  9.65e+02 2.07e-01  1.43e+05    28s
+  50   2.22838070e+11  5.88922232e+10  9.48e+02 1.98e-01  1.38e+05    29s
+  51   2.20227396e+11  6.17997577e+10  9.11e+02 1.92e-01  1.33e+05    29s
+  52   2.16126834e+11  6.47686508e+10  8.52e+02 1.86e-01  1.27e+05    29s
+  53   2.13963375e+11  7.39221061e+10  8.17e+02 1.68e-01  1.18e+05    30s
+  54   2.12285453e+11  7.80474935e+10  7.90e+02 1.60e-01  1.13e+05    30s
+  55   2.09793974e+11  8.19748583e+10  7.53e+02 1.51e-01  1.07e+05    30s
+  56   2.07093419e+11  8.78892157e+10  6.89e+02 1.41e-01  9.99e+04    31s
+  57   2.03758751e+11  9.14864177e+10  6.43e+02 1.31e-01  9.41e+04    31s
+  58   2.02521383e+11  9.45424431e+10  6.24e+02 1.25e-01  9.05e+04    32s
+  59   1.99408351e+11  9.66068294e+10  5.83e+02 1.21e-01  8.61e+04    32s
+  60   1.96758838e+11  9.95895261e+10  5.53e+02 1.12e-01  8.14e+04    32s
+  61   1.95179817e+11  1.02920822e+11  5.31e+02 1.05e-01  7.72e+04    33s
+  62   1.92672219e+11  1.04720614e+11  4.95e+02 1.01e-01  7.36e+04    33s
+  63   1.90616976e+11  1.06878229e+11  4.75e+02 9.59e-02  7.01e+04    34s
+  64   1.88042501e+11  1.09170442e+11  4.47e+02 9.05e-02  6.60e+04    34s
+  65   1.86919475e+11  1.11843342e+11  4.34e+02 8.52e-02  6.28e+04    34s
+  66   1.83870594e+11  1.12333037e+11  3.89e+02 8.41e-02  5.98e+04    35s
+  67   1.82255027e+11  1.14406993e+11  3.72e+02 7.86e-02  5.67e+04    35s
+  68   1.81676212e+11  1.16598479e+11  3.60e+02 7.44e-02  5.44e+04    35s
+  69   1.80114781e+11  1.17491050e+11  3.44e+02 7.19e-02  5.23e+04    36s
+  70   1.79741815e+11  1.18625858e+11  3.39e+02 6.91e-02  5.11e+04    36s
+  71   1.77894567e+11  1.20080338e+11  3.18e+02 6.57e-02  4.83e+04    37s
+  72   1.76848074e+11  1.21299358e+11  2.98e+02 6.34e-02  4.64e+04    37s
+  73   1.74333376e+11  1.22147025e+11  2.76e+02 5.95e-02  4.36e+04    37s
+  74   1.72576565e+11  1.22831688e+11  2.60e+02 5.75e-02  4.15e+04    38s
+  75   1.71846945e+11  1.23681926e+11  2.54e+02 5.48e-02  4.02e+04    38s
+  76   1.69904268e+11  1.24704598e+11  2.39e+02 5.19e-02  3.77e+04    38s
+  77   1.69170292e+11  1.26423517e+11  2.29e+02 4.74e-02  3.57e+04    39s
+  78   1.68083317e+11  1.26779850e+11  2.19e+02 4.65e-02  3.45e+04    39s
+  79   1.67428648e+11  1.27341296e+11  2.10e+02 4.53e-02  3.35e+04    39s
+  80   1.65447160e+11  1.28188970e+11  1.95e+02 4.27e-02  3.11e+04    40s
+  81   1.64881530e+11  1.29666172e+11  1.88e+02 3.91e-02  2.94e+04    40s
+  82   1.63862845e+11  1.29902614e+11  1.77e+02 3.86e-02  2.83e+04    41s
+  83   1.63289098e+11  1.30450603e+11  1.69e+02 3.76e-02  2.74e+04    41s
+  84   1.62698576e+11  1.30919611e+11  1.64e+02 3.64e-02  2.65e+04    41s
+  85   1.61948469e+11  1.32007326e+11  1.57e+02 3.31e-02  2.50e+04    42s
+  86   1.60866767e+11  1.32477570e+11  1.47e+02 3.19e-02  2.37e+04    42s
+  87   1.60445995e+11  1.33491204e+11  1.40e+02 2.91e-02  2.25e+04    42s
+  88   1.59347501e+11  1.33899233e+11  1.30e+02 2.81e-02  2.12e+04    43s
+  89   1.57991934e+11  1.34247839e+11  1.20e+02 2.68e-02  1.98e+04    43s
+  90   1.57623333e+11  1.35441797e+11  1.17e+02 2.23e-02  1.85e+04    44s
+  91   1.56486065e+11  1.35751057e+11  1.08e+02 2.13e-02  1.73e+04    44s
+  92   1.55889829e+11  1.36189208e+11  1.01e+02 2.03e-02  1.64e+04    44s
+  93   1.55142245e+11  1.36627973e+11  9.52e+01 1.88e-02  1.54e+04    45s
+  94   1.54736143e+11  1.37025619e+11  9.22e+01 1.75e-02  1.48e+04    45s
+  95   1.54253830e+11  1.37431014e+11  8.73e+01 1.64e-02  1.40e+04    45s
+  96   1.53880166e+11  1.37639981e+11  8.48e+01 1.57e-02  1.35e+04    46s
+  97   1.53182833e+11  1.37727426e+11  7.96e+01 1.54e-02  1.29e+04    46s
+  98   1.52503313e+11  1.37924027e+11  7.45e+01 1.48e-02  1.21e+04    47s
+  99   1.52077181e+11  1.38203871e+11  6.94e+01 1.41e-02  1.16e+04    47s
+ 100   1.51695885e+11  1.38473638e+11  6.65e+01 1.32e-02  1.10e+04    47s
+ 101   1.50307120e+11  1.38795142e+11  5.67e+01 1.18e-02  9.59e+03    48s
+ 102   1.49807221e+11  1.39178646e+11  5.33e+01 1.04e-02  8.85e+03    48s
+ 103   1.49572792e+11  1.39259633e+11  5.14e+01 1.01e-02  8.59e+03    49s
+ 104   1.49282721e+11  1.39379631e+11  4.84e+01 9.77e-03  8.25e+03    49s
+ 105   1.49050700e+11  1.39589442e+11  4.68e+01 9.10e-03  7.88e+03    49s
+ 106   1.48577318e+11  1.39825946e+11  4.34e+01 8.33e-03  7.29e+03    50s
+ 107   1.48491444e+11  1.39906013e+11  4.26e+01 8.15e-03  7.15e+03    50s
+ 108   1.48375853e+11  1.40001609e+11  4.15e+01 7.96e-03  6.97e+03    50s
+ 109   1.48218804e+11  1.40090635e+11  4.03e+01 7.69e-03  6.77e+03    51s
+ 110   1.47699243e+11  1.40208838e+11  3.69e+01 7.21e-03  6.24e+03    51s
+ 111   1.47013121e+11  1.40292756e+11  3.25e+01 6.87e-03  5.60e+03    52s
+ 112   1.46773715e+11  1.40563052e+11  3.09e+01 5.72e-03  5.17e+03    52s
+ 113   1.46632941e+11  1.40714646e+11  2.99e+01 5.26e-03  4.93e+03    52s
+ 114   1.46292484e+11  1.40806648e+11  2.73e+01 4.99e-03  4.57e+03    53s
+ 115   1.46223041e+11  1.40884071e+11  2.68e+01 4.74e-03  4.44e+03    53s
+ 116   1.45880076e+11  1.40935589e+11  2.45e+01 4.54e-03  4.12e+03    53s
+ 117   1.45823991e+11  1.40985963e+11  2.41e+01 4.39e-03  4.03e+03    54s
+ 118   1.45613131e+11  1.41079679e+11  2.26e+01 4.11e-03  3.77e+03    54s
+ 119   1.44975255e+11  1.41152377e+11  1.85e+01 3.75e-03  3.18e+03    54s
+ 120   1.44824935e+11  1.41272599e+11  1.76e+01 3.27e-03  2.96e+03    55s
+ 121   1.44597410e+11  1.41352078e+11  1.61e+01 2.96e-03  2.70e+03    55s
+ 122   1.44330329e+11  1.41387582e+11  1.44e+01 2.82e-03  2.45e+03    56s
+ 123   1.44279639e+11  1.41415252e+11  1.41e+01 2.69e-03  2.38e+03    56s
+ 124   1.44225362e+11  1.41427165e+11  1.37e+01 2.64e-03  2.33e+03    56s
+ 125   1.43977182e+11  1.41611738e+11  1.22e+01 1.78e-03  1.97e+03    57s
+ 126   1.43770058e+11  1.41644354e+11  1.08e+01 1.65e-03  1.77e+03    57s
+ 127   1.43328986e+11  1.41771174e+11  8.08e+00 1.09e-03  1.30e+03    57s
+ 128   1.43264997e+11  1.41788881e+11  7.67e+00 1.03e-03  1.23e+03    58s
+ 129   1.43154338e+11  1.41814579e+11  6.97e+00 9.21e-04  1.11e+03    58s
+ 130   1.43110647e+11  1.41838634e+11  6.70e+00 8.26e-04  1.06e+03    58s
+
+Barrier solved model in 130 iterations and 58.38 seconds (104.75 work units)
+Optimal objective 1.43110647e+11
+
+
+User-callback calls 8523, time in user-callback 0.01 sec
+  Activating new project at `~/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760`
+Precompiling packages...
+Info Given MacroEnergy was explicitly requested, output will be shown live [0K
+[0K
+[0Klibgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+[0K
+[0Klibgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+[0K
+[0Klibgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+  21137.8 ms  ✓ MacroEnergy (serial)
+  1 dependency successfully precompiled in 21 seconds
+  1 dependency had output during precompilation:
+┌ MacroEnergy
+│  [Output was shown above]
+└  
+Precompiling packages...
+Info Given Gurobi was explicitly requested, output will be shown live [0K
+[0K
+[0Klibgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+[0KSet parameter LicenseID to value 197246
+[0KSet parameter GURO_PAR_SPECIAL
+[0KSet parameter TokenServer to value "license.rc.princeton.edu"
+   7077.5 ms  ✓ Gurobi (serial)
+  1 dependency successfully precompiled in 7 seconds
+  1 dependency had output during precompilation:
+┌ Gurobi
+│  [Output was shown above]
+└  
+Precompiling packages...
+Info Given MacroEnergyGurobiExt was explicitly requested, output will be shown live [0K
+[0K
+[0Klibgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+   6044.9 ms  ✓ MacroEnergyGurobiExt (serial)
+  1 dependency successfully precompiled in 6 seconds
+  1 dependency had output during precompilation:
+┌ MacroEnergyGurobiExt
+│  [Output was shown above]
+└  
+Precompiling packages...
+Info Given UserAdditions was explicitly requested, output will be shown live [0K
+[0K
+[0Klibgomp: Invalid value for environment variable OMP_NUM_THREADS: invalid
+   5490.1 ms  ✓ UserAdditions (serial)
+  1 dependency successfully precompiled in 6 seconds
+  1 dependency had output during precompilation:
+┌ UserAdditions
+│  [Output was shown above]
+└  
+[ Info: 2025-12-16 13:24:28 Running case at /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760
+[ Info: 2025-12-16 13:24:29  ++ Loading user additions from ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/tmp/UserAdditions.jl
+[ Info: 2025-12-16 13:24:35  ++ Successfully loaded UserAdditions module.
+[ Info: 2025-12-16 13:24:35 Loading case from /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/system_data.json
+[ Info: 2025-12-16 13:24:35 Loading system data
+[ Info: 2025-12-16 13:24:36 Done loading system data. It took 0.99 seconds
+[ Info: 2025-12-16 13:24:36 Done loading case data. It took 0.99 seconds
+[ Info: 2025-12-16 13:24:36 *** Generating case ***
+[ Info: 2025-12-16 13:24:37 Configuring case from settings/case_settings.json
+[ Info: 2025-12-16 13:24:37 Configuring case
+[ Info: 2025-12-16 13:24:37  -- Setting solution algorithm
+[ Info: 2025-12-16 13:24:37  -- Solution algorithm set to MacroEnergy.Monolithic()
+[ Info: 2025-12-16 13:24:37 Generating systems
+[ Info: 2025-12-16 13:24:37 Generating system
+┌ Warning: 2025-12-16 13:24:38 Could not find: "locations", full path: /home/al3792/MacroEnergy.jl/locations
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_json_inputs.jl:137
+┌ Warning: 2025-12-16 13:24:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:24:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:24:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:24:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:24:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+┌ Warning: 2025-12-16 13:24:39 Using default weights = 1 as no period map provided and each period maps to itself
+└ @ MacroEnergy ~/MacroEnergy.jl/src/load_inputs/load_time_data.jl:198
+[ Info: 2025-12-16 13:24:54 Done generating system. It took 16.88 seconds
+[ Info: 2025-12-16 13:24:54  -- Discounting fixed costs for period 1
+[ Info: 2025-12-16 13:24:55  -- Computing retirement case for period 1
+[ Info: 2025-12-16 13:24:55 *** Done generating case. It took 18.31 seconds ***
+[ Info: 2025-12-16 13:24:55 *** Running simulation with monolithic solver ***
+[ Info: 2025-12-16 13:24:55 Generating model
+[ Info: 2025-12-16 13:24:55  -- Period 1
+[ Info: 2025-12-16 13:24:55  -- Adding linking variables
+[ Info: 2025-12-16 13:24:56  -- Defining available capacity
+[ Info: 2025-12-16 13:24:56  -- Generating planning model
+[ Info: 2025-12-16 13:24:58  -- Adding retrofit constraints
+[ Info: 2025-12-16 13:24:58  -- Including age-based retirements
+[ Info: 2025-12-16 13:24:58  -- Generating operational model
+[ Info: 2025-12-16 13:25:37  -- Model generation complete, it took 42.538942098617554 seconds
+[ Info: 2025-12-16 13:25:38 Scaling constraints and RHS
+[ Info: 2025-12-16 13:26:47 Writing results for period 1
+[ Info: 2025-12-16 13:26:48 Writing capacity results to /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/results_002/results/capacity.csv
+[ Info: 2025-12-16 13:26:53 Writing discounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/results_002/results/costs.csv
+[ Info: 2025-12-16 13:26:54 Writing undiscounted costs to /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/results_002/results/undiscounted_costs.csv
+[ Info: 2025-12-16 13:26:54 Writing flow results to /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/results_002/results/flows.csv
+[ Info: 2025-12-16 13:26:56 Writing constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/results_002/results
+[ Info: 2025-12-16 13:26:56 Writing balance constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/results_002/results
+[ Info: 2025-12-16 13:26:56 Writing CO2 cap constraint dual values to /home/al3792/MacroEnergy.jl/ExampleSystems/shandong_1_period_elec_cement_retrofit_agg_demand_one_co2_sink_uc_8760/results_002/results
+┌ Warning: 2025-12-16 13:26:57 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065
+┌ Warning: 2025-12-16 13:26:57 rmprocs: process 1 not removed
+└ @ Distributed /scratch/gpfs/LICENSED/x86_64/julia/1.12.1/share/julia/stdlib/v1.12/Distributed/src/cluster.jl:1065
