@@ -1,0 +1,98 @@
+{
+    "Scrap_eaf": [
+        {
+            "type": "ElectricArcFurnace",
+            "global_data": {
+                "transforms": {
+                    "timedata": "Electricity",
+                    "steelscrap_consumption": 0.602,
+                    "electricity_consumption": 0.34,
+                    "naturalgas_consumption": 0,
+                    "carbonsource_consumption": 2.663,
+                    "emission_rate": 0.86,
+                    "constraints": {
+                        "BalanceConstraint": true
+                    }
+                },
+                "edges": {
+                    "crudesteel_edge": {
+                        "type": "CrudeSteel",
+                        "unidirectional": true,
+                        "has_capacity": true,
+                        "can_expand": true,
+                        "can_retire": true,
+                        "integer_decisions": false,
+                        "investment_cost": 2422140,
+                        "fixed_om_cost": 72708,
+                        "variable_om_cost": 0,
+                        "constraints": {
+                            "CapacityConstraint": true
+                        }
+                    },
+                    "steelscrap_edge": {
+                        "commodity": "SteelScrap",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "elec_edge": {
+                        "commodity": "Electricity",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "naturalgas_edge": {
+                        "commodity": "NaturalGas",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "carbonsource_edge": {
+                        "commodity": "Coal",
+                        "unidirectional": true,
+                        "has_capacity": false
+                    },
+                    "co2_edge": {
+                        "commodity": "CO2",
+                        "unidirectional": true,
+                        "has_capacity": false,
+                        "end_vertex": "co2_sink"
+                    }
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "scrap_eaf_56_Region1Beijing",
+                    "edges": {
+                        "crudesteel_edge": {
+                            "end_vertex": "crudesteel_Region1Beijing",
+                            "existing_capacity": 571
+                        },
+                        "steelscrap_edge": {
+                            "start_vertex": "steelscrap_source_Region1Beijing"
+                        },
+                        "elec_edge": {
+                            "start_vertex": "elec_Region1Beijing"
+                        },
+                        "naturalgas_edge": {
+                            "start_vertex": "natgas_Region1Beijing"
+                        },
+                        "carbonsource_edge": {
+                            "start_vertex": "coal_Region1Beijing"
+                        },
+                        "retrofit_options": [
+                            {
+                                "template_id": "scrapeaf_100_Region1Beijing",
+                                "id": "scrapeaf_100_retrofit_Region1Beijing",
+                                "edges": {
+                                    "crudesteel_edge": {
+                                        "is_retrofit": true,
+                                        "retrofit_efficiency": 1,
+                                        "can_expand": true
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

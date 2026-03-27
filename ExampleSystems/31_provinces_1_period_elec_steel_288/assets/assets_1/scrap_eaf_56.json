@@ -59,7 +59,7 @@
             },
             "instance_data": [
                 {
-                    "id": "scrap_eaf_56_Region1Beijing",
+                    "id": "Region1Beijing_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region1Beijing",
@@ -76,24 +76,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region1Beijing"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region1Beijing",
-                                "id": "scrapeaf_100_retrofit_Region1Beijing",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region1Beijing_scrap_eaf_100",
+                            "id": "Region1Beijing_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region2Tianjin",
+                    "id": "Region2Tianjin_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region2Tianjin",
@@ -110,24 +110,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region2Tianjin"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region2Tianjin",
-                                "id": "scrapeaf_100_retrofit_Region2Tianjin",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region2Tianjin_scrap_eaf_100",
+                            "id": "Region2Tianjin_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region3Hebei",
+                    "id": "Region3Hebei_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region3Hebei",
@@ -144,24 +144,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region3Hebei"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region3Hebei",
-                                "id": "scrapeaf_100_retrofit_Region3Hebei",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region3Hebei_scrap_eaf_100",
+                            "id": "Region3Hebei_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region4Shanxi",
+                    "id": "Region4Shanxi_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region4Shanxi",
@@ -178,24 +178,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region4Shanxi"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region4Shanxi",
-                                "id": "scrapeaf_100_retrofit_Region4Shanxi",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region4Shanxi_scrap_eaf_100",
+                            "id": "Region4Shanxi_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region5Innermongolia",
+                    "id": "Region5Innermongolia_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region5Innermongolia",
@@ -212,24 +212,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region5Innermongolia"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region5Innermongolia",
-                                "id": "scrapeaf_100_retrofit_Region5Innermongolia",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region5Innermongolia_scrap_eaf_100",
+                            "id": "Region5Innermongolia_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region6Liaoning",
+                    "id": "Region6Liaoning_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region6Liaoning",
@@ -246,24 +246,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region6Liaoning"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region6Liaoning",
-                                "id": "scrapeaf_100_retrofit_Region6Liaoning",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region6Liaoning_scrap_eaf_100",
+                            "id": "Region6Liaoning_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region7Jilin",
+                    "id": "Region7Jilin_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region7Jilin",
@@ -280,24 +280,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region7Jilin"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region7Jilin",
-                                "id": "scrapeaf_100_retrofit_Region7Jilin",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region7Jilin_scrap_eaf_100",
+                            "id": "Region7Jilin_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region8Heilongjiang",
+                    "id": "Region8Heilongjiang_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region8Heilongjiang",
@@ -314,24 +314,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region8Heilongjiang"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region8Heilongjiang",
-                                "id": "scrapeaf_100_retrofit_Region8Heilongjiang",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region8Heilongjiang_scrap_eaf_100",
+                            "id": "Region8Heilongjiang_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region9Shanghai",
+                    "id": "Region9Shanghai_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region9Shanghai",
@@ -348,24 +348,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region9Shanghai"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region9Shanghai",
-                                "id": "scrapeaf_100_retrofit_Region9Shanghai",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region9Shanghai_scrap_eaf_100",
+                            "id": "Region9Shanghai_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region10Jiangsu",
+                    "id": "Region10Jiangsu_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region10Jiangsu",
@@ -382,24 +382,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region10Jiangsu"
-                        },
+                        }
+                    },
                         "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region10Jiangsu",
-                                "id": "scrapeaf_100_retrofit_Region10Jiangsu",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        {
+                            "template_id": "Region10Jiangsu_scrap_eaf_100",
+                            "id": "Region10Jiangsu_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region11Zhejiang",
+                    "id": "Region11Zhejiang_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region11Zhejiang",
@@ -416,24 +416,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region11Zhejiang"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region11Zhejiang",
-                                "id": "scrapeaf_100_retrofit_Region11Zhejiang",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region11Zhejiang_scrap_eaf_100",
+                            "id": "Region11Zhejiang_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region12Anhui",
+                    "id": "Region12Anhui_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region12Anhui",
@@ -450,24 +450,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region12Anhui"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region12Anhui",
-                                "id": "scrapeaf_100_retrofit_Region12Anhui",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region12Anhui_scrap_eaf_100",
+                            "id": "Region12Anhui_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region13Fujian",
+                    "id": "Region13Fujian_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region13Fujian",
@@ -484,24 +484,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region13Fujian"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region13Fujian",
-                                "id": "scrapeaf_100_retrofit_Region13Fujian",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region13Fujian_scrap_eaf_100",
+                            "id": "Region13Fujian_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region14Jiangxi",
+                    "id": "Region14Jiangxi_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region14Jiangxi",
@@ -518,24 +518,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region14Jiangxi"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region14Jiangxi",
-                                "id": "scrapeaf_100_retrofit_Region14Jiangxi",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region14Jiangxi_scrap_eaf_100",
+                            "id": "Region14Jiangxi_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region15Shandong",
+                    "id": "Region15Shandong_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region15Shandong",
@@ -552,24 +552,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region15Shandong"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region15Shandong",
-                                "id": "scrapeaf_100_retrofit_Region15Shandong",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region15Shandong_scrap_eaf_100",
+                            "id": "Region15Shandong_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region16Henan",
+                    "id": "Region16Henan_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region16Henan",
@@ -586,24 +586,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region16Henan"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region16Henan",
-                                "id": "scrapeaf_100_retrofit_Region16Henan",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region16Henan_scrap_eaf_100",
+                            "id": "Region16Henan_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region17Hubei",
+                    "id": "Region17Hubei_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region17Hubei",
@@ -620,24 +620,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region17Hubei"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region17Hubei",
-                                "id": "scrapeaf_100_retrofit_Region17Hubei",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region17Hubei_scrap_eaf_100",
+                            "id": "Region17Hubei_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region18Hunan",
+                    "id": "Region18Hunan_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region18Hunan",
@@ -654,24 +654,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region18Hunan"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region18Hunan",
-                                "id": "scrapeaf_100_retrofit_Region18Hunan",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region18Hunan_scrap_eaf_100",
+                            "id": "Region18Hunan_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region19Guangdong",
+                    "id": "Region19Guangdong_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region19Guangdong",
@@ -688,24 +688,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region19Guangdong"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region19Guangdong",
-                                "id": "scrapeaf_100_retrofit_Region19Guangdong",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region19Guangdong_scrap_eaf_100",
+                            "id": "Region19Guangdong_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region20Guangxi",
+                    "id": "Region20Guangxi_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region20Guangxi",
@@ -722,24 +722,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region20Guangxi"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region20Guangxi",
-                                "id": "scrapeaf_100_retrofit_Region20Guangxi",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region20Guangxi_scrap_eaf_100",
+                            "id": "Region20Guangxi_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region22Chongqing",
+                    "id": "Region22Chongqing_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region22Chongqing",
@@ -756,24 +756,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region22Chongqing"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region22Chongqing",
-                                "id": "scrapeaf_100_retrofit_Region22Chongqing",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region22Chongqing_scrap_eaf_100",
+                            "id": "Region22Chongqing_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region23Sichuan",
+                    "id": "Region23Sichuan_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region23Sichuan",
@@ -790,24 +790,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region23Sichuan"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region23Sichuan",
-                                "id": "scrapeaf_100_retrofit_Region23Sichuan",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region23Sichuan_scrap_eaf_100",
+                            "id": "Region23Sichuan_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region24Guizhou",
+                    "id": "Region24Guizhou_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region24Guizhou",
@@ -824,24 +824,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region24Guizhou"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region24Guizhou",
-                                "id": "scrapeaf_100_retrofit_Region24Guizhou",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region24Guizhou_scrap_eaf_100",
+                            "id": "Region24Guizhou_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region25Yunnan",
+                    "id": "Region25Yunnan_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region25Yunnan",
@@ -858,24 +858,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region25Yunnan"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region25Yunnan",
-                                "id": "scrapeaf_100_retrofit_Region25Yunnan",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region25Yunnan_scrap_eaf_100",
+                            "id": "Region25Yunnan_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region27Shaanxi",
+                    "id": "Region27Shaanxi_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region27Shaanxi",
@@ -892,24 +892,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region27Shaanxi"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region27Shaanxi",
-                                "id": "scrapeaf_100_retrofit_Region27Shaanxi",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region27Shaanxi_scrap_eaf_100",
+                            "id": "Region27Shaanxi_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region28Gansu",
+                    "id": "Region28Gansu_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region28Gansu",
@@ -926,24 +926,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region28Gansu"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region28Gansu",
-                                "id": "scrapeaf_100_retrofit_Region28Gansu",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region28Gansu_scrap_eaf_100",
+                            "id": "Region28Gansu_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region29Qinghai",
+                    "id": "Region29Qinghai_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region29Qinghai",
@@ -960,24 +960,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region29Qinghai"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region29Qinghai",
-                                "id": "scrapeaf_100_retrofit_Region29Qinghai",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region29Qinghai_scrap_eaf_100",
+                            "id": "Region29Qinghai_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region30Ningxia",
+                    "id": "Region30Ningxia_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region30Ningxia",
@@ -994,24 +994,24 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region30Ningxia"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region30Ningxia",
-                                "id": "scrapeaf_100_retrofit_Region30Ningxia",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region30Ningxia_scrap_eaf_100",
+                            "id": "Region30Ningxia_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "scrap_eaf_56_Region31Xinjiang",
+                    "id": "Region31Xinjiang_scrap_eaf_56",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region31Xinjiang",
@@ -1028,21 +1028,21 @@
                         },
                         "carbonsource_edge": {
                             "start_vertex": "coal_Region31Xinjiang"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "scrapeaf_100_Region31Xinjiang",
-                                "id": "scrapeaf_100_retrofit_Region31Xinjiang",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region31Xinjiang_scrap_eaf_100",
+                            "id": "Region31Xinjiang_scrap_eaf_100_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 }
             ]
         }
