@@ -74,7 +74,7 @@
             },
             "instance_data": [
                 {
-                    "id": "bfbof_Region1Beijing",
+                    "id": "Region1Beijing_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region1Beijing",
@@ -101,8 +101,8 @@
                     },
                     "retrofit_options": [
                         {
-                            "template_id": "bfbofccs_Region1Beijing",
-                            "id": "bfbofccs_retrofit_Region1Beijing",
+                            "template_id": "Region1Beijing_bfbofccs",
+                            "id": "Region1Beijing_bfbofccs_retrofit",
                             "edges": {
                                 "crudesteel_edge": {
                                     "investment_cost": 3278693,
@@ -115,34 +115,35 @@
                     ]
                 },
                 {
-                    "id": "bfbof_Region2Tianjin",
-                    "edges": {
-                        "crudesteel_edge": {
-                            "end_vertex": "crudesteel_Region2Tianjin",
-                            "existing_capacity": 1558
-                        },
-                        "metcoal_edge": {
-                            "start_vertex": "coal_Region2Tianjin"
-                        },
-                        "thermalcoal_edge": {
-                            "start_vertex": "coal_Region2Tianjin"
-                        },
-                        "elec_edge": {
-                            "start_vertex": "elec_Region2Tianjin"
-                        },
-                        "natgas_edge": {
-                            "start_vertex": "natgas_Region2Tianjin"
-                        },
-                        "ironore_edge": {
-                            "start_vertex": "ironore_source"
-                        },
-                        "steelscrap_edge": {
-                            "start_vertex": "steelscrap_source_Region2Tianjin"
+                    "id": "Region2Tianjin_bfbof",
+                        "edges": {
+                            "crudesteel_edge": {
+                                "end_vertex": "crudesteel_Region2Tianjin",
+                                "existing_capacity": 1558
+                            },
+                            "metcoal_edge": {
+                                "start_vertex": "coal_Region2Tianjin"
+                            },
+                            "thermalcoal_edge": {
+                                "start_vertex": "coal_Region2Tianjin"
+                            },
+                            "elec_edge": {
+                                "start_vertex": "elec_Region2Tianjin"
+                            },
+                            "natgas_edge": {
+                                "start_vertex": "natgas_Region2Tianjin"
+                            },
+                            "ironore_edge": {
+                                "start_vertex": "ironore_source"
+                            },
+                            "steelscrap_edge": {
+                                "start_vertex": "steelscrap_source_Region2Tianjin"
+                            }
                         },
                         "retrofit_options": [
                             {
-                                "template_id": "bfbofccs_Region2Tianjin",
-                                "id": "bfbofccs_retrofit_Region2Tianjin",
+                                "template_id": "Region2Tianjin_bfbofccs",
+                                "id": "Region2Tianjin_bfbofccs_retrofit",
                                 "edges": {
                                     "crudesteel_edge": {
                                         "investment_cost": 3278693,
@@ -153,10 +154,9 @@
                                 }
                             }
                         ]
-                    }
                 },
                 {
-                    "id": "bfbof_Region3Hebei",
+                    "id": "Region3Hebei_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region3Hebei",
@@ -179,25 +179,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region3Hebei"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region3Hebei",
-                                "id": "bfbofccs_retrofit_Region3Hebei",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region3Hebei_bfbofccs",
+                            "id": "Region3Hebei_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region4Shanxi",
+                    "id": "Region4Shanxi_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region4Shanxi",
@@ -220,25 +220,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region4Shanxi"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region4Shanxi",
-                                "id": "bfbofccs_retrofit_Region4Shanxi",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region4Shanxi_bfbofccs",
+                            "id": "Region4Shanxi_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region5Innermongolia",
+                    "id": "Region5Innermongolia_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region5Innermongolia",
@@ -261,25 +261,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region5Innermongolia"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region5Innermongolia",
-                                "id": "bfbofccs_retrofit_Region5Innermongolia",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region5Innermongolia_bfbofccs",
+                            "id": "Region5Innermongolia_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region6Liaoning",
+                    "id": "Region6Liaoning_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region6Liaoning",
@@ -302,25 +302,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region6Liaoning"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region6Liaoning",
-                                "id": "bfbofccs_retrofit_Region6Liaoning",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region6Liaoning_bfbofccs",
+                            "id": "Region6Liaoning_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region7Jilin",
+                    "id": "Region7Jilin_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region7Jilin",
@@ -343,25 +343,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region7Jilin"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region7Jilin",
-                                "id": "bfbofccs_retrofit_Region7Jilin",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region7Jilin_bfbofccs",
+                            "id": "Region7Jilin_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region8Heilongjiang",
+                    "id": "Region8Heilongjiang_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region8Heilongjiang",
@@ -384,25 +384,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region8Heilongjiang"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region8Heilongjiang",
-                                "id": "bfbofccs_retrofit_Region8Heilongjiang",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region8Heilongjiang_bfbofccs",
+                            "id": "Region8Heilongjiang_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region9Shanghai",
+                    "id": "Region9Shanghai_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region9Shanghai",
@@ -425,25 +425,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region9Shanghai"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region9Shanghai",
-                                "id": "bfbofccs_retrofit_Region9Shanghai",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region9Shanghai_bfbofccs",
+                            "id": "Region9Shanghai_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region10Jiangsu",
+                    "id": "Region10Jiangsu_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region10Jiangsu",
@@ -466,25 +466,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region10Jiangsu"
+                        }
                         },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region10Jiangsu",
-                                "id": "bfbofccs_retrofit_Region10Jiangsu",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region10Jiangsu_bfbofccs",
+                            "id": "Region10Jiangsu_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region11Zhejiang",
+                    "id": "Region11Zhejiang_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region11Zhejiang",
@@ -507,25 +507,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region11Zhejiang"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region11Zhejiang",
-                                "id": "bfbofccs_retrofit_Region11Zhejiang",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region11Zhejiang_bfbofccs",
+                            "id": "Region11Zhejiang_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region12Anhui",
+                    "id": "Region12Anhui_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region12Anhui",
@@ -548,25 +548,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region12Anhui"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region12Anhui",
-                                "id": "bfbofccs_retrofit_Region12Anhui",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region12Anhui_bfbofccs",
+                            "id": "Region12Anhui_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region13Fujian",
+                    "id": "Region13Fujian_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region13Fujian",
@@ -589,25 +589,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region13Fujian"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region13Fujian",
-                                "id": "bfbofccs_retrofit_Region13Fujian",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region13Fujian_bfbofccs",
+                            "id": "Region13Fujian_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region14Jiangxi",
+                    "id": "Region14Jiangxi_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region14Jiangxi",
@@ -630,25 +630,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region14Jiangxi"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region14Jiangxi",
-                                "id": "bfbofccs_retrofit_Region14Jiangxi",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region14Jiangxi_bfbofccs",
+                            "id": "Region14Jiangxi_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region15Shandong",
+                    "id": "Region15Shandong_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region15Shandong",
@@ -671,25 +671,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region15Shandong"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region15Shandong",
-                                "id": "bfbofccs_retrofit_Region15Shandong",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region15Shandong_bfbofccs",
+                            "id": "Region15Shandong_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region16Henan",
+                    "id": "Region16Henan_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region16Henan",
@@ -712,25 +712,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region16Henan"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region16Henan",
-                                "id": "bfbofccs_retrofit_Region16Henan",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region16Henan_bfbofccs",
+                            "id": "Region16Henan_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region17Hubei",
+                    "id": "Region17Hubei_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region17Hubei",
@@ -753,11 +753,12 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region17Hubei"
-                        },
+                        }
+                    },
                         "retrofit_options": [
                             {
-                                "template_id": "bfbofccs_Region17Hubei",
-                                "id": "bfbofccs_retrofit_Region17Hubei",
+                                "template_id": "Region17Hubei_bfbofccs",
+                                "id": "Region17Hubei_bfbofccs_retrofit",
                                 "edges": {
                                     "crudesteel_edge": {
                                         "investment_cost": 3278693,
@@ -768,10 +769,9 @@
                                 }
                             }
                         ]
-                    }
                 },
                 {
-                    "id": "bfbof_Region18Hunan",
+                    "id": "Region18Hunan_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region18Hunan",
@@ -794,25 +794,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region18Hunan"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region18Hunan",
-                                "id": "bfbofccs_retrofit_Region18Hunan",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region18Hunan_bfbofccs",
+                            "id": "Region18Hunan_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region19Guangdong",
+                    "id": "Region19Guangdong_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region19Guangdong",
@@ -835,25 +835,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region19Guangdong"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region19Guangdong",
-                                "id": "bfbofccs_retrofit_Region19Guangdong",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region19Guangdong_bfbofccs",
+                            "id": "Region19Guangdong_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region20Guangxi",
+                    "id": "Region20Guangxi_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region20Guangxi",
@@ -876,25 +876,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region20Guangxi"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region20Guangxi",
-                                "id": "bfbofccs_retrofit_Region20Guangxi",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region20Guangxi_bfbofccs",
+                            "id": "Region20Guangxi_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region22Chongqing",
+                    "id": "Region22Chongqing_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region22Chongqing",
@@ -917,25 +917,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region22Chongqing"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region22Chongqing",
-                                "id": "bfbofccs_retrofit_Region22Chongqing",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region22Chongqing_bfbofccs",
+                            "id": "Region22Chongqing_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region23Sichuan",
+                    "id": "Region23Sichuan_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region23Sichuan",
@@ -958,25 +958,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region23Sichuan"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region23Sichuan",
-                                "id": "bfbofccs_retrofit_Region23Sichuan",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region23Sichuan_bfbofccs",
+                            "id": "Region23Sichuan_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region24Guizhou",
+                    "id": "Region24Guizhou_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region24Guizhou",
@@ -999,25 +999,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region24Guizhou"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region24Guizhou",
-                                "id": "bfbofccs_retrofit_Region24Guizhou",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region24Guizhou_bfbofccs",
+                            "id": "Region24Guizhou_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region25Yunnan",
+                    "id": "Region25Yunnan_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region25Yunnan",
@@ -1040,25 +1040,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region25Yunnan"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region25Yunnan",
-                                "id": "bfbofccs_retrofit_Region25Yunnan",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region25Yunnan_bfbofccs",
+                            "id": "Region25Yunnan_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region27Shaanxi",
+                    "id": "Region27Shaanxi_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region27Shaanxi",
@@ -1081,25 +1081,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region27Shaanxi"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region27Shaanxi",
-                                "id": "bfbofccs_retrofit_Region27Shaanxi",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region27Shaanxi_bfbofccs",
+                            "id": "Region27Shaanxi_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region28Gansu",
+                    "id": "Region28Gansu_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region28Gansu",
@@ -1122,25 +1122,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region28Gansu"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region28Gansu",
-                                "id": "bfbofccs_retrofit_Region28Gansu",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region28Gansu_bfbofccs",
+                            "id": "Region28Gansu_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region29Qinghai",
+                    "id": "Region29Qinghai_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region29Qinghai",
@@ -1163,25 +1163,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region29Qinghai"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region29Qinghai",
-                                "id": "bfbofccs_retrofit_Region29Qinghai",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region29Qinghai_bfbofccs",
+                            "id": "Region29Qinghai_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region30Ningxia",
+                    "id": "Region30Ningxia_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region30Ningxia",
@@ -1204,25 +1204,25 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region30Ningxia"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region30Ningxia",
-                                "id": "bfbofccs_retrofit_Region30Ningxia",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region30Ningxia_bfbofccs",
+                            "id": "Region30Ningxia_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 },
                 {
-                    "id": "bfbof_Region31Xinjiang",
+                    "id": "Region31Xinjiang_bfbof",
                     "edges": {
                         "crudesteel_edge": {
                             "end_vertex": "crudesteel_Region31Xinjiang",
@@ -1245,22 +1245,22 @@
                         },
                         "steelscrap_edge": {
                             "start_vertex": "steelscrap_source_Region31Xinjiang"
-                        },
-                        "retrofit_options": [
-                            {
-                                "template_id": "bfbofccs_Region31Xinjiang",
-                                "id": "bfbofccs_retrofit_Region31Xinjiang",
-                                "edges": {
-                                    "crudesteel_edge": {
-                                        "investment_cost": 3278693,
-                                        "is_retrofit": true,
-                                        "retrofit_efficiency": 1,
-                                        "can_expand": true
-                                    }
+                        }
+                    },
+                    "retrofit_options": [
+                        {
+                            "template_id": "Region31Xinjiang_bfbofccs",
+                            "id": "Region31Xinjiang_bfbofccs_retrofit",
+                            "edges": {
+                                "crudesteel_edge": {
+                                    "investment_cost": 3278693,
+                                    "is_retrofit": true,
+                                    "retrofit_efficiency": 1,
+                                    "can_expand": true
                                 }
                             }
-                        ]
-                    }
+                        }
+                    ]
                 }
             ]
         }
