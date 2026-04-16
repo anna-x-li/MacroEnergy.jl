@@ -8,7 +8,7 @@
                     "constraints": {
                         "BalanceConstraint": true
                     },
-                    "steelscrap_consumption": 1.075,
+                    "steelscrap_consumption": 0.979,
                     "electricity_consumption": 0.625,
                     "naturalgas_consumption": 0,
                     "carbonsource_consumption": 0,

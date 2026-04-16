@@ -307,7 +307,10 @@
         {
             "type": "NaturalGas",
             "global_data": {
-                "time_interval": "NaturalGas"
+                "time_interval": "NaturalGas",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
             },
             "instance_data": [
                 {
@@ -594,7 +597,10 @@
         {
             "type": "Coal",
             "global_data": {
-                "time_interval": "Coal"
+                "time_interval": "Coal",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
             },
             "instance_data": [
                 {
@@ -881,7 +887,10 @@
         {
             "type": "Uranium",
             "global_data": {
-                "time_interval": "Uranium"
+                "time_interval": "Uranium",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
             },
             "instance_data": [
                 {
@@ -903,10 +912,11 @@
             "instance_data": [
                 {
                     "constraints": {
-                        "CO2CapConstraint": true
+                        "CO2CapConstraint": true,
+                        "BalanceConstraint": false
                     },
                     "rhs_policy": {
-                        "CO2CapConstraint": 1.296e8
+                        "CO2CapConstraint": 3.55E+07
                     },
                     "id": "co2_sink"
                 }
@@ -914,7 +924,10 @@
         },
         {
             "global_data": {
-                "time_interval": "Electricity"
+                "time_interval": "Electricity",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
             },
             "instance_data": [
                 {
@@ -926,7 +939,10 @@
         {
             "type": "CO2Captured",
             "global_data": {
-                "time_interval": "CO2Captured"
+                "time_interval": "CO2Captured",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
             },
             "instance_data": [
                 {
@@ -937,7 +953,10 @@
         {
             "type": "Coal",
             "global_data": {
-                "time_interval": "Coal"
+                "time_interval": "Coal",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
             },
             "instance_data": [
                 {
@@ -948,7 +967,10 @@
         {
             "type": "IronOre",
             "global_data": {
-                "time_interval": "IronOre"
+                "time_interval": "IronOre",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
             },
             "instance_data": [
                 {
@@ -965,167 +987,46 @@
                 }
             },
             "instance_data": [
-                {
-                    "id": "steelscrap_source_Region1Beijing",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region2Tianjin",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region3Hebei",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region4Shanxi",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region5Innermongolia",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region6Liaoning",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region7Jilin",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region8Heilongjiang",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region9Shanghai",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region10Jiangsu",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region11Zhejiang",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region12Anhui",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region13Fujian",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region14Jiangxi",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region15Shandong",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region16Henan",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region17Hubei",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region18Hunan",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region19Guangdong",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region20Guangxi",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region21Hainan",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region22Chongqing",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region23Sichuan",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region24Guizhou",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region25Yunnan",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region26Tibet",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region27Shaanxi",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region28Gansu",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region29Qinghai",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region30Ningxia",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                },
-                {
-                    "id": "steelscrap_source_Region31Xinjiang",
-                    "max_supply":[1e100],
-                    "price_supply":[10]
-                }
+                {"id": "steelscrap_source_Region1Beijing","max_supply":[1226.68798],"price_supply":[10]},
+                {"id": "steelscrap_source_Region2Tianjin","max_supply":[529.195864],"price_supply":[10]},
+                {"id": "steelscrap_source_Region3Hebei","max_supply":[1348.93192],"price_supply":[10]},
+                {"id": "steelscrap_source_Region4Shanxi","max_supply":[653.042051],"price_supply":[10]},
+                {"id": "steelscrap_source_Region5Innermongolia","max_supply":[628.085183],"price_supply":[10]},
+                {"id": "steelscrap_source_Region6Liaoning","max_supply":[540.196544],"price_supply":[10]},
+                {"id": "steelscrap_source_Region7Jilin","max_supply":[254.77778],"price_supply":[10]},
+                {"id": "steelscrap_source_Region8Heilongjiang","max_supply":[325.075727],"price_supply":[10]},
+                {"id": "steelscrap_source_Region9Shanghai","max_supply":[1018.04948],"price_supply":[10]},
+                {"id": "steelscrap_source_Region10Jiangsu","max_supply":[2450.44483],"price_supply":[10]},
+                {"id": "steelscrap_source_Region11Zhejiang","max_supply":[1571.8055],"price_supply":[10]},
+                {"id": "steelscrap_source_Region12Anhui","max_supply":[851.752849],"price_supply":[10]},
+                {"id": "steelscrap_source_Region13Fujian","max_supply":[952.081838],"price_supply":[10]},
+                {"id": "steelscrap_source_Region14Jiangxi","max_supply":[589.568881],"price_supply":[10]},
+                {"id": "steelscrap_source_Region15Shandong","max_supply":[1910.20262],"price_supply":[10]},
+                {"id": "steelscrap_source_Region16Henan","max_supply":[927.662839],"price_supply":[10]},
+                {"id": "steelscrap_source_Region17Hubei","max_supply":[711.895654],"price_supply":[10]},
+                {"id": "steelscrap_source_Region18Hunan","max_supply":[668.003517],"price_supply":[10]},
+                {"id": "steelscrap_source_Region19Guangdong","max_supply":[1873.77417],"price_supply":[10]},
+                {"id": "steelscrap_source_Region20Guangxi","max_supply":[361.448579],"price_supply":[10]},
+                {"id": "steelscrap_source_Region21Hainan","max_supply":[88.505516],"price_supply":[10]},
+                {"id": "steelscrap_source_Region22Chongqing","max_supply":[449.216063],"price_supply":[10]},
+                {"id": "steelscrap_source_Region23Sichuan","max_supply":[902.462817],"price_supply":[10]},
+                {"id": "steelscrap_source_Region24Guizhou","max_supply":[291.082078],"price_supply":[10]},
+                {"id": "steelscrap_source_Region25Yunnan","max_supply":[445.44866],"price_supply":[10]},
+                {"id": "steelscrap_source_Region26Tibet","max_supply":[0],"price_supply":[10]},
+                {"id": "steelscrap_source_Region27Shaanxi","max_supply":[418.514805],"price_supply":[10]},
+                {"id": "steelscrap_source_Region28Gansu","max_supply":[163.086315],"price_supply":[10]},
+                {"id": "steelscrap_source_Region29Qinghai","max_supply":[49.2073305],"price_supply":[10]},
+                {"id": "steelscrap_source_Region30Ningxia","max_supply":[62.5736641],"price_supply":[10]},
+                {"id": "steelscrap_source_Region31Xinjiang","max_supply":[231.798921],"price_supply":[10]}
             ]
         },
         {
             "type": "CrudeSteel",
             "global_data": {
-                "time_interval": "CrudeSteel"
+                "time_interval": "CrudeSteel",
+                "constraints": {
+                        "BalanceConstraint": false
+                    }
             },
             "instance_data": [
                 {
@@ -1307,6 +1208,15 @@
                         "AggregatedDemandConstraint": 607474
                     },
                     "id": "crudesteel_Region20Guangxi"
+                },
+                {
+                    "constraints": {
+                        "AggregatedDemandConstraint": true
+                    },
+                    "rhs_policy": {
+                        "AggregatedDemandConstraint":  1163116 
+                    },
+                    "id": "crudesteel_Region21Hainan"
                 },
                 {
                     "constraints": {

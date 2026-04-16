@@ -4,7 +4,7 @@
             "transforms": {},
             "edges": {
                 "transmission_edge": {
-                    "unidirectional": false,
+                    "unidirectional": true,
                     "has_capacity": false,
                     "commodity": "SteelScrap",
                     "loss_fraction": 0,
@@ -39,8 +39,35 @@
                         "end_vertex": "steelscrap_source_Region3Hebei"
                     }
                 }
+            },
+            {
+                "id": "steelscrap_transport_Region2Tianjin_to_Region1Beijing",
+                "edges": {
+                    "transmission_edge": {
+                        "start_vertex": "steelscrap_source_Region2Tianjin",
+                        "end_vertex": "steelscrap_source_Region1Beijing"
+                    }
+                }
+            },
+            {
+                "id": "steelscrap_transport_Region3Hebei_to_Region1Beijing",
+                "edges": {
+                    "transmission_edge": {
+                        "start_vertex": "steelscrap_source_Region3Hebei",
+                        "end_vertex": "steelscrap_source_Region1Beijing"
+                    }
+                }
+            },
+            {
+                "id": "steelscrap_transport_Region3Hebei_to_Region2Tianjin",
+                "edges": {
+                    "transmission_edge": {
+                        "start_vertex": "steelscrap_source_Region3Hebei",
+                        "end_vertex": "steelscrap_source_Region2Tianjin"
+                    }
+                }
             }
         ],
-        "type": "TransmissionLink"
+        "type": "OneWayTransmissionLink"
     }
 }
