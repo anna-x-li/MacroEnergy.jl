@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 -c ':*)"
+      "Bash(python3 -c ':*)",
+      "Bash(python3 -c \" import json with open\\('/Users/al3792/.claude/projects/-Users-al3792-Documents-Local-MacroEnergy-jl/2689d11a-81ec-44bd-ab2c-b1aeb40b2554.jsonl'\\) as f: content = f.read\\(\\) idx = content.find\\('demand_flow'\\) if idx >= 0: print\\(content[max\\(0,idx-200\\):idx+2000]\\) \")",
+      "Bash(python3 -c ' *)",
+      "Bash(git -C \"/Users/al3792/Documents_Local/MacroEnergy.jl\" diff --name-only HEAD -- \"ExampleSystems/\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('/Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/updated_electricity_aluminum_one_stage/system/nodes_1.json'\\)\\); [print\\(n['type']\\) for n in d['nodes']]\")",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('/Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/31_provinces_1_period_elec_cement/system/nodes_1.json'\\)\\); [print\\(n['type']\\) for n in d['nodes']]\")"
     ]
   }
 }

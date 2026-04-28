@@ -101,6 +101,12 @@ function generate_planning_problem(case::Case)
 
     @objective(model, Min, model[:eFixedCost])
 
+    # @variable(model, vTHETA[w in 1:number_of_subperiods], lower_bound = 0.0)
+
+    # @expression(model, eApproximateVariableCost, sum(model[:vTHETA][w] for w in 1:number_of_subperiods))
+
+    # @objective(model, Min, model[:eFixedCost] + model[:eApproximateVariableCost])
+
     @info(" -- Planning problem generation complete, it took $(time() - start_time) seconds")
 
     return model
