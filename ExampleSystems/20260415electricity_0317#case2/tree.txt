@@ -1,0 +1,199 @@
+卷 Windows-SSD 的文件夹 PATH 列表
+卷序列号为 C2CC-1E39
+C:.
+|   electricity_0317#case2.log
+|   Main1_Check_json.py
+|   run.jl
+|   run1.jl
+|   run_benders.jl
+|   run_benders_HiGHS.jl
+|   run_monitor1.jl
+|   run_plot.jl
+|   run_plots.jl
+|   run_raw.jl
+|   system_data.json
+|   tree.txt
+|   tt.txt
+|   
++---assets
+|   +---assets_1
+|   |       hydropower.json
+|   |       storage.json
+|   |       thermal.json
+|   |       transmission.json
+|   |       vre.json
+|   |       
+|   +---assets_2
+|   |       hydropower.json
+|   |       storage.json
+|   |       thermal.json
+|   |       transmission.json
+|   |       vre.json
+|   |       
+|   +---assets_3
+|   |       hydropower.json
+|   |       storage.json
+|   |       thermal.json
+|   |       transmission.json
+|   |       vre.json
+|   |       
+|   +---assets_4
+|   |       hydropower.json
+|   |       storage.json
+|   |       thermal.json
+|   |       transmission.json
+|   |       vre.json
+|   |       
+|   +---assets_5
+|   |       hydropower.json
+|   |       storage.json
+|   |       thermal.json
+|   |       transmission.json
+|   |       vre.json
+|   |       
+|   +---assets_6
+|   |       hydropower.json
+|   |       storage.json
+|   |       thermal.json
+|   |       transmission.json
+|   |       vre.json
+|   |       
+|   \---assets_7
+|           hydropower.json
+|           storage.json
+|           thermal.json
+|           transmission.json
+|           vre.json
+|           
++---results_001_0326Benders
+|   |   settings.json
+|   |   
+|   +---results_period_1
+|   |       balance_duals.csv
+|   |       capacity.csv
+|   |       costs.csv
+|   |       flows.csv
+|   |       undiscounted_costs.csv
+|   |       
+|   +---results_period_2
+|   |       balance_duals.csv
+|   |       capacity.csv
+|   |       costs.csv
+|   |       flows.csv
+|   |       undiscounted_costs.csv
+|   |       
+|   +---results_period_3
+|   |       balance_duals.csv
+|   |       capacity.csv
+|   |       costs.csv
+|   |       flows.csv
+|   |       undiscounted_costs.csv
+|   |       
+|   +---results_period_4
+|   |       balance_duals.csv
+|   |       capacity.csv
+|   |       costs.csv
+|   |       flows.csv
+|   |       undiscounted_costs.csv
+|   |       
+|   +---results_period_5
+|   |       balance_duals.csv
+|   |       capacity.csv
+|   |       costs.csv
+|   |       flows.csv
+|   |       undiscounted_costs.csv
+|   |       
+|   +---results_period_6
+|   |       balance_duals.csv
+|   |       capacity.csv
+|   |       costs.csv
+|   |       flows.csv
+|   |       undiscounted_costs.csv
+|   |       
+|   \---results_period_7
+|           balance_duals.csv
+|           capacity.csv
+|           costs.csv
+|           flows.csv
+|           undiscounted_costs.csv
+|           
++---settings
+|       benders_settings.json
+|       case_settings.json
+|       macro_settings.json
+|       TDR_settings.json
+|       
++---system
+|   |   .DS_Store
+|   |   commodities.json
+|   |   demand_1.csv
+|   |   demand_2.csv
+|   |   demand_3.csv
+|   |   demand_4.csv
+|   |   demand_5.csv
+|   |   demand_6.csv
+|   |   demand_7.csv
+|   |   fuel_prices_1.csv
+|   |   fuel_prices_2.csv
+|   |   fuel_prices_3.csv
+|   |   fuel_prices_4.csv
+|   |   fuel_prices_5.csv
+|   |   fuel_prices_6.csv
+|   |   fuel_prices_7.csv
+|   |   nodes_1.json
+|   |   nodes_2.json
+|   |   nodes_3.json
+|   |   nodes_4.json
+|   |   nodes_5.json
+|   |   nodes_6.json
+|   |   nodes_7.json
+|   |   time_data.json
+|   |   vre_availability.csv
+|   |   vre_availability_1.csv
+|   |   vre_availability_2.csv
+|   |   vre_availability_3.csv
+|   |   vre_availability_4.csv
+|   |   vre_availability_5.csv
+|   |   vre_availability_6.csv
+|   |   vre_availability_7.csv
+|   |   
+|   \---TDR_results
+|           demand_1.csv
+|           demand_2.csv
+|           demand_3.csv
+|           demand_4.csv
+|           demand_5.csv
+|           demand_6.csv
+|           demand_7.csv
+|           fuel_prices_1.csv
+|           fuel_prices_2.csv
+|           fuel_prices_3.csv
+|           fuel_prices_4.csv
+|           fuel_prices_5.csv
+|           fuel_prices_6.csv
+|           fuel_prices_7.csv
+|           Period_map_1.csv
+|           Period_map_2.csv
+|           Period_map_3.csv
+|           Period_map_4.csv
+|           Period_map_5.csv
+|           Period_map_6.csv
+|           Period_map_7.csv
+|           time_data_1.json
+|           time_data_2.json
+|           time_data_3.json
+|           time_data_4.json
+|           time_data_5.json
+|           time_data_6.json
+|           time_data_7.json
+|           vre_availability_1.csv
+|           vre_availability_2.csv
+|           vre_availability_3.csv
+|           vre_availability_4.csv
+|           vre_availability_5.csv
+|           vre_availability_6.csv
+|           vre_availability_7.csv
+|           
+\---tmp
+        UserAdditions.jl
+        

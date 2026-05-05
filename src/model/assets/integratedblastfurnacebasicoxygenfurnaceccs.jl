@@ -416,11 +416,11 @@ function make(asset_type::Type{BlastFurnaceBasicOxygenFurnaceCCS}, data::Abstrac
             natgas_edge.id => 1.0
         ),
         :emissions => Dict(
-            crudesteel_edge.id => get(transform_data, :emission_rate, 0.0),
+            crudesteel_edge.id => (1 - get(transform_data, :capture_rate, 0.0)) * get(transform_data, :emission_rate, 0.0),
             co2_edge.id => -1.0,
         ),
         :capture => Dict(
-            crudesteel_edge.id => get(transform_data, :capture_rate, 0.0),
+            crudesteel_edge.id => get(transform_data, :capture_rate, 0.0) * get(transform_data, :emission_rate, 0.0),
             co2_captured_edge.id => -1.0,
         )
     )

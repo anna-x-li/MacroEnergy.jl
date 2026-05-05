@@ -1,4 +1,0 @@
-[deps]
-Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
-Infiltrator = "5903a43b-9cc3-4c30-8d17-598619ec4e9b"
-MacroEnergy = "260b7737-bf0e-4e84-9335-3af14438b1f5"

@@ -1,0 +1,1080 @@
+{
+    "nodes": [
+        {
+            "type": "Electricity",
+            "global_data": {
+                "time_interval": "Electricity",
+                "constraints": {
+                    "BalanceConstraint": true,
+                    "MaxNonServedDemandConstraint": true,
+                    "MaxNonServedDemandPerSegmentConstraint": true
+                },
+                "max_nsd": [
+                    0.01
+                ],
+                "price_nsd": [
+                    10000
+                ]
+            },
+            "instance_data": [
+                {
+                    "id": "elec_BR_AC",
+                    "location": "BR_AC",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_AC"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_AL",
+                    "location": "BR_AL",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_AL"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_AP",
+                    "location": "BR_AP",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_AP"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_AM",
+                    "location": "BR_AM",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_AM"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_BA",
+                    "location": "BR_BA",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_BA"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_CE",
+                    "location": "BR_CE",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_CE"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_DF",
+                    "location": "BR_DF",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_DF"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_ES",
+                    "location": "BR_ES",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_ES"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_GO",
+                    "location": "BR_GO",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_GO"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_MA",
+                    "location": "BR_MA",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_MA"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_MT",
+                    "location": "BR_MT",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_MT"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_MS",
+                    "location": "BR_MS",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_MS"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_MG",
+                    "location": "BR_MG",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_MG"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_PA",
+                    "location": "BR_PA",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_PA"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_PB",
+                    "location": "BR_PB",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_PB"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_PR",
+                    "location": "BR_PR",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_PR"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_PE",
+                    "location": "BR_PE",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_PE"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_PI",
+                    "location": "BR_PI",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_PI"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_RJ",
+                    "location": "BR_RJ",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_RJ"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_RN",
+                    "location": "BR_RN",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_RN"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_RS",
+                    "location": "BR_RS",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_RS"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_RO",
+                    "location": "BR_RO",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_RO"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_RR",
+                    "location": "BR_RR",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_RR"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_SC",
+                    "location": "BR_SC",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_SC"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_SP",
+                    "location": "BR_SP",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_SP"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_SE",
+                    "location": "BR_SE",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_SE"
+                        }
+                    }
+                },
+                {
+                    "id": "elec_BR_TO",
+                    "location": "BR_TO",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/elec_demand.csv",
+                            "header": "elec_BR_TO"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Electricity",
+            "global_data": {
+                "time_interval": "Electricity",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "hydro_source_Amazonas"
+                },
+                {
+                    "id": "hydro_source_Doce"
+                },
+                {
+                    "id": "hydro_source_Grande"
+                },
+                {
+                    "id": "hydro_source_Iguacu"
+                },
+                {
+                    "id": "hydro_source_Jacui_capivari"
+                },
+                {
+                    "id": "hydro_source_Jequitinhonha"
+                },
+                {
+                    "id": "hydro_source_Paraiba_do_sul"
+                },
+                {
+                    "id": "hydro_source_Parana"
+                },
+                {
+                    "id": "hydro_source_Paranaiba"
+                },
+                {
+                    "id": "hydro_source_Paranapanema"
+                },
+                {
+                    "id": "hydro_source_Parnaiba"
+                },
+                {
+                    "id": "hydro_source_Sao_francisco"
+                },
+                {
+                    "id": "hydro_source_Tiete"
+                },
+                {
+                    "id": "hydro_source_Tocantins"
+                },
+                {
+                    "id": "hydro_source_Uruguai"
+                }
+            ]
+        },
+        {
+            "type": "Electricity",
+            "global_data": {
+                "time_interval": "Electricity",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "elec_proxy_BM"
+                },
+                {
+                    "id": "elec_proxy_IMP"
+                },
+                {
+                    "id": "elec_proxy_ITA"
+                },
+                {
+                    "id": "elec_proxy_N"
+                },
+                {
+                    "id": "elec_proxy_NE"
+                },
+                {
+                    "id": "elec_proxy_S"
+                },
+                {
+                    "id": "elec_proxy_SE"
+                }
+            ]
+        },
+        {
+            "type": "Hydrogen",
+            "global_data": {
+                "time_interval": "Hydrogen",
+                "constraints": {
+                    "BalanceConstraint": true,
+                    "MaxNonServedDemandConstraint": true,
+                    "MaxNonServedDemandPerSegmentConstraint": true
+                },
+                "max_nsd": [
+                    0.01
+                ],
+                "price_nsd": [
+                    10000
+                ]
+            },
+            "instance_data": [
+                {
+                    "id": "h2_BR_AC",
+                    "location": "BR_AC",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_AC"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_AL",
+                    "location": "BR_AL",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_AL"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_AP",
+                    "location": "BR_AP",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_AP"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_AM",
+                    "location": "BR_AM",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_AM"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_BA",
+                    "location": "BR_BA",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_BA"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_CE",
+                    "location": "BR_CE",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_CE"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_DF",
+                    "location": "BR_DF",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_DF"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_ES",
+                    "location": "BR_ES",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_ES"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_GO",
+                    "location": "BR_GO",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_GO"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_MA",
+                    "location": "BR_MA",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_MA"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_MT",
+                    "location": "BR_MT",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_MT"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_MS",
+                    "location": "BR_MS",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_MS"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_MG",
+                    "location": "BR_MG",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_MG"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_PA",
+                    "location": "BR_PA",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_PA"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_PB",
+                    "location": "BR_PB",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_PB"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_PR",
+                    "location": "BR_PR",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_PR"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_PE",
+                    "location": "BR_PE",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_PE"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_PI",
+                    "location": "BR_PI",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_PI"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_RJ",
+                    "location": "BR_RJ",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_RJ"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_RN",
+                    "location": "BR_RN",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_RN"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_RS",
+                    "location": "BR_RS",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_RS"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_RO",
+                    "location": "BR_RO",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_RO"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_RR",
+                    "location": "BR_RR",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_RR"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_SC",
+                    "location": "BR_SC",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_SC"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_SP",
+                    "location": "BR_SP",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_SP"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_SE",
+                    "location": "BR_SE",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_SE"
+                        }
+                    }
+                },
+                {
+                    "id": "h2_BR_TO",
+                    "location": "BR_TO",
+                    "demand": {
+                        "timeseries": {
+                            "path": "system/h2_demand.csv",
+                            "header": "h2_BR_TO"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "CO2",
+            "global_data": {
+                "time_interval": "CO2",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "co2_emitted_BR",
+                    "constraints": {
+                        "CO2CapConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2CapConstraint": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "CO2Captured",
+            "global_data": {
+                "time_interval": "CO2Captured",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "co2_captured_BR_AC",
+                    "location": "BR_AC"
+                },
+                {
+                    "id": "co2_captured_BR_AL",
+                    "location": "BR_AL"
+                },
+                {
+                    "id": "co2_captured_BR_AP",
+                    "location": "BR_AP"
+                },
+                {
+                    "id": "co2_captured_BR_AM",
+                    "location": "BR_AM"
+                },
+                {
+                    "id": "co2_captured_BR_BA",
+                    "location": "BR_BA"
+                },
+                {
+                    "id": "co2_captured_BR_CE",
+                    "location": "BR_CE"
+                },
+                {
+                    "id": "co2_captured_BR_DF",
+                    "location": "BR_DF"
+                },
+                {
+                    "id": "co2_captured_BR_ES",
+                    "location": "BR_ES"
+                },
+                {
+                    "id": "co2_captured_BR_GO",
+                    "location": "BR_GO"
+                },
+                {
+                    "id": "co2_captured_BR_MA",
+                    "location": "BR_MA"
+                },
+                {
+                    "id": "co2_captured_BR_MT",
+                    "location": "BR_MT"
+                },
+                {
+                    "id": "co2_captured_BR_MS",
+                    "location": "BR_MS"
+                },
+                {
+                    "id": "co2_captured_BR_MG",
+                    "location": "BR_MG"
+                },
+                {
+                    "id": "co2_captured_BR_PA",
+                    "location": "BR_PA"
+                },
+                {
+                    "id": "co2_captured_BR_PB",
+                    "location": "BR_PB"
+                },
+                {
+                    "id": "co2_captured_BR_PR",
+                    "location": "BR_PR"
+                },
+                {
+                    "id": "co2_captured_BR_PE",
+                    "location": "BR_PE"
+                },
+                {
+                    "id": "co2_captured_BR_PI",
+                    "location": "BR_PI"
+                },
+                {
+                    "id": "co2_captured_BR_RJ",
+                    "location": "BR_RJ"
+                },
+                {
+                    "id": "co2_captured_BR_RN",
+                    "location": "BR_RN"
+                },
+                {
+                    "id": "co2_captured_BR_RS",
+                    "location": "BR_RS"
+                },
+                {
+                    "id": "co2_captured_BR_RO",
+                    "location": "BR_RO"
+                },
+                {
+                    "id": "co2_captured_BR_RR",
+                    "location": "BR_RR"
+                },
+                {
+                    "id": "co2_captured_BR_SC",
+                    "location": "BR_SC"
+                },
+                {
+                    "id": "co2_captured_BR_SP",
+                    "location": "BR_SP"
+                },
+                {
+                    "id": "co2_captured_BR_SE",
+                    "location": "BR_SE"
+                },
+                {
+                    "id": "co2_captured_BR_TO",
+                    "location": "BR_TO"
+                }
+            ]
+        },
+        {
+            "type": "CO2Captured",
+            "global_data": {
+                "time_interval": "CO2Captured",
+                "constraints": {
+                    "BalanceConstraint": true
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "co2_transported_BR_AC"
+                },
+                {
+                    "id": "co2_transported_BR_AL"
+                },
+                {
+                    "id": "co2_transported_BR_AP"
+                },
+                {
+                    "id": "co2_transported_BR_AM"
+                },
+                {
+                    "id": "co2_transported_BR_BA"
+                },
+                {
+                    "id": "co2_transported_BR_CE"
+                },
+                {
+                    "id": "co2_transported_BR_DF"
+                },
+                {
+                    "id": "co2_transported_BR_ES"
+                },
+                {
+                    "id": "co2_transported_BR_GO"
+                },
+                {
+                    "id": "co2_transported_BR_MA"
+                },
+                {
+                    "id": "co2_transported_BR_MT"
+                },
+                {
+                    "id": "co2_transported_BR_MS"
+                },
+                {
+                    "id": "co2_transported_BR_MG"
+                },
+                {
+                    "id": "co2_transported_BR_PA"
+                },
+                {
+                    "id": "co2_transported_BR_PB"
+                },
+                {
+                    "id": "co2_transported_BR_PR"
+                },
+                {
+                    "id": "co2_transported_BR_PE"
+                },
+                {
+                    "id": "co2_transported_BR_PI"
+                },
+                {
+                    "id": "co2_transported_BR_RJ"
+                },
+                {
+                    "id": "co2_transported_BR_RN"
+                },
+                {
+                    "id": "co2_transported_BR_RS"
+                },
+                {
+                    "id": "co2_transported_BR_RO"
+                },
+                {
+                    "id": "co2_transported_BR_RR"
+                },
+                {
+                    "id": "co2_transported_BR_SC"
+                },
+                {
+                    "id": "co2_transported_BR_SP"
+                },
+                {
+                    "id": "co2_transported_BR_SE"
+                },
+                {
+                    "id": "co2_transported_BR_TO"
+                }
+            ]
+        },
+        {
+            "type": "CO2Captured",
+            "global_data": {
+                "time_interval": "CO2Captured",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "co2_storage_Parana",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 1237000000
+                    }
+                },
+                {
+                    "id": "co2_storage_Santos",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 751000000
+                    }
+                },
+                {
+                    "id": "co2_storage_Campos",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 14600000
+                    }
+                },
+                {
+                    "id": "co2_storage_Sao_Francisco",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 30000000
+                    }
+                },
+                {
+                    "id": "co2_storage_Reconcavo",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 3000000
+                    }
+                },
+                {
+                    "id": "co2_storage_Sergipe_Alagoas",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 14000000
+                    }
+                },
+                {
+                    "id": "co2_storage_Potiguar",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 8773000
+                    }
+                },
+                {
+                    "id": "co2_storage_Parecis",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 30000000
+                    }
+                },
+                {
+                    "id": "co2_storage_Espirito_Santo",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 6700000
+                    }
+                },
+                {
+                    "id": "co2_storage_Ceara",
+                    "constraints": {
+                        "CO2StorageConstraint": true
+                    },
+                    "rhs_policy": {
+                        "CO2StorageConstraint": 6700000
+                    }
+                }
+            ]
+        },
+        {
+            "type": "NaturalGas",
+            "global_data": {
+                "time_interval": "NaturalGas",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "natgas_BR",
+                    "price": {
+                        "timeseries": {
+                            "path": "system/fuel_prices.csv",
+                            "header": "natgas_price_BR"
+                        }
+                    }
+                },
+                {
+                    "id": "natgas_LNG_BR",
+                    "price": {
+                        "timeseries": {
+                            "path": "system/fuel_prices.csv",
+                            "header": "natgas_LNG_price_BR"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Coal",
+            "global_data": {
+                "time_interval": "Coal",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "coal_BR",
+                    "price": {
+                        "timeseries": {
+                            "path": "system/fuel_prices.csv",
+                            "header": "coal_price_BR"
+                        }
+                    }
+                },
+                {
+                    "id": "coal_imported",
+                    "price": {
+                        "timeseries": {
+                            "path": "system/fuel_prices.csv",
+                            "header": "coal_price_imported"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Uranium",
+            "global_data": {
+                "time_interval": "Uranium",
+                "constraints": {
+                    "BalanceConstraint": false
+                }
+            },
+            "instance_data": [
+                {
+                    "id": "uranium_BR",
+                    "price": {
+                        "timeseries": {
+                            "path": "system/fuel_prices.csv",
+                            "header": "uranium_price_BR"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
