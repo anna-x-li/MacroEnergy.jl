@@ -2658,219 +2658,219 @@
       },
       "instance_data": [
         {
-          "id": "co2_storage_Shanghai",
+          "id": "co2_storage_Songliao",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 341960000000
+            "CO2StorageConstraint": 35000
           }
         },
         {
-          "id": "co2_storage_Xinjiang",
+          "id": "co2_storage_TurpanHami",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 745902900000
+            "CO2StorageConstraint": 855000
           }
         },
         {
-          "id": "co2_storage_Ningxia",
+          "id": "co2_storage_Subei",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 258304060000
+            "CO2StorageConstraint": 1131667
           }
         },
         {
-          "id": "co2_storage_Beijing",
+          "id": "co2_storage_BohaiOnshore",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 125522060000
+            "CO2StorageConstraint": 1985000
           }
         },
         {
-          "id": "co2_storage_Guangdong",
+          "id": "co2_storage_Qaidam",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 69753000000
+            "CO2StorageConstraint": 785833
           }
         },
         {
-          "id": "co2_storage_Heilongjiang",
+          "id": "co2_storage_Nanxiang",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 44900000000
+            "CO2StorageConstraint": 1238333
           }
         },
         {
-          "id": "co2_storage_Xinjiang_2",
+          "id": "co2_storage_Sanjiang",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 197968010000
+            "CO2StorageConstraint": 4170833
           }
         },
         {
-          "id": "co2_storage_Henan",
+          "id": "co2_storage_Hailar",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 178068020000
+            "CO2StorageConstraint": 1667
           }
         },
         {
-          "id": "co2_storage_Chongqing",
+          "id": "co2_storage_Jianghan",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 78670000000
+            "CO2StorageConstraint": 6667
           }
         },
         {
-          "id": "co2_storage_Xinjiang_3",
+          "id": "co2_storage_Tarim",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 54581380000
+            "CO2StorageConstraint": 481667
           }
         },
         {
-          "id": "co2_storage_InnerMongolia",
+          "id": "co2_storage_Ordos",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 85031000000
+            "CO2StorageConstraint": 8333
           }
         },
         {
-          "id": "co2_storage_Tianjin",
+          "id": "co2_storage_YingenEjina",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 317937370000
+            "CO2StorageConstraint": 4167
           }
         },
         {
-          "id": "co2_storage_Hubei",
+          "id": "co2_storage_Hehuai",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 52824000000
+            "CO2StorageConstraint": 298333
           }
         },
         {
-          "id": "co2_storage_Qinghai",
+          "id": "co2_storage_Qinshui",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 22120940000
+            "CO2StorageConstraint": 10000
           }
         },
         {
-          "id": "co2_storage_Hainan",
+          "id": "co2_storage_Erlian",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 23818000000
+            "CO2StorageConstraint": 380000
           }
         },
         {
-          "id": "co2_storage_Heilongjiang_2",
+          "id": "co2_storage_Junggar",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 16100000000
+            "CO2StorageConstraint": 66667
           }
         },
         {
-          "id": "co2_storage_Fujian",
+          "id": "co2_storage_SichuanBasin",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 11000000000
+            "CO2StorageConstraint": 833
           }
         },
         {
-          "id": "co2_storage_Jilin",
+          "id": "co2_storage_BohaiOffshore",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 2176480000
+            "CO2StorageConstraint": 1400833
           }
         },
         {
-          "id": "co2_storage_Henan_2",
+          "id": "co2_storage_NorthYellowSea",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 7584810000
+            "CO2StorageConstraint": 1230833
           }
         },
         {
-          "id": "co2_storage_Xinjiang_4",
+          "id": "co2_storage_SouthYellowSea",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 689000000
+            "CO2StorageConstraint": 5833
           }
         },
         {
-          "id": "co2_storage_Heilongjiang_3",
+          "id": "co2_storage_EastChinaSea",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 228818710000
+            "CO2StorageConstraint": 1000000
           }
         },
         {
-          "id": "co2_storage_Liaoning",
+          "id": "co2_storage_PearlRiverMouth",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 26247570000
+            "CO2StorageConstraint": 775000
           }
         },
         {
-          "id": "co2_storage_Hainan_2",
+          "id": "co2_storage_BeibugGulf",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 56680000000
+            "CO2StorageConstraint": 2076667
           }
         },
         {
-          "id": "co2_storage_Shanghai_2",
+          "id": "co2_storage_Qiongdongnan",
           "constraints": {
             "CO2StorageConstraint": true
           },
           "rhs_policy": {
-            "CO2StorageConstraint": 133908000000
+            "CO2StorageConstraint": 3702500
           }
         }
       ]

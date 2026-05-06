@@ -6,7 +6,19 @@
       "Bash(python3 -c ' *)",
       "Bash(git -C \"/Users/al3792/Documents_Local/MacroEnergy.jl\" diff --name-only HEAD -- \"ExampleSystems/\")",
       "Bash(python3 -c \"import json; d=json.load\\(open\\('/Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/updated_electricity_aluminum_one_stage/system/nodes_1.json'\\)\\); [print\\(n['type']\\) for n in d['nodes']]\")",
-      "Bash(python3 -c \"import json; d=json.load\\(open\\('/Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/31_provinces_1_period_elec_cement/system/nodes_1.json'\\)\\); [print\\(n['type']\\) for n in d['nodes']]\")"
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('/Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/31_provinces_1_period_elec_cement/system/nodes_1.json'\\)\\); [print\\(n['type']\\) for n in d['nodes']]\")",
+      "WebSearch",
+      "WebFetch(domain:academic.oup.com)",
+      "WebFetch(domain:pubs.usgs.gov)",
+      "WebFetch(domain:ui.adsabs.harvard.edu)",
+      "WebFetch(domain:doi.pangaea.de)",
+      "WebFetch(domain:link.springer.com)",
+      "WebFetch(domain:www.mindat.org)",
+      "WebFetch(domain:www.apec.org)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)[:5]\\); n=list\\(d.values\\(\\)\\)[0]; print\\(list\\(n.keys\\(\\)\\)[:3]\\)\")",
+      "Bash(git -C /Users/al3792/Documents_Local/MacroEnergy.jl show HEAD:ExampleSystems/31_provinces_1_period_updatedelec_steel_cement_aluminum_288_meacement/assets/assets_1/mea_cement_retrofit_option.json)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2\\)[:2000]\\)\")"
     ]
   }
 }
