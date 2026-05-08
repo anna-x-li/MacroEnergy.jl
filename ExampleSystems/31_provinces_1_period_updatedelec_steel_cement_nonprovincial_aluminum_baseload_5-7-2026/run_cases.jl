@@ -12,8 +12,8 @@ output_base = joinpath(@__DIR__, "results")
 
 # Nodes files to sweep over (name => path relative to system/)
 nodes_scenarios = [
-    # "min_co2_injection"  => "system/nodes_min_co2_injection.json",
-    # "mean_co2_injection" => "system/nodes_mean_co2_injection.json",
+    "min_co2_injection"  => "system/nodes_min_co2_injection.json",
+    "mean_co2_injection" => "system/nodes_mean_co2_injection.json",
     "max_co2_injection"  => "system/nodes_max_co2_injection.json",
 ]
 
@@ -22,8 +22,8 @@ nodes_scenarios = [
 emission_cases = [
     "30pct" => 0.70,
     "60pct" => 0.40,
-#     "80pct" => 0.20,
-# ]
+    "80pct" => 0.20,
+]
 
 # ── Optimizer (shared across all runs) ───────────────────────────────────────
 optim = MacroEnergy.create_optimizer(Gurobi.Optimizer, nothing, ("Method" => 2, "Crossover" => 0, "BarConvTol" => 1e-3))

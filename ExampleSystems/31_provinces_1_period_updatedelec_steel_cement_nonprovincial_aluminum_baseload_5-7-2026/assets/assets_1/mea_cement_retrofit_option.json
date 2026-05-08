@@ -26,10 +26,11 @@
           "can_expand": false,
           "can_retrofit": true,
           "has_capacity": true,
+          "min_flow_fraction": 1.0,
           "constraints": {
-            "RampingLimitConstraint": true
-          },
-          "min_flow_fraction": 1
+            "RampingLimitConstraint": true,
+            "MinFlowConstraint": true
+          }
         }
       },
       "transforms": {
