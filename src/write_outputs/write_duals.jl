@@ -193,8 +193,12 @@ function write_co2_cap_duals(
         # Store node ID
         push!(node_ids, id(node))
 
-        # Get CO2 shadow prices
-        co2_shadow_price = -dual(constraint) / scaling
+        # Get CO2 shadow prices (dual may be unavailable if cap is non-binding)
+        co2_shadow_price = try
+            -dual(constraint) / scaling
+        catch
+            0.0
+        end
         push!(co2_shadow_prices, co2_shadow_price)
 
         # Calculate penalty cost if slack variables exist

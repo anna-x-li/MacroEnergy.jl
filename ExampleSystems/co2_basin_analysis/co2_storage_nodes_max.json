@@ -13,7 +13,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 136667
+        "CO2StorageConstraint": 53918
       }
     },
     {
@@ -22,7 +22,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 2385833
+        "CO2StorageConstraint": 941260
       }
     },
     {
@@ -31,7 +31,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 2839167
+        "CO2StorageConstraint": 1120110
       }
     },
     {
@@ -40,7 +40,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 10230833
+        "CO2StorageConstraint": 4036274
       }
     },
     {
@@ -49,7 +49,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 1463333
+        "CO2StorageConstraint": 577315
       }
     },
     {
@@ -58,7 +58,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 10389167
+        "CO2StorageConstraint": 4098740
       }
     },
     {
@@ -67,7 +67,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 7887500
+        "CO2StorageConstraint": 3111781
       }
     },
     {
@@ -76,7 +76,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 5000
+        "CO2StorageConstraint": 1973
       }
     },
     {
@@ -85,7 +85,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 25833
+        "CO2StorageConstraint": 10192
       }
     },
     {
@@ -94,7 +94,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 2708333
+        "CO2StorageConstraint": 1068493
       }
     },
     {
@@ -103,7 +103,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 65833
+        "CO2StorageConstraint": 25973
       }
     },
     {
@@ -112,7 +112,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 10000
+        "CO2StorageConstraint": 3945
       }
     },
     {
@@ -121,7 +121,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 4322500
+        "CO2StorageConstraint": 1705315
       }
     },
     {
@@ -130,7 +130,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 14167
+        "CO2StorageConstraint": 5589
       }
     },
     {
@@ -139,7 +139,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 1222500
+        "CO2StorageConstraint": 482301
       }
     },
     {
@@ -148,7 +148,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 190000
+        "CO2StorageConstraint": 74959
       }
     },
     {
@@ -157,7 +157,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 1667
+        "CO2StorageConstraint": 658
       }
     },
     {
@@ -166,7 +166,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 2870000
+        "CO2StorageConstraint": 1132274
       }
     },
     {
@@ -175,7 +175,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 5612500
+        "CO2StorageConstraint": 2214247
       }
     },
     {
@@ -184,7 +184,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 50833
+        "CO2StorageConstraint": 20055
       }
     },
     {
@@ -193,7 +193,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 5137500
+        "CO2StorageConstraint": 2026849
       }
     },
     {
@@ -202,7 +202,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 8686667
+        "CO2StorageConstraint": 3427068
       }
     },
     {
@@ -211,7 +211,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 8441667
+        "CO2StorageConstraint": 3330411
       }
     },
     {
@@ -220,7 +220,7 @@
         "CO2StorageConstraint": true
       },
       "rhs_policy": {
-        "CO2StorageConstraint": 11200000
+        "CO2StorageConstraint": 4418630
       }
     }
   ]

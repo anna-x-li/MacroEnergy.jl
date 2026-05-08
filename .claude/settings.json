@@ -18,7 +18,13 @@
       "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)[:5]\\); n=list\\(d.values\\(\\)\\)[0]; print\\(list\\(n.keys\\(\\)\\)[:3]\\)\")",
       "Bash(git -C /Users/al3792/Documents_Local/MacroEnergy.jl show HEAD:ExampleSystems/31_provinces_1_period_updatedelec_steel_cement_aluminum_288_meacement/assets/assets_1/mea_cement_retrofit_option.json)",
-      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2\\)[:2000]\\)\")"
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2\\)[:2000]\\)\")",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(list\\(data.keys\\(\\)\\)[:5]\\); print\\(data[list\\(data.keys\\(\\)\\)[0]]\\)\")",
+      "Bash(cp '/Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/20260415electricity_0317#case2/system/demand_1.csv' /Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/31_provinces_1_period_updatedelec_steel_cement_aluminum_288_baseload/system/demand_1.csv)",
+      "Bash(cp '/Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/20260415electricity_0317#case2/system/vre_availability_1.csv' /Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/31_provinces_1_period_updatedelec_steel_cement_aluminum_288_baseload/system/vre_availability_1.csv)",
+      "Bash(cp '/Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/20260415electricity_0317#case2/system/fuel_prices_1.csv' /Users/al3792/Documents_Local/MacroEnergy.jl/ExampleSystems/31_provinces_1_period_updatedelec_steel_cement_aluminum_288_baseload/system/fuel_prices_1.csv)",
+      "Bash(awk -F',' 'NR>1{print $2}')",
+      "Read(//Users/al3792/Documents_Local/**)"
     ]
   }
 }

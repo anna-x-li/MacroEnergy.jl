@@ -1,0 +1,74 @@
+{
+    "TimeDomainReduction": 1,
+    "TimeDomainReductionFolder": "TDR_results",
+    "TotalHoursModeled": 8760,
+
+    "TimestepsPerRepPeriod": 168,
+    "NumberOfSubperiods": 4,
+    "ClusterMethod": "kmeans",
+
+    "ScalingMethod": "N",
+    "nReps": 300,
+
+    "ClusterAvailability": 1,
+    "ClusterDemand": 1,
+    "ClusterFuelPrices": 0,
+
+    "AvailabilityFileName": "vre_availability",
+    "DemandFileName": "demand",
+    "FuelPricesFileName": "fuel_prices",
+
+    "UseExtremePeriods": 0,
+    "ExtremePeriods": {
+        "Load": {
+        "System": {
+            "Absolute": { "Max": 1, "Min": 0 },
+            "Integral": { "Max": 0, "Min": 0 }
+        }
+        },
+        "PV": {
+        "System": {
+            "Absolute": { "Max": 0, "Min": 0 },
+            "Integral": { "Max": 0, "Min": 1 }
+        }
+        },
+        "Wind": {
+        "System": {
+            "Absolute": { "Max": 0, "Min": 0 },
+            "Integral": { "Max": 0, "Min": 1 }
+        }
+        }
+    },
+
+    "ClusterSubperiodResults": 0,
+    "ClusterSubperiodFileName": "subperiod_results",
+    "Distributed_Subperiod_Solving": false,
+    "Zero_Threshold": 0.1,
+
+    "SubperiodPolicyConstraints": 1,
+
+    "SubperiodResults" : {
+        "Commodities" : {
+            "Electricity" : {
+                "Include": 1,
+                "Assets": {
+                    "VRE": 1,
+                    "Battery": 1,
+                    "ThermalPower": 0,
+                    "ThermalPowerCCS": 0,
+                    "HydroRes": 0,
+                    "MustRun": 0
+                }
+            },
+            "Hydrogen" : {
+                "Include": 0,
+                "Assets": {
+                    "Electrolyzer": 0,
+                    "ThermalHydrogen": 0,
+                    "ThermalHydrogenCCS": 0,
+                    "GasStorage": 0
+                }
+            }
+        }
+    }
+  }

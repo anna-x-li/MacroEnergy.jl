@@ -28,8 +28,7 @@ baseline_co2 = sum(
 
 # ── Cases 2 & 3: reductions from baseline ────────────────────────────────────
 
-#cases = [("30pct", 0.70), ("60pct", 0.40), ("90pct", 0.10)]
-cases = [("70pct", 0.30)]
+cases = [("30pct", 0.70), ("60pct", 0.40), ("80pct", 0.20)]
 
 # Define the base directory where you want everything to live
 
