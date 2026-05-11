@@ -23,7 +23,7 @@ emission_cases = [
     "30pct" => 0.70,
     "60pct" => 0.40,
 #     "80pct" => 0.20,
-# ]
+]
 
 # ── Optimizer (shared across all runs) ───────────────────────────────────────
 optim = MacroEnergy.create_optimizer(Gurobi.Optimizer, nothing, ("Method" => 2, "Crossover" => 0, "BarConvTol" => 1e-3))
