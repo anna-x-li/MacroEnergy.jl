@@ -1,0 +1,12 @@
+{
+    "ConstraintScaling": true,
+    "OutputLayout": "wide",
+    "DualExportsEnabled": true,
+    "MGA": {
+        "Enabled": true,
+        "Epsilon": 0.1,
+        "NumIterations": 1,
+        "Groupings": ["location", "custom"],
+        "Quantity": "capacity"
+    }
+}

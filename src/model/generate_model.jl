@@ -8,6 +8,7 @@ function generate_model(case::Case, opt::Optimizer, ::Monolithic)
         set_optimizer(model, opt)
     end
 
+    model.ext[:mga_optimizer] = opt
     set_string_names_on_creation(model, case.systems[1].settings.EnableJuMPStringNames)
 
     @info("Generating model")
@@ -22,6 +23,14 @@ function generate_model(case::Case, opt::Optimizer, ::Monolithic)
     for (period_idx, system) in enumerate(periods)
         next = period_idx < length(periods) ? periods[period_idx+1] : nothing
         add_period_to_model!(model, system, next, fixed_cost, investment_cost, om_fixed_cost, variable_cost)
+    end
+
+    if mga_enabled(case)
+        validate_mga(case)
+        @info(" -- Adding MGA variables")
+        for system in periods
+            add_mga_variables(system, model)
+        end
     end
 
     finalize_model_objective!(model, settings, fixed_cost, investment_cost, om_fixed_cost, variable_cost)

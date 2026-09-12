@@ -1,5 +1,6 @@
 ####### Entry point: dispatch on ExpansionHorizon then SolutionAlgorithm #######
 function solve_case(case::Case, opt::O) where O <: Union{Optimizer, Dict{Symbol, Dict{Symbol, Any}}}
+    validate_mga(case)
     solve_case(case, opt, expansion_horizon(case))
 end
 

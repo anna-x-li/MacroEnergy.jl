@@ -10,6 +10,23 @@
 
 **Condition:** Both files are written only when `DualExportsEnabled = true` (the default) in `macro_settings.json`.
 
+For MGA, this setting controls a separate pricing solve for the baseline and each
+alternative. With `true`, MacroEnergy fixes the selected investment portfolio
+(including continuous capacity decisions) and discrete operating decisions in a
+copy of the model, removes the MGA cost budget, and minimizes total discounted
+system cost. It writes the resulting cost-based duals without changing the MGA
+model or its solution. These prices are conditional on the fixed portfolio and
+discrete decisions; the pricing dispatch may differ from the MGA dispatch in the
+primal output files. `pricing_summary.csv` records the pricing solve's discounted
+system cost in original cost units.
+
+With `false`, MGA skips the pricing solve and dual files. Set this at the top level
+of `macro_settings.json`, alongside `MGA`:
+
+```json
+"DualExportsEnabled": true
+```
+
 Dual values (also called shadow prices or Lagrange multipliers) are the marginal costs associated with binding constraints in the optimization. Macro exports duals for two types of constraints:
 
 1. **`balance_duals.csv`** — shadow prices of the commodity balance equations at every node (locational marginal prices)

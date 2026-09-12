@@ -7,6 +7,7 @@ using DataFrames
 using JSONTables
 using OrderedCollections
 using JuMP
+using Random
 using HiGHS
 using Revise
 using InteractiveUtils
@@ -21,6 +22,7 @@ using GitHub
 using Markdown
 using Logging
 using LoggingExtras
+using Infiltrator
 
 import MacroEnergyScaling: scale_constraints!
 import JuMP: set_optimizer, set_optimizer_attributes, optimize!
@@ -180,6 +182,7 @@ include("model/networks/macroobject.jl")
 include("model/optimizer.jl")
 include("model/generate_model.jl")
 include("model/retrofit.jl")
+include("model/mga.jl")
 include("model/scaling.jl")
 include("model/myopic.jl")
 include_all_in_folder("model/constraints")
@@ -338,6 +341,7 @@ export AbstractAsset,
     RampingLimitConstraint,
     run_case,
     solve_case,
+    run_mga,
     Steam,
     SteelScrap,
     Storage,

@@ -11,7 +11,14 @@ function default_settings()
         AutoCreateNodes = false,
         AutoCreateLocations = true,
         Retrofitting = false,
-        DualExportsEnabled = true
+        DualExportsEnabled = true,
+        MGA = (
+            Enabled = false,
+            Epsilon = 0.01,
+            NumIterations = 10,
+            Groupings = ["location", "technology"],
+            Quantity = "capacity"
+        )
     )
 end
 
@@ -59,6 +66,13 @@ function validate_settings(settings::NamedTuple)
     @assert settings[:AllowImplicitTopLevelCommodities] isa Bool
     @assert settings[:DualExportsEnabled] isa Bool
     @assert settings[:OutputLayout] isa Union{String, NamedTuple}
+    @assert settings[:MGA] isa NamedTuple
+    @assert settings[:MGA][:Enabled] isa Bool
+    @assert settings[:MGA][:Epsilon] isa Real && settings[:MGA][:Epsilon] > 0
+    @assert settings[:MGA][:NumIterations] isa Integer && settings[:MGA][:NumIterations] > 0
+    @assert settings[:MGA][:Groupings] isa AbstractVector{<:AbstractString}
+    @assert settings[:MGA][:Quantity] isa AbstractString
+    @assert settings[:WriteSubcommodities] isa Bool
     if settings[:OutputLayout] isa String
         @assert settings[:OutputLayout] ∈ ("long", "wide")
     else

@@ -7,6 +7,8 @@ function edge_default_data()
         :start_vertex => missing,
         :end_vertex => missing,
         :location => missing,
+        :mga_enabled => false,
+        :mga_group => missing,
         :unidirectional => true,
         :availability => missing,
         :has_capacity => false,
