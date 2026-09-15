@@ -202,6 +202,11 @@ function _run_case_impl(
             # If MGA is enabled, run MGA and write outputs; otherwise, just write outputs
             if mga_enabled(case)
                 write_mga_outputs(output_path, case, solution)
+                
+                # Check if the run is myopic and monolithic (as Benders is not currently supported for MGA) 
+                expansion_horizon(case) isa PerfectForesight || error("MGA requires PerfectForesight; myopic runs are not supported.")
+                solution_algorithm(case) isa Monolithic || error("MGA currently requires the Monolithic solution algorithm.")
+
                 run_mga(case, solution, output_path; case_path=case_path)
             else
                 write_outputs(output_path, case, solution)

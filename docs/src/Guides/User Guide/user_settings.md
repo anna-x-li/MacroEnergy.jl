@@ -75,9 +75,7 @@ on a separate worker. `MGAAlgorithm` selects the objectives:
   `_group_<index>` to the iteration directory; `mga_summary.csv` identifies the
   group and planning period.
 
-New algorithms can subtype `MacroEnergy.MGASolutionAlgorithm` and implement
-`MacroEnergy.mga_jobs`; string settings also require a corresponding mapping in
-`mga_solution_algorithm`. Both execution modes consume the same jobs.
+Both execution modes consume the same jobs created from `MGAAlgorithm`.
 
 `run_case` reads these settings automatically. When calling `run_mga` directly,
 provide `case_path` in parallel mode:

@@ -76,8 +76,10 @@ function validate_settings(settings::NamedTuple)
     @assert settings[:MGA][:Epsilon] isa Real && settings[:MGA][:Epsilon] > 0
     @assert settings[:MGA][:Parallel] isa Bool
     @assert settings[:MGA][:Workers] isa Integer && settings[:MGA][:Workers] > 0
-    algorithm = mga_solution_algorithm(settings[:MGA][:MGAAlgorithm])
-    if algorithm isa RandomVector
+    algorithm = settings[:MGA][:MGAAlgorithm]
+    algorithm in ("RandomVector", "VariableMinMax") ||
+        throw(ArgumentError("Unknown MGAAlgorithm: $algorithm. Expected RandomVector or VariableMinMax."))
+    if algorithm == "RandomVector"
         @assert settings[:MGA][:NumIterations] isa Integer && settings[:MGA][:NumIterations] > 0
     end
     @assert settings[:MGA][:Groupings] isa AbstractVector{<:AbstractString}

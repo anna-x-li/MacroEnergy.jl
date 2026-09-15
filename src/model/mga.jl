@@ -1,45 +1,29 @@
-# Dispatch on the algorithm so job creation stays separate from solving and writing results.
-abstract type MGASolutionAlgorithm end
-struct RandomVector <: MGASolutionAlgorithm end
-struct VariableMinMax <: MGASolutionAlgorithm end
-
-mga_solution_algorithm(algorithm::MGASolutionAlgorithm) = algorithm
-function mga_solution_algorithm(name::AbstractString)
-    name == "RandomVector" && return RandomVector()
-    name == "VariableMinMax" && return VariableMinMax()
-    throw(ArgumentError("Unknown MGAAlgorithm: $name. Expected RandomVector or VariableMinMax."))
-end
-
 """
-    mga_jobs(algorithm::MGASolutionAlgorithm, groups, settings, rng)
+    mga_jobs(algorithm::AbstractString, groups, settings, rng)
 
-Build independently schedulable objectives. Extend this function for new MGA
-algorithms. Each job supplies an iteration, group index (zero for a vector),
-weights (nothing for a single-group objective), direction, and objective sense.
+Build independently schedulable objectives. Each job supplies an iteration,
+group index (zero for a vector), weights (nothing for a single-group objective),
+direction, and objective sense.
 Job order determines summary order, even when parallel solves finish out of order.
 """
-function mga_jobs(::RandomVector, groups, settings, rng)
+function mga_jobs(algorithm::AbstractString, groups, settings, rng)
     jobs = NamedTuple[]
-    for iteration in 1:settings.NumIterations
-        # Use the same random direction for the max/min pair. Draw on the main
-        # process so the seed gives the same objectives in serial and parallel runs.
-        weights = rand(rng, length(groups))
-        for (direction, sense) in (("max", MOI.MAX_SENSE), ("min", MOI.MIN_SENSE))
-            push!(jobs, (; iteration, group_index = 0, weights, direction, sense))
+    if algorithm == "RandomVector"
+        for iteration in 1:settings.NumIterations
+            weights = rand(rng, length(groups))
+            for (direction, sense) in (("max", MOI.MAX_SENSE), ("min", MOI.MIN_SENSE))
+                push!(jobs, (; iteration, group_index = 0, weights, direction, sense))
+            end
         end
-    end
-    return jobs
-end
-
-function mga_jobs(::VariableMinMax, groups, settings, rng)
-    jobs = NamedTuple[]
-    for group_index in eachindex(groups)
-        # The group index identifies the entire objective; avoid storing an
-        # N-element one-hot vector for each of the N groups.
-        weights = nothing
-        for (direction, sense) in (("max", MOI.MAX_SENSE), ("min", MOI.MIN_SENSE))
-            push!(jobs, (; iteration = 1, group_index, weights, direction, sense))
+    elseif algorithm == "VariableMinMax"
+        for group_index in eachindex(groups)
+            weights = nothing
+            for (direction, sense) in (("max", MOI.MAX_SENSE), ("min", MOI.MIN_SENSE))
+                push!(jobs, (; iteration = 1, group_index, weights, direction, sense))
+            end
         end
+    else
+        throw(ArgumentError("Unknown MGAAlgorithm: $algorithm. Expected RandomVector or VariableMinMax."))
     end
     return jobs
 end
@@ -70,13 +54,10 @@ function run_mga(
     case_path = nothing
 )
     # Make sure the least-cost model is ready before starting MGA
-    mga_enabled(case) || return NamedTuple[]
-    validate_mga(case)
     termination_status(EP) == MOI.OPTIMAL || error("MGA requires an optimal least-cost solution first.")
     haskey(EP, :vMGA) && !isempty(EP[:vMGA]) || error("No MGA groups were added to the model.")
     println("MGA Module")
 
-    # All periods share these settings (checked by validate_mga)
     mga_settings = first(get_periods(case)).settings.MGA
     slack = mga_settings.Epsilon
 
@@ -90,7 +71,7 @@ function run_mga(
     budget_limit = least_cost + slack * abs(least_cost)
 
     # Generate all jobs once, before choosing serial or parallel execution.
-    jobs = mga_jobs(mga_solution_algorithm(mga_settings.MGAAlgorithm), mga_groups, mga_settings, rng)
+    jobs = mga_jobs(mga_settings.MGAAlgorithm, mga_groups, mga_settings, rng)
     isempty(jobs) && error("No MGA jobs were created")
 
     # In parallel mode, leave EP unchanged and transfer copies to the workers
@@ -289,10 +270,6 @@ function initialize_mga_worker!(case_model_copy, solver, attributes, groups, bud
     set_optimizer(model, optimizer)
     model.ext[:mga_optimizer] = optimizer
 
-    # Check that the copied variables use the same ordering as the job definitions.
-    worker_groups = sort!(collect(keys(model[:vMGA])))
-    worker_groups == groups || error("Worker MGA groups differ from the supplied MGA jobs.")
-
     system_cost = add_mga_budget!(case, model, budget_limit)
     MGA_WORKER_STATE[] = (case, model, system_cost, groups)
     return nothing
@@ -310,7 +287,6 @@ function run_mga_parallel(case, model, path, case_path, groups, least_cost, budg
     mga_settings = first(get_periods(case)).settings.MGA
     worker_count = mga_settings.Workers
     worker_count > 0 || throw(ArgumentError("MGA.Workers must be positive."))
-    isempty(jobs) && return NamedTuple[]
     haskey(model.ext, :mga_optimizer) || error("Parallel MGA requires generate_model's optimizer configuration.")
     opt = model.ext[:mga_optimizer]
 
@@ -482,8 +458,7 @@ function add_mga_variables(system::System, EP::Model)
         key = (period, group)
         group_name = join(group, "_")
 
-        # Annual flow can be negative for bidirectional edges, so only capacity
-        # aggregates get a zero lower bound. The equality below defines the value.
+        # Define MGA groups. Only capacity aggregates get a lower bound of zero, since annual flow can be negative for bidirectional edges.
         vMGA = @variable(EP, base_name = "vMGA_$(period)_$(group_name)")
         if quantity == "capacity"
             set_lower_bound(vMGA, 0)
@@ -503,20 +478,6 @@ function add_mga_variables(system::System, EP::Model)
         end
     end
 
-    return nothing
-end
-
-mga_enabled(case::Case) = any(system.settings.MGA.Enabled for system in get_periods(case))
-
-function validate_mga(case::Case)
-    mga_enabled(case) || return nothing
-    expansion_horizon(case) isa PerfectForesight || error("MGA requires PerfectForesight; myopic runs are not supported.")
-    solution_algorithm(case) isa Monolithic || error("MGA currently requires the Monolithic solution algorithm.")
-    # Mixing quantities or groupings across periods would give inconsistent
-    # objectives; a single budget also requires one common slack setting.
-    settings = first(get_periods(case)).settings.MGA
-    all(system.settings.MGA == settings for system in get_periods(case)) ||
-        error("MGA settings must be identical in every planning period.")
     return nothing
 end
 

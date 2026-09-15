@@ -12,11 +12,11 @@ end
 @testset "MGA algorithm jobs" begin
     groups = [(1, (:a,)), (1, (:b,))]
     settings = (NumIterations = 3,)
-    random_jobs = M.mga_jobs(M.RandomVector(), groups, settings, MersenneTwister(42))
+    random_jobs = M.mga_jobs("RandomVector", groups, settings, MersenneTwister(42))
     @test length(random_jobs) == 6
     @test random_jobs[1].weights == random_jobs[2].weights
     @test [job.direction for job in random_jobs] == repeat(["max", "min"], 3)
-    variable_jobs = M.mga_jobs(M.VariableMinMax(), groups, settings, MersenneTwister(42))
+    variable_jobs = M.mga_jobs("VariableMinMax", groups, settings, MersenneTwister(42))
     @test length(variable_jobs) == 4
     @test all(job.iteration == 1 for job in variable_jobs)
     @test all(isnothing(job.weights) for job in variable_jobs)
@@ -134,7 +134,7 @@ mktempdir() do root
         groups = sort!(collect(keys(model[:vMGA])))
         pop!(groups) # Simulate job groups that do not match the model copy.
         mga_settings = first(M.get_periods(case)).settings.MGA
-        jobs = M.mga_jobs(M.mga_solution_algorithm(mga_settings.MGAAlgorithm),
+        jobs = M.mga_jobs(mga_settings.MGAAlgorithm,
             groups, mga_settings, MersenneTwister(42))
         @test_throws CompositeException M.run_mga_parallel(case, model,
             joinpath(root, "failure"), fixture, groups, baseline, baseline * 1.1,
