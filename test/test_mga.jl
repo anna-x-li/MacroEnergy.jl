@@ -20,7 +20,7 @@ end
             fix(edge.flow[2], 2cap)
             push!(assets, MGAExampleAsset(edge))
         end
-        system = M.System("", (MGA=(Enabled=true, AnnualGeneration=annual),),
+        system = M.System("", (MGA=(Enabled=true, Groupings=["custom"], Quantity=annual ? "annual_flow" : "capacity"),),
             Dict{Symbol,DataType}(:Electricity=>M.Electricity), Dict{Symbol,M.TimeData}(:Electricity=>td),
             assets, Union{M.Node,M.Location}[], Dict{Symbol,Any}[])
         M.add_mga_variables(system, model)
@@ -28,8 +28,29 @@ end
     @test length(model[:vMGA]) == 2
     optimize!(model)
     @test is_solved_and_feasible(model)
-    @test value(model[:vMGA][(1,:solar)]) ≈ 18
-    @test value(model[:vMGA][(2,:solar)]) ≈ 162
+    @test value(model[:vMGA][(1,(:solar,))]) ≈ 18
+    @test value(model[:vMGA][(2,(:solar,))]) ≈ 162
+end
+
+@testset "Signed annual flow in MGA" begin
+    model = Model(HiGHS.Optimizer)
+    set_silent(model)
+    td = M.TimeData{M.Electricity}(time_interval=1:1:2, period_index=1,
+        subperiods=[1:1:2], subperiod_indices=[1], subperiod_weights=Dict(1=>3.0))
+    node = M.Node{M.Electricity}(id=:node, timedata=td)
+    edge = M.BidirectionalEdge{M.Electricity}(id=:link, timedata=td,
+        start_vertex=node, end_vertex=node, mga_group=:transmission, capacity=5.0)
+    edge.flow = @variable(model, [1:2])
+    fix(edge.flow[1], -5.0)
+    fix(edge.flow[2], 2.0)
+    system = M.System("", (MGA=(Groupings=["custom"], Quantity="annual_flow"),),
+        Dict{Symbol,DataType}(:Electricity=>M.Electricity),
+        Dict{Symbol,M.TimeData}(:Electricity=>td), M.AbstractAsset[MGAExampleAsset(edge)],
+        Union{M.Node,M.Location}[], Dict{Symbol,Any}[])
+    M.add_mga_variables(system, model)
+    optimize!(model)
+    @test is_solved_and_feasible(model)
+    @test value(model[:vMGA][(1, (:transmission,))]) ≈ -9.0
 end
 
 @testset "Cost-based MGA pricing" begin
@@ -72,7 +93,7 @@ data[:case] = [deepcopy(data[:case][1]), deepcopy(data[:case][1])]
 data[:settings] = Dict{Symbol,Any}(:SolutionAlgorithm=>"Monolithic", :ExpansionHorizon=>"PerfectForesight", :PeriodLengths=>[1,1])
 case = M.generate_case(joinpath(root,"system_data.json"), data)
 for system in case.systems
-    system.settings = merge(system.settings, (MGA=(Enabled=true, Epsilon=0.1, NumIterations=1, AnnualGeneration=false),))
+    system.settings = merge(system.settings, (MGA=merge(system.settings.MGA, (Enabled=true, Epsilon=0.1, NumIterations=1, Groupings=["custom"], Quantity="capacity")),))
     for edge in M.get_edges(system)
         M.has_capacity(edge) && (edge.mga_group=:capacity)
     end
@@ -90,10 +111,10 @@ opt = M.create_optimizer(HiGHS.Optimizer, nothing, ("output_flag"=>false,))
     result = run_mga(case, model, output; rng=MersenneTwister(1))
     @test length(result) == 2
     @test is_binary(integer_choice) && !is_fixed(integer_choice)
-    @test all(r.system_cost <= r.budget_limit + 1e-5 * abs(r.budget_limit) for r in result)
+    @test all(r.objective_function <= r.budget_limit + 1e-5 * abs(r.budget_limit) for r in result)
     @test is_solved_and_feasible(model)
     @test objective_value(model) ≈ last(result).mga_objective
-    @test value(original_cost) ≈ last(result).system_cost
+    @test value(original_cost) ≈ last(result).objective_function
     # Scaling the retained budget can introduce additional proxy constraints.
     @test num_constraints(model; count_variable_in_set_constraints=true) >= constraint_count + 1
     @test isfile(joinpath(output,"MGAResults_max","MGA_0.1_1","mga_summary.csv"))

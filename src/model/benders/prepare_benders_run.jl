@@ -51,7 +51,7 @@ function get_period_to_subproblem_mapping(periods::Vector{System})
     
 end
 
-function start_distributed_processes!(case_path::AbstractString, number_of_subproblems::Int64; lsf_cpus_per_task::Int64=1)
+function start_distributed_processes!(case_path::AbstractString, number_of_subproblems::Int64; lsf_cpus_per_task::Int64=1, prepare_workers::Bool=true)
 
     # rmprocs.(workers())
 
@@ -75,8 +75,10 @@ function start_distributed_processes!(case_path::AbstractString, number_of_subpr
 
     project = Pkg.project().path
 
-    @sync for p in workers()
-        @async create_worker_process(p,project,case_path) # add a check
+    if prepare_workers
+        @sync for p in workers()
+            @async create_worker_process(p,project,case_path) # add a check
+        end
     end
 
     @info("Number of procs: $(nprocs())")

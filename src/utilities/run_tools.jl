@@ -202,7 +202,7 @@ function _run_case_impl(
             # If MGA is enabled, run MGA and write outputs; otherwise, just write outputs
             if mga_enabled(case)
                 write_mga_outputs(output_path, case, solution)
-                run_mga(case, solution, output_path)
+                run_mga(case, solution, output_path; case_path=case_path)
             else
                 write_outputs(output_path, case, solution)
             end

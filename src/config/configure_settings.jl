@@ -15,9 +15,12 @@ function default_settings()
         MGA = (
             Enabled = false,
             Epsilon = 0.01,
-            NumIterations = 10,
             Groupings = ["location", "technology"],
-            Quantity = "capacity"
+            Quantity = "capacity",
+            MGAAlgorithm = "RandomVector",
+            NumIterations = 10,
+            Parallel = false,
+            Workers = 1
         )
     )
 end
@@ -55,7 +58,9 @@ function configure_settings(model_settings::NamedTuple)
     validate_names(model_settings)
     settings = default_settings()
 
-    settings = merge(settings, model_settings)
+    # Keep MGA defaults when the input file specifies only some of the MGA options
+    mga_settings = merge(settings.MGA, get(model_settings, :MGA, (;)))
+    settings = merge(settings, model_settings, (MGA = mga_settings,))
 
     validate_settings(settings)
     return settings
@@ -69,7 +74,12 @@ function validate_settings(settings::NamedTuple)
     @assert settings[:MGA] isa NamedTuple
     @assert settings[:MGA][:Enabled] isa Bool
     @assert settings[:MGA][:Epsilon] isa Real && settings[:MGA][:Epsilon] > 0
-    @assert settings[:MGA][:NumIterations] isa Integer && settings[:MGA][:NumIterations] > 0
+    @assert settings[:MGA][:Parallel] isa Bool
+    @assert settings[:MGA][:Workers] isa Integer && settings[:MGA][:Workers] > 0
+    algorithm = mga_solution_algorithm(settings[:MGA][:MGAAlgorithm])
+    if algorithm isa RandomVector
+        @assert settings[:MGA][:NumIterations] isa Integer && settings[:MGA][:NumIterations] > 0
+    end
     @assert settings[:MGA][:Groupings] isa AbstractVector{<:AbstractString}
     @assert settings[:MGA][:Quantity] isa AbstractString
     @assert settings[:WriteSubcommodities] isa Bool

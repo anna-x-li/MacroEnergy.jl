@@ -1,12 +1,14 @@
 {
     "ConstraintScaling": true,
     "OutputLayout": "wide",
-    "DualExportsEnabled": true,
+    "DualExportsEnabled": false,
     "MGA": {
         "Enabled": true,
         "Epsilon": 0.1,
-        "NumIterations": 1,
         "Groupings": ["location", "custom"],
-        "Quantity": "capacity"
+        "Quantity": "capacity",
+        "MGAAlgorithm": "VariableMinMax",
+        "Parallel": true,
+        "Workers": 2
     }
 }
