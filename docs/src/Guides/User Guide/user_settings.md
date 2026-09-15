@@ -49,7 +49,7 @@ For a complete list of available settings, their default values, and detailed de
 
 ## Parallel MGA
 
-Set `Parallel` and `Workers` inside `MGA` in `settings/macro_settings.json`:
+Set `Parallel` and `Workers` inside `MGA` in `settings/case_settings.json`:
 
 ```json
 "MGA": {
@@ -84,17 +84,11 @@ provide `case_path` in parallel mode:
 run_mga(case, model, output_path; case_path=case_directory)
 ```
 
-Parallel MGA reuses Benders' process startup, including SLURM detection. The
-main process makes one solver-free copy of the existing case and model,
-including remapped JuMP references, and sends it once to each active worker.
-Each worker starts taking jobs from a shared queue as soon as its initialization
-finishes, without waiting for other workers. Summaries retain the original job order.
-Workers attach their own solver and reuse the received model across jobs;
-they do not reload inputs, regenerate the MACRO model, or repeat the least-cost
-solve. In-memory case and mathematical model changes are included in the copy.
-Solver state, custom solver environments, optimize hooks, and model extension
-data are not transferred. Each worker still needs time and memory to receive
-the model and initialize its solver; the main process also holds the copy.
+Parallel MGA reuses Benders' process startup, including SLURM detection. Each
+worker takes jobs from a shared queue and reuses its model across jobs. Direct
+models are reloaded and rebuilt from `case_path` on workers; other models use
+`deepcopy` of the case and model. Workers do not repeat the least-cost solve.
+Summaries retain the original job order.
 
 `case_path` is used to load user additions during worker startup. All workers
 need access to the same project, user additions, and

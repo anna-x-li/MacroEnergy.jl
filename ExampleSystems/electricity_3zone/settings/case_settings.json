@@ -1,3 +1,15 @@
 {
-    "SolutionAlgorithm": "Monolithic"
+    "SolutionAlgorithm": "Monolithic",
+    "MGA": {
+        "Enabled": true,
+        "Epsilon": 0.1,
+        "Groupings": [
+            "location",
+            "custom"
+        ],
+        "Quantity": "capacity",
+        "MGAAlgorithm": "VariableMinMax",
+        "Parallel": true,
+        "Workers": 2
+    }
 }

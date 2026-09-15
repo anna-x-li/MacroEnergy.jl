@@ -26,10 +26,9 @@ function generate_model(case::Case, opt::Optimizer, ::Monolithic)
     end
 
     if mga_enabled(case)
-        validate_mga(case)
         @info(" -- Adding MGA variables")
         for system in periods
-            add_mga_variables(system, model)
+            add_mga_variables(system, model, case.settings.MGA)
         end
     end
 

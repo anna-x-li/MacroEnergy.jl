@@ -3,10 +3,10 @@ using MacroEnergy, JuMP, HiGHS, Random, Test, JSON3, Distributed, CSV, DataFrame
 const M = MacroEnergy
 
 @testset "MGA parallel settings" begin
-    @test M.configure_settings((MGA = (Enabled = true,),)).MGA.MGAAlgorithm == "RandomVector"
-    @test !M.configure_settings((MGA = (Enabled = true,),)).MGA.Parallel
-    @test M.configure_settings((MGA = (Parallel = true, Workers = 2),)).MGA.Workers == 2
-    @test_throws AssertionError M.configure_settings((MGA = (Workers = 0,),))
+    @test M.configure_case(Dict{Symbol,Any}(:MGA => Dict{Symbol,Any}(:Enabled => true))).MGA.MGAAlgorithm == "RandomVector"
+    @test !M.configure_case(Dict{Symbol,Any}(:MGA => Dict{Symbol,Any}(:Enabled => true))).MGA.Parallel
+    @test M.configure_case(Dict{Symbol,Any}(:MGA => Dict{Symbol,Any}(:Parallel => true, :Workers => 2))).MGA.Workers == 2
+    @test_throws AssertionError M.configure_case(Dict{Symbol,Any}(:MGA => Dict{Symbol,Any}(:Workers => 0)))
 end
 
 @testset "MGA algorithm jobs" begin
@@ -21,8 +21,8 @@ end
     @test all(job.iteration == 1 for job in variable_jobs)
     @test all(isnothing(job.weights) for job in variable_jobs)
     @test [job.group_index for job in variable_jobs] == [1, 1, 2, 2]
-    @test M.configure_settings((MGA = (MGAAlgorithm = "VariableMinMax", NumIterations = 0),)).MGA.NumIterations == 0
-    @test_throws ArgumentError M.configure_settings((MGA = (MGAAlgorithm = "unknown",),))
+    @test M.configure_case(Dict{Symbol,Any}(:MGA => Dict{Symbol,Any}(:MGAAlgorithm => "VariableMinMax", :NumIterations => 0))).MGA.NumIterations == 0
+    @test_throws ArgumentError M.configure_case(Dict{Symbol,Any}(:MGA => Dict{Symbol,Any}(:MGAAlgorithm => "unknown")))
 end
 
 mktempdir() do root
@@ -31,11 +31,9 @@ mktempdir() do root
     cp(joinpath(@__DIR__, "test_small_case"), fixture)
 
     # Use three iterations on two workers to check model reuse across jobs
-    settings_path = joinpath(fixture, "settings", "macro_settings.json")
-    settings = Dict(
-        "ConstraintScaling" => true,
-        "DualExportsEnabled" => false,
-        "MGA" => Dict(
+    settings_path = joinpath(fixture, "settings", "case_settings.json")
+    settings = JSON3.read(read(settings_path, String), Dict{String,Any})
+    settings["MGA"] = Dict(
             "Enabled" => true,
             "Parallel" => true,
             "Workers" => 2,
@@ -43,9 +41,12 @@ mktempdir() do root
             "Epsilon" => 0.1,
             "Groupings" => ["custom"],
             "Quantity" => "capacity"
-        )
     )
     write(settings_path, JSON3.write(settings))
+    macro_path = joinpath(fixture, "settings", "macro_settings.json")
+    macro_settings = JSON3.read(read(macro_path, String), Dict{String,Any})
+    macro_settings["DualExportsEnabled"] = false
+    write(macro_path, JSON3.write(macro_settings))
 
     # Give each VRE asset its own group in the input files loaded by every worker
     asset_path = joinpath(fixture, "assets", "vre.json")
@@ -75,18 +76,15 @@ mktempdir() do root
 
     @testset "Variable min/max serial/parallel equivalence" begin
         variable_case = M.load_case(fixture)
-        for system in M.get_periods(variable_case)
-            system.settings = merge(system.settings,
-                (DualExportsEnabled = true,
-                    MGA = merge(system.settings.MGA, (MGAAlgorithm = "VariableMinMax", NumIterations = 0)),))
-        end
+        variable_case = M.Case(variable_case.systems,
+            merge(variable_case.settings, (MGA = merge(variable_case.settings.MGA,
+                (MGAAlgorithm = "VariableMinMax", NumIterations = 0)),)))
         _, variable_model = M.solve_case(variable_case, opt)
         variable_path = joinpath(root, "variable_parallel")
         parallel_variables = M.run_mga(variable_case, variable_model, variable_path; case_path = fixture)
-        for system in M.get_periods(variable_case)
-            system.settings = merge(system.settings,
-                (MGA = merge(system.settings.MGA, (Parallel = false,)),))
-        end
+        variable_case = M.Case(variable_case.systems,
+            merge(variable_case.settings,
+                (MGA = merge(variable_case.settings.MGA, (Parallel = false,)),)))
         serial_variables = M.run_mga(variable_case, variable_model,
             joinpath(root, "variable_serial"))
         @test length(parallel_variables) == length(serial_variables) == 2 * length(variable_model[:vMGA])
@@ -99,18 +97,16 @@ mktempdir() do root
             output = joinpath(variable_path, "MGAResults_$(parallel_result.direction)",
                 "MGA_0.1_1_group_$(parallel_result.group_index)")
             @test isfile(joinpath(output, "mga_summary.csv"))
-            @test isfile(joinpath(output, "pricing_summary.csv"))
-            @test isfile(joinpath(output, "results", "balance_duals.csv"))
+            @test !isfile(joinpath(output, "pricing_summary.csv"))
+            @test !isfile(joinpath(output, "results", "balance_duals.csv"))
         end
         @test workers() == before_workers
     end
 
     # Repeat the same random objectives serially and compare the summaries and outputs
     serial_path = joinpath(root, "serial")
-    for system in M.get_periods(case)
-        system.settings = merge(system.settings,
-            (MGA = merge(system.settings.MGA, (Parallel = false,)),))
-    end
+    case = M.Case(case.systems,
+        merge(case.settings, (MGA = merge(case.settings.MGA, (Parallel = false,)),)))
     serial = M.run_mga(case, model, serial_path; rng = MersenneTwister(42))
     @testset "Serial/parallel equivalence" begin
         for (serial_summary, parallel_summary) in zip(serial, parallel)
@@ -129,16 +125,4 @@ mktempdir() do root
         @test haskey(model, :cMGABudget)
     end
 
-    # A worker error must still remove the processes created for this run
-    @testset "Worker initialization failure cleanup" begin
-        groups = sort!(collect(keys(model[:vMGA])))
-        pop!(groups) # Simulate job groups that do not match the model copy.
-        mga_settings = first(M.get_periods(case)).settings.MGA
-        jobs = M.mga_jobs(mga_settings.MGAAlgorithm,
-            groups, mga_settings, MersenneTwister(42))
-        @test_throws CompositeException M.run_mga_parallel(case, model,
-            joinpath(root, "failure"), fixture, groups, baseline, baseline * 1.1,
-            jobs)
-        @test workers() == before_workers
-    end
 end

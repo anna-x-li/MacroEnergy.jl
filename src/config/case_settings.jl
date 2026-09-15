@@ -10,7 +10,17 @@ function default_case_settings()
         :ParameterScaling => false,
         :ParameterScalingFactor => 1e3,
         :SolutionAlgorithm => "Monolithic",
-        :ExpansionHorizon => "PerfectForesight"
+        :ExpansionHorizon => "PerfectForesight",
+        :MGA => Dict(
+            :Enabled => false,
+            :Epsilon => 0.01,
+            :Groupings => ["location", "technology"],
+            :Quantity => "capacity",
+            :MGAAlgorithm => "RandomVector",
+            :NumIterations => 10,
+            :Parallel => false,
+            :Workers => 1
+        )
     )
 end
 
@@ -132,6 +142,7 @@ function configure_case(case_settings::AbstractDict{Symbol,Any})
     @info("Configuring case")
     settings = default_case_settings()
     settings = merge(settings, case_settings)
+    settings[:MGA] = merge(default_case_settings()[:MGA], get(case_settings, :MGA, Dict{Symbol,Any}()))
     set_period_lengths!(settings)
     set_solution_algorithm!(settings)
     set_expansion_horizon!(settings)
@@ -149,6 +160,19 @@ function validate_case_settings(case_settings::AbstractDict{Symbol,Any})
     @assert case_settings[:ParameterScalingFactor] >= 0
     @assert isa(case_settings[:SolutionAlgorithm], AbstractSolutionAlgorithm)
     @assert isa(case_settings[:ExpansionHorizon], AbstractExpansionHorizon)
+    mga = case_settings[:MGA]
+    @assert mga[:Enabled] isa Bool
+    @assert mga[:Epsilon] isa Real && mga[:Epsilon] > 0
+    @assert mga[:Parallel] isa Bool
+    @assert mga[:Workers] isa Integer && mga[:Workers] > 0
+    algorithm = mga[:MGAAlgorithm]
+    algorithm in ("RandomVector", "VariableMinMax") ||
+        throw(ArgumentError("Unknown MGAAlgorithm: $algorithm. Expected RandomVector or VariableMinMax."))
+    if algorithm == "RandomVector"
+        @assert mga[:NumIterations] isa Integer && mga[:NumIterations] > 0
+    end
+    @assert mga[:Groupings] isa AbstractVector{<:AbstractString}
+    @assert mga[:Quantity] isa AbstractString
 end
 
 function set_period_lengths!(case_settings::AbstractDict{Symbol,Any})

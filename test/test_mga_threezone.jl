@@ -22,6 +22,9 @@ for group in nodes_data["nodes"]
 end
 write(nodes_path, JSON3.write(nodes_data))
 case = M.load_case(fixture)
+case = M.Case(case.systems, merge(case.settings,
+    (MGA=merge(case.settings.MGA,
+        (MGAAlgorithm="RandomVector", NumIterations=10, Parallel=false, Epsilon=0.01)),)))
 for system in M.get_periods(case)
     system.settings = merge(system.settings, (DualExportsEnabled=false,))
 end
@@ -33,7 +36,8 @@ println("BASELINE_COST=", baseline, " GROUPS=", sort(collect(keys(model[:vMGA]))
 output = mktempdir(;prefix="threezone_mga_", cleanup=false)
 println("OUTPUT_DIRECTORY=", output)
 flush(stdout)
-M.write_mga_outputs(output, case, model)
+M.postprocess!(case, model)
+M.write_outputs(output, case, model)
 results = M.run_mga(case, model, output; rng=MersenneTwister(42))
 @testset "Three-zone MGA integration" begin
     @test length(results) == 20
