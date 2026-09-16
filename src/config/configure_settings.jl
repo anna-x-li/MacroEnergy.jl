@@ -59,7 +59,6 @@ function validate_settings(settings::NamedTuple)
     @assert settings[:AllowImplicitTopLevelCommodities] isa Bool
     @assert settings[:DualExportsEnabled] isa Bool
     @assert settings[:OutputLayout] isa Union{String, NamedTuple}
-    @assert settings[:WriteSubcommodities] isa Bool
     if settings[:OutputLayout] isa String
         @assert settings[:OutputLayout] ∈ ("long", "wide")
     else

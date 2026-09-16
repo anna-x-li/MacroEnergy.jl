@@ -1,4 +1,5 @@
 function generate_model(case::Case, opt::Optimizer, ::Monolithic)
+    validate_mga(case)
     @info("*** Generating monolithic model ***")
 
     if case.systems[1].settings.EnableJuMPDirectModel

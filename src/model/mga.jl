@@ -1,11 +1,21 @@
 mga_enabled(case::Case) = case.settings.MGA.Enabled
 
+function validate_mga(case::Case)
+    mga_enabled(case) || return nothing
+    expansion_horizon(case) isa PerfectForesight ||
+        error("MGA requires PerfectForesight; myopic runs are not supported.")
+    solution_algorithm(case) isa Monolithic ||
+        error("MGA currently requires the Monolithic solution algorithm.")
+    return nothing
+end
+
 function run_mga(
     case::Case,
     EP::Model,
     path::AbstractString;
     rng = Random.default_rng()
 )
+    validate_mga(case)
     # Make sure the least-cost model is ready before starting MGA
     termination_status(EP) == MOI.OPTIMAL || error("MGA requires an optimal least-cost solution first.")
     haskey(EP, :vMGA) && !isempty(EP[:vMGA]) || error("No MGA groups were added to the model.")

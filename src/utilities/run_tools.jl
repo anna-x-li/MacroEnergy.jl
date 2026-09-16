@@ -189,9 +189,7 @@ function _run_case_impl(
 
         case, solution = solve_case(case, optimizer_instance)
 
-        if !mga_enabled(case)
-            postprocess!(case, solution)
-        end
+        postprocess!(case, solution)
 
         if isa(solution, MyopicResults)
             # Outputs already written per-period during iteration; just retrieve the output path for log file copying
@@ -199,22 +197,8 @@ function _run_case_impl(
         else
             output_path = length(case.systems) ≥ 1 ? create_output_path(case.systems[1], case_path) : case_path
 
-            # If MGA is enabled, run MGA and write outputs; otherwise, just write outputs
-            if mga_enabled(case)
-                postprocess!(case, solution)
-                write_outputs(output_path, case, solution)
-                
-                # Check if the run is myopic and monolithic (as Benders is not currently supported for MGA) 
-                expansion_horizon(case) isa PerfectForesight || error("MGA requires PerfectForesight; myopic runs are not supported.")
-                solution_algorithm(case) isa Monolithic || error("MGA currently requires the Monolithic solution algorithm.")
-
-                mga_start_time = time()
-                run_mga(case, solution, output_path)
-                @info "MGA finished in $(round(time() - mga_start_time; digits=2)) seconds"
-            else
-                write_outputs(output_path, case, solution)
-            end
-
+            write_outputs(output_path, case, solution)
+            mga_enabled(case) && run_mga(case, solution, output_path)
         end
 
         if log_to_file && isfile(log_file_path)

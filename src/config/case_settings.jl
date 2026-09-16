@@ -161,6 +161,12 @@ function validate_case_settings(case_settings::AbstractDict{Symbol,Any})
     mga = case_settings[:MGA]
     @assert mga[:Enabled] isa Bool
     @assert mga[:Epsilon] isa Real && mga[:Epsilon] > 0
+    if mga[:Enabled]
+        case_settings[:ExpansionHorizon] isa PerfectForesight ||
+            error("MGA requires PerfectForesight; myopic runs are not supported.")
+        case_settings[:SolutionAlgorithm] isa Monolithic ||
+            error("MGA currently requires the Monolithic solution algorithm.")
+    end
     algorithm = mga[:MGAAlgorithm]
     algorithm in ("RandomVector", "VariableMinMax") ||
         throw(ArgumentError("Unknown MGAAlgorithm: $algorithm. Expected RandomVector or VariableMinMax."))
