@@ -1,3 +1,7 @@
+import Pkg
+Pkg.activate("/Users/al3792/Documents_Local/MacroEnergy.jl")
+
+using Revise
 using MacroEnergy
 using Gurobi
 

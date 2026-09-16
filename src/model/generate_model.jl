@@ -8,7 +8,6 @@ function generate_model(case::Case, opt::Optimizer, ::Monolithic)
         set_optimizer(model, opt)
     end
 
-    model.ext[:mga_optimizer] = opt
     set_string_names_on_creation(model, case.systems[1].settings.EnableJuMPStringNames)
 
     @info("Generating model")

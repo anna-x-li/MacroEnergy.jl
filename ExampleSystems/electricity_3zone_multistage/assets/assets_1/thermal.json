@@ -16,7 +16,8 @@
                     "has_capacity": true,
                     "wacc": 0.039,
                     "lifetime": 20,
-                    "capital_recovery_period": 20
+                    "capital_recovery_period": 20,
+                    "mga_enableds": true
                 },
                 "fuel_edge": {
                     "unidirectional": true,

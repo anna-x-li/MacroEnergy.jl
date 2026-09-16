@@ -17,9 +17,7 @@ function default_case_settings()
             :Groupings => ["location", "technology"],
             :Quantity => "capacity",
             :MGAAlgorithm => "RandomVector",
-            :NumIterations => 10,
-            :Parallel => false,
-            :Workers => 1
+            :NumIterations => 10
         )
     )
 end
@@ -163,8 +161,6 @@ function validate_case_settings(case_settings::AbstractDict{Symbol,Any})
     mga = case_settings[:MGA]
     @assert mga[:Enabled] isa Bool
     @assert mga[:Epsilon] isa Real && mga[:Epsilon] > 0
-    @assert mga[:Parallel] isa Bool
-    @assert mga[:Workers] isa Integer && mga[:Workers] > 0
     algorithm = mga[:MGAAlgorithm]
     algorithm in ("RandomVector", "VariableMinMax") ||
         throw(ArgumentError("Unknown MGAAlgorithm: $algorithm. Expected RandomVector or VariableMinMax."))

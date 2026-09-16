@@ -209,7 +209,7 @@ function _run_case_impl(
                 solution_algorithm(case) isa Monolithic || error("MGA currently requires the Monolithic solution algorithm.")
 
                 mga_start_time = time()
-                run_mga(case, solution, output_path; case_path=case_path)
+                run_mga(case, solution, output_path)
                 @info "MGA finished in $(round(time() - mga_start_time; digits=2)) seconds"
             else
                 write_outputs(output_path, case, solution)

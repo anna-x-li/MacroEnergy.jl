@@ -10,7 +10,8 @@
                     "has_capacity": true,
                     "commodity": "Electricity",
                     "lifetime": 20,
-                    "capital_recovery_period": 20
+                    "capital_recovery_period": 20,
+                    "mga_enabled": true
                 }
             }
         },

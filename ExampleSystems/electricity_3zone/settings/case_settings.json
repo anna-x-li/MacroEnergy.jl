@@ -8,8 +8,6 @@
             "custom"
         ],
         "Quantity": "capacity",
-        "MGAAlgorithm": "VariableMinMax",
-        "Parallel": true,
-        "Workers": 2
+        "MGAAlgorithm": "VariableMinMax"
     }
 }
