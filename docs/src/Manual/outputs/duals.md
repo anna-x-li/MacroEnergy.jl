@@ -10,12 +10,6 @@
 
 **Condition:** Both files are written only when `DualExportsEnabled = true` (the default) in `macro_settings.json`.
 
-MGA uses the regular output writer. With `DualExportsEnabled = true`, it writes
-duals for the selected MGA objective; these are not cost prices. If duals are
-unavailable because the model has discrete variables, the writer fixes those
-variables and re-solves the model before writing. Set `DualExportsEnabled = false`
-when you do not need these duals.
-
 Dual values (also called shadow prices or Lagrange multipliers) are the marginal costs associated with binding constraints in the optimization. Macro exports duals for two types of constraints:
 
 1. **`balance_duals.csv`** — shadow prices of the commodity balance equations at every node (locational marginal prices)
